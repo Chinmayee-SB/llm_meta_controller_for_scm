@@ -1,0 +1,44 @@
+import numpy as np
+import random
+import math
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
+class merton(object):
+
+    def __init__(self, length, max_demand=20, mu=5e-5, sigma=1e-2, lamda=15, l1=10, l2=0, l3=0.01):
+
+        base = l1
+        start = 0
+        
+        while(True):
+            self.demand_list = []
+            self.drump = []
+            self.no_drump = []
+            self.no_drump.append(start)
+            self.demand_list.append(start)
+            self.drump.append(0)
+            for i in range(length):
+                Z = np.random.normal(0, 1)
+                N = np.random.poisson(lamda)
+                Z_2 = np.random.normal(0, 2)
+                M = l2*N + l3*(N**0.5)*Z_2
+                new_X = self.demand_list[-1] + mu - 0.5*sigma*sigma + sigma*Z + M
+                self.demand_list.append(new_X)
+            self.demand_list = [int(math.exp(i)*base) for i in self.demand_list]
+            if(np.mean(self.demand_list)>0 and np.mean(self.demand_list)<max_demand):
+                break
+            
+        for i in range(len(self.demand_list)):
+            self.demand_list[i] = min(max_demand, self.demand_list[i])  
+
+    def __getitem__(self, key = 0):
+        return self.demand_list[key]
+
+class stationary_possion(object):
+
+    def __init__(self, length, max_demand=20):
+        self.demand_list = np.random.poisson(max_demand/2, length)
+    
+    def __getitem__(self, key = 0):
+        return self.demand_list[key]

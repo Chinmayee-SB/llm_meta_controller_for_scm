@@ -1,0 +1,66 @@
+# =============================================================================
+# PRE-REGISTERED CONFIG — Episodic_Meta_LLM Phase 1
+# Source: MADRL paper Liu et al. Tables G.1, G.2, Table 1
+# Commit this file before any training run. Do not modify after first commit.
+# =============================================================================
+
+environment:
+  n_agents: 4                    # Retailer(1), Warehouse(2), Distributor(3), Manufacturer(4)
+  episode_length: 200            # Table G.1: T=200
+  lead_time: 4                   # Table 1 "Typical": L=4
+  O_max: 20                      # repo ACTION_DIM-1=20
+  initial_inventory: 0           # repo default
+  holding_cost: 1                # Table 1: h^i=1 uniform all agents
+  backlog_cost: 1                # Table 1: b^i=1 uniform all agents
+  demand_clip_min: 1
+  demand_clip_max: 40
+
+demand:
+  model: merton_jd
+  mu: 5.0e-5                     # Table G.2 Serial Supply Chain
+  sigma: 1.0e-2
+  lambda: 15
+  l1: 10
+  l2: 0
+  l3: 0.01
+
+happo:
+  gru_num_layers: 2              # Table G.1
+  gru_hidden: 128                # Table G.1
+  fc_hidden: 128
+  gamma: 0.95                    # Table G.1
+  gae_lambda: 0.95               # repo config
+  lr: 1.0e-4                     # Table G.1 (same for actor and critic)
+  ppo_clip: 0.2                  # Table G.1: epsilon=0.2
+  entropy_coeff: 0.01            # Table G.1: beta_E=0.01
+  ppo_epoch: 15                  # repo config
+  data_chunk_length: 10          # repo config: recurrent chunk
+  max_grad_norm: 0.5
+  weight_init: orthogonal        # repo: use_orthogonal=True
+  use_huber_loss: true
+  huber_delta: 10.0
+  num_env_steps: 3000000         # repo config: 3e6 steps
+  n_rollout_threads: 5           # repo config: parallel envs
+
+alpha:
+  sampling: per_agent_independent_uniform  # each agent independent, NOT shared
+  min: 0.0
+  max: 1.0
+  in_actor_obs: true             # alpha appended as last element of actor obs
+  in_critic_obs: false           # critic does NOT see alpha
+
+stability_gate:
+  n_random_traces: 50
+  n_traces_per_alpha: 10
+  alpha_test_values: [0.0, 0.25, 0.5, 0.75, 1.0]
+  min_service_level_avg: 0.80
+  max_bullwhip_ratio_avg: 3.0
+  max_cost_vs_basestock_ratio: 1.20
+  max_backlog_per_agent: 500
+  min_random_traces_passing: 45
+  min_service_level_at_any_alpha: 0.75
+
+evaluation:
+  n_final_eval_traces: 50
+  n_training_repeats: 5
+  seeds: [0, 1, 2, 3, 4]

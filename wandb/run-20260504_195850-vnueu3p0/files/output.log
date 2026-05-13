@@ -1,0 +1,890 @@
+share_observation_space:  [Box(-inf, inf, (28,), float32), Box(-inf, inf, (28,), float32), Box(-inf, inf, (28,), float32), Box(-inf, inf, (28,), float32)]
+observation_space:  [Box(-inf, inf, (8,), float32), Box(-inf, inf, (8,), float32), Box(-inf, inf, (8,), float32), Box(-inf, inf, (8,), float32)]
+action_space:  [Discrete(21), Discrete(21), Discrete(21), Discrete(21)]
+C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\core\fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\core\_methods.py:190: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 1/3000 | Cost: 175054.00 | SL: 0.018 | Bullwhip: 1.24 | alpha: [0.55,0.72,0.60,0.54]
+
+ Algo happo Exp check updates 0/3000 episodes, total num timesteps 1000/3000000.0, FPS 60.
+
+Reward for thread 1: [-388.14, -182.23, -127.0, -161.59] -214.74  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.28, 9.84, 10.25, 9.31] Demand: [12.33]
+Reward for thread 2: [-71.64, -67.25, -93.0, -74.83] -76.68  Inventory: [85.0, 0.0, 187.0, 0.0]  Order: [10.06, 9.15, 10.34, 10.05] Demand: [8.905]
+Reward for thread 3: [-291.25, -49.46, -106.6, -90.24] -134.39  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.9, 10.04, 9.66, 9.46] Demand: [14.23]
+Reward for thread 4: [-370.48, -101.43, -170.16, -190.03] -208.02  Inventory: [1573.0, 32.0, 0.0, 0.0]  Order: [9.89, 10.0, 10.81, 9.94] Demand: [2.135]
+Reward for thread 5: [-105.55, -35.17, -80.91, -82.37] -76.0  Inventory: [38.0, 0.0, 0.0, 146.0]  Order: [9.78, 10.4, 9.74, 10.56] Demand: [9.575]
+Episode 2/3000 | Cost: 58924.00 | SL: 0.656 | Bullwhip: 1.95 | alpha: [0.70,0.84,0.00,0.13]
+
+ Algo happo Exp check updates 1/3000 episodes, total num timesteps 2000/3000000.0, FPS 58.
+
+Reward for thread 1: [-122.68, -45.93, -73.45, -74.84] -79.22  Inventory: [324.0, 0.0, 0.0, 235.0]  Order: [9.83, 9.93, 9.68, 10.8] Demand: [8.03]
+Reward for thread 2: [-543.49, -148.33, -88.92, -97.22] -219.49  Inventory: [0.0, 0.0, 0.0, 131.0]  Order: [9.86, 10.34, 9.55, 10.2] Demand: [16.935]
+Reward for thread 3: [-54.35, -46.29, -57.19, -46.12] -50.99  Inventory: [36.0, 0.0, 113.0, 36.0]  Order: [10.1, 9.85, 10.28, 10.41] Demand: [9.895]
+Reward for thread 4: [-424.44, -36.99, -97.26, -82.06] -160.19  Inventory: [1261.0, 23.0, 0.0, 0.0]  Order: [10.09, 10.38, 10.51, 9.98] Demand: [3.79]
+Reward for thread 5: [-97.44, -86.99, -103.41, -100.46] -97.08  Inventory: [214.0, 0.0, 0.0, 208.0]  Order: [9.76, 10.18, 9.54, 10.53] Demand: [8.595]
+Episode 3/3000 | Cost: 185558.00 | SL: 1.000 | Bullwhip: 0.61 | alpha: [0.88,0.96,0.92,0.91]
+
+ Algo happo Exp check updates 2/3000 episodes, total num timesteps 3000/3000000.0, FPS 56.
+
+Reward for thread 1: [-669.56, -124.29, -75.09, -37.63] -226.64  Inventory: [1611.0, 0.0, 0.0, 6.0]  Order: [11.16, 10.64, 9.93, 9.93] Demand: [1.905]
+Reward for thread 2: [-113.63, -66.49, -37.52, -69.91] -71.89  Inventory: [193.0, 0.0, 46.0, 148.0]  Order: [10.62, 9.96, 10.07, 10.8] Demand: [9.27]
+Reward for thread 3: [-126.27, -61.5, -78.68, -76.74] -85.8  Inventory: [343.0, 29.0, 133.0, 129.0]  Order: [9.54, 9.71, 10.28, 10.86] Demand: [7.89]
+Reward for thread 4: [-331.62, -75.26, -149.47, -187.02] -185.84  Inventory: [1297.0, 0.0, 0.0, 34.0]  Order: [10.32, 10.95, 9.88, 9.98] Demand: [3.485]
+Reward for thread 5: [-87.29, -33.34, -35.57, -31.14] -46.84  Inventory: [0.0, 88.0, 4.0, 13.0]  Order: [9.48, 9.86, 9.9, 9.85] Demand: [11.39]
+Episode 4/3000 | Cost: 55130.00 | SL: 0.082 | Bullwhip: 2.14 | alpha: [0.79,0.90,0.56,0.49]
+
+ Algo happo Exp check updates 3/3000 episodes, total num timesteps 4000/3000000.0, FPS 54.
+
+Reward for thread 1: [-125.55, -70.32, -41.65, -56.86] -73.6  Inventory: [0.0, 0.0, 49.0, 0.0]  Order: [11.21, 10.15, 10.7, 10.36] Demand: [13.36]
+Reward for thread 2: [-128.52, -79.67, -63.67, -35.08] -76.74  Inventory: [765.0, 0.0, 0.0, 12.0]  Order: [10.38, 10.44, 10.2, 10.23] Demand: [6.35]
+Reward for thread 3: [-203.13, -76.41, -43.94, -80.37] -100.96  Inventory: [693.0, 83.0, 0.0, 0.0]  Order: [9.67, 10.15, 9.97, 9.9] Demand: [6.36]
+Reward for thread 4: [-383.84, -60.78, -50.85, -130.74] -156.55  Inventory: [1249.0, 25.0, 92.0, 50.0]  Order: [9.9, 9.9, 10.28, 10.49] Demand: [3.635]
+Reward for thread 5: [-55.3, -66.63, -61.15, -39.83] -55.73  Inventory: [118.0, 222.0, 55.0, 97.0]  Order: [8.79, 9.84, 10.01, 10.49] Demand: [8.36]
+Episode 5/3000 | Cost: 52155.00 | SL: 0.063 | Bullwhip: 2.09 | alpha: [0.18,0.13,0.35,0.16]
+
+ Algo happo Exp check updates 4/3000 episodes, total num timesteps 5000/3000000.0, FPS 53.
+
+Reward for thread 1: [-79.52, -60.73, -56.86, -61.52] -64.66  Inventory: [0.0, 0.0, 71.0, 136.0]  Order: [9.75, 9.61, 9.86, 10.54] Demand: [10.18]
+Reward for thread 2: [-251.23, -77.89, -50.46, -100.9] -120.12  Inventory: [0.0, 0.0, 0.0, 70.0]  Order: [10.03, 9.72, 9.72, 9.96] Demand: [14.86]
+Reward for thread 3: [-157.33, -99.49, -91.05, -37.63] -96.38  Inventory: [382.0, 89.0, 0.0, 0.0]  Order: [9.02, 10.07, 9.93, 9.41] Demand: [7.195]
+Reward for thread 4: [-221.2, -85.41, -42.58, -65.7] -103.72  Inventory: [1091.0, 0.0, 0.0, 0.0]  Order: [9.99, 10.12, 10.04, 9.75] Demand: [4.495]
+Reward for thread 5: [-111.55, -92.05, -70.17, -78.17] -87.98  Inventory: [659.0, 0.0, 69.0, 85.0]  Order: [10.31, 9.88, 10.1, 10.42] Demand: [6.68]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 6/3000 | Cost: 102874.00 | SL: 1.000 | Bullwhip: 1.02 | alpha: [0.09,0.26,0.53,0.10]
+
+ Algo happo Exp check updates 5/3000 episodes, total num timesteps 6000/3000000.0, FPS 53.
+
+Reward for thread 1: [-146.91, -105.86, -91.3, -123.95] -117.0  Inventory: [888.0, 47.0, 137.0, 104.0]  Order: [9.22, 9.4, 10.06, 10.54] Demand: [4.84]
+Reward for thread 2: [-207.09, -92.31, -88.52, -56.29] -111.05  Inventory: [612.0, 0.0, 144.0, 0.0]  Order: [9.74, 9.35, 10.16, 9.86] Demand: [6.32]
+Reward for thread 3: [-555.38, -173.37, -169.94, -148.99] -261.92  Inventory: [0.0, 0.0, 78.0, 152.0]  Order: [9.8, 9.41, 9.72, 10.5] Demand: [15.945]
+Reward for thread 4: [-291.99, -136.94, -122.64, -66.63] -154.55  Inventory: [940.0, 0.0, 0.0, 0.0]  Order: [9.76, 9.56, 9.39, 9.3] Demand: [4.66]
+Reward for thread 5: [-119.64, -92.4, -61.13, -94.31] -91.87  Inventory: [850.0, 49.0, 0.0, 135.0]  Order: [9.42, 9.72, 9.62, 10.33] Demand: [5.235]
+Episode 7/3000 | Cost: 93836.00 | SL: 1.000 | Bullwhip: 1.57 | alpha: [0.42,0.43,0.65,0.83]
+
+ Algo happo Exp check updates 6/3000 episodes, total num timesteps 7000/3000000.0, FPS 53.
+
+Reward for thread 1: [-201.17, -89.37, -75.24, -57.9] -105.92  Inventory: [455.0, 119.0, 111.0, 26.0]  Order: [9.46, 10.06, 10.52, 10.6] Demand: [7.15]
+Reward for thread 2: [-57.56, -51.74, -59.92, -57.19] -56.6  Inventory: [163.0, 82.0, 0.0, 92.0]  Order: [9.46, 9.94, 9.77, 10.14] Demand: [8.795]
+Reward for thread 3: [-97.96, -52.73, -47.28, -54.71] -63.17  Inventory: [75.0, 30.0, 0.0, 0.0]  Order: [9.7, 10.02, 10.38, 9.85] Demand: [9.455]
+Reward for thread 4: [-219.73, -122.96, -109.18, -59.72] -127.9  Inventory: [0.0, 0.0, 0.0, 173.0]  Order: [9.87, 10.04, 9.51, 10.28] Demand: [16.48]
+Reward for thread 5: [-153.46, -78.92, -43.6, -86.51] -90.62  Inventory: [639.0, 0.0, 33.0, 0.0]  Order: [10.28, 9.94, 10.07, 9.92] Demand: [6.97]
+Episode 8/3000 | Cost: 95261.00 | SL: 0.654 | Bullwhip: 1.33 | alpha: [0.58,0.15,0.05,0.51]
+
+ Algo happo Exp check updates 7/3000 episodes, total num timesteps 8000/3000000.0, FPS 53.
+
+Reward for thread 1: [-264.5, -107.98, -115.36, -70.4] -139.56  Inventory: [839.0, 133.0, 0.0, 0.0]  Order: [9.64, 10.39, 10.58, 10.2] Demand: [5.555]
+Reward for thread 2: [-76.94, -72.7, -27.11, -43.28] -55.01  Inventory: [164.0, 106.0, 70.0, 44.0]  Order: [9.78, 10.18, 10.51, 10.63] Demand: [9.03]
+Reward for thread 3: [-54.74, -50.35, -52.35, -30.75] -47.05  Inventory: [0.0, 0.0, 47.0, 9.0]  Order: [10.22, 9.89, 10.06, 10.02] Demand: [11.875]
+Reward for thread 4: [-404.04, -85.77, -83.5, -61.6] -158.73  Inventory: [888.0, 57.0, 24.0, 0.0]  Order: [9.85, 10.01, 10.12, 9.9] Demand: [5.51]
+Reward for thread 5: [-215.56, -70.04, -72.51, -52.6] -102.68  Inventory: [630.0, 0.0, 45.0, 55.0]  Order: [10.28, 9.8, 9.89, 10.23] Demand: [6.725]
+Episode 9/3000 | Cost: 113085.00 | SL: 0.022 | Bullwhip: 2.66 | alpha: [0.62,0.45,0.67,0.40]
+
+ Algo happo Exp check updates 8/3000 episodes, total num timesteps 9000/3000000.0, FPS 52.
+
+Reward for thread 1: [-325.59, -95.82, -75.87, -101.45] -149.68  Inventory: [0.0, 0.0, 102.0, 61.0]  Order: [10.11, 9.56, 9.94, 10.21] Demand: [16.175]
+Reward for thread 2: [-278.48, -96.85, -77.4, -113.08] -141.45  Inventory: [768.0, 208.0, 0.0, 0.0]  Order: [9.17, 10.42, 10.15, 10.04] Demand: [5.365]
+Reward for thread 3: [-465.03, -141.53, -90.87, -127.77] -206.3  Inventory: [0.0, 0.0, 0.0, 41.0]  Order: [9.74, 9.62, 9.44, 9.6] Demand: [14.56]
+Reward for thread 4: [-164.09, -76.97, -89.29, -86.66] -104.25  Inventory: [1081.0, 66.0, 62.0, 55.0]  Order: [9.81, 10.07, 10.24, 10.44] Demand: [4.425]
+Reward for thread 5: [-176.03, -66.45, -52.46, -68.8] -90.94  Inventory: [55.0, 0.0, 117.0, 0.0]  Order: [10.28, 9.74, 10.38, 10.06] Demand: [9.555]
+Episode 10/3000 | Cost: 109709.00 | SL: 0.028 | Bullwhip: 2.32 | alpha: [0.66,0.37,0.67,0.03]
+
+ Algo happo Exp check updates 9/3000 episodes, total num timesteps 10000/3000000.0, FPS 52.
+
+Reward for thread 1: [-278.13, -121.03, -91.93, -133.6] -156.17  Inventory: [0.0, 0.0, 134.0, 56.0]  Order: [11.06, 9.86, 10.46, 10.68] Demand: [15.385]
+Reward for thread 2: [-210.38, -112.48, -63.9, -108.06] -123.7  Inventory: [0.0, 58.0, 0.0, 15.0]  Order: [9.56, 10.06, 9.78, 9.81] Demand: [13.225]
+Reward for thread 3: [-120.0, -39.6, -67.22, -61.09] -71.98  Inventory: [768.0, 5.0, 59.0, 0.0]  Order: [10.07, 10.04, 10.46, 10.26] Demand: [6.255]
+Reward for thread 4: [-63.44, -34.19, -28.69, -25.85] -38.04  Inventory: [0.0, 29.0, 46.0, 0.0]  Order: [9.61, 9.66, 9.99, 9.8] Demand: [11.33]
+Reward for thread 5: [-78.95, -49.74, -53.29, -34.7] -54.17  Inventory: [39.0, 0.0, 18.0, 26.0]  Order: [10.08, 9.61, 9.54, 9.58] Demand: [9.415]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 11/3000 | Cost: 43097.00 | SL: 0.158 | Bullwhip: 1.28 | alpha: [0.25,0.13,1.00,0.77]
+
+ Algo happo Exp check updates 10/3000 episodes, total num timesteps 11000/3000000.0, FPS 51.
+
+Reward for thread 1: [-65.99, -49.71, -38.99, -52.95] -51.91  Inventory: [429.0, 0.0, 47.0, 0.0]  Order: [9.66, 9.48, 9.78, 9.64] Demand: [7.49]
+Reward for thread 2: [-217.11, -62.27, -48.71, -106.83] -108.73  Inventory: [1008.0, 0.0, 43.0, 0.0]  Order: [10.1, 9.58, 9.71, 9.6] Demand: [4.7]
+Reward for thread 3: [-132.35, -34.6, -46.33, -64.37] -69.41  Inventory: [695.0, 6.0, 59.0, 0.0]  Order: [9.76, 9.8, 10.08, 10.02] Demand: [6.265]
+Reward for thread 4: [-211.48, -76.58, -98.24, -94.35] -120.16  Inventory: [1462.0, 0.0, 0.0, 0.0]  Order: [10.28, 9.99, 10.74, 9.87] Demand: [2.735]
+Reward for thread 5: [-137.89, -69.18, -60.96, -61.64] -82.42  Inventory: [250.0, 61.0, 67.0, 16.0]  Order: [9.26, 9.44, 9.72, 9.74] Demand: [7.9]
+Episode 12/3000 | Cost: 35986.00 | SL: 0.117 | Bullwhip: 1.86 | alpha: [0.06,0.95,0.08,0.90]
+
+ Algo happo Exp check updates 11/3000 episodes, total num timesteps 12000/3000000.0, FPS 50.
+
+Reward for thread 1: [-47.8, -40.14, -43.55, -27.43] -39.73  Inventory: [0.0, 39.0, 0.0, 0.0]  Order: [9.86, 10.14, 10.09, 9.86] Demand: [11.725]
+Reward for thread 2: [-66.72, -61.19, -49.07, -42.2] -54.8  Inventory: [0.0, 101.0, 74.0, 43.0]  Order: [10.17, 10.52, 10.8, 10.88] Demand: [11.535]
+Reward for thread 3: [-90.09, -86.76, -44.7, -52.09] -68.41  Inventory: [7.0, 181.0, 10.0, 42.0]  Order: [8.83, 9.72, 9.72, 9.88] Demand: [8.97]
+Reward for thread 4: [-256.69, -188.62, -160.59, -123.92] -182.46  Inventory: [0.0, 57.0, 71.0, 0.0]  Order: [9.31, 9.59, 9.96, 9.88] Demand: [17.795]
+Reward for thread 5: [-98.56, -80.66, -72.39, -55.32] -76.73  Inventory: [107.0, 0.0, 40.0, 51.0]  Order: [10.17, 9.55, 9.62, 9.72] Demand: [9.15]
+Episode 13/3000 | Cost: 78980.00 | SL: 0.081 | Bullwhip: 1.23 | alpha: [0.66,0.14,0.68,0.33]
+
+ Algo happo Exp check updates 12/3000 episodes, total num timesteps 13000/3000000.0, FPS 50.
+
+Reward for thread 1: [-142.02, -105.08, -67.31, -76.87] -97.82  Inventory: [0.0, 239.0, 49.0, 7.0]  Order: [8.79, 9.86, 10.06, 9.99] Demand: [12.005]
+Reward for thread 2: [-79.41, -41.48, -41.09, -36.82] -49.7  Inventory: [140.0, 26.0, 56.0, 0.0]  Order: [9.98, 10.06, 10.28, 10.26] Demand: [9.285]
+Reward for thread 3: [-206.54, -127.87, -123.13, -129.97] -146.88  Inventory: [0.0, 42.0, 15.0, 0.0]  Order: [9.85, 9.98, 10.1, 9.99] Demand: [14.27]
+Reward for thread 4: [-99.76, -80.59, -87.77, -89.17] -89.32  Inventory: [262.0, 138.0, 66.0, 60.0]  Order: [9.07, 9.67, 9.91, 10.25] Demand: [7.875]
+Reward for thread 5: [-75.06, -34.93, -55.63, -35.05] -50.17  Inventory: [0.0, 0.0, 0.0, 10.0]  Order: [10.74, 10.37, 10.38, 10.44] Demand: [10.72]
+Episode 14/3000 | Cost: 74939.00 | SL: 1.000 | Bullwhip: 1.49 | alpha: [0.17,0.40,0.20,0.66]
+
+ Algo happo Exp check updates 13/3000 episodes, total num timesteps 14000/3000000.0, FPS 50.
+
+Reward for thread 1: [-122.5, -84.06, -79.26, -47.27] -83.27  Inventory: [208.0, 77.0, 50.0, 0.0]  Order: [9.4, 9.77, 10.18, 9.98] Demand: [8.345]
+Reward for thread 2: [-352.25, -77.57, -123.97, -124.24] -169.51  Inventory: [0.0, 4.0, 0.0, 31.0]  Order: [9.56, 9.76, 9.44, 9.49] Demand: [14.295]
+Reward for thread 3: [-319.85, -142.86, -120.22, -69.16] -163.02  Inventory: [1153.0, 83.0, 78.0, 27.0]  Order: [9.2, 9.49, 9.73, 9.8] Demand: [3.515]
+Reward for thread 4: [-240.18, -114.7, -55.88, -33.71] -111.12  Inventory: [845.0, 189.0, 56.0, 0.0]  Order: [9.3, 10.1, 10.45, 10.3] Demand: [5.185]
+Reward for thread 5: [-146.5, -106.59, -99.93, -90.76] -110.94  Inventory: [674.0, 244.0, 105.0, 58.0]  Order: [8.0, 9.16, 9.62, 9.85] Demand: [4.785]
+Episode 15/3000 | Cost: 47901.00 | SL: 0.248 | Bullwhip: 0.98 | alpha: [0.49,0.12,0.56,0.98]
+
+ Algo happo Exp check updates 14/3000 episodes, total num timesteps 15000/3000000.0, FPS 50.
+
+Reward for thread 1: [-91.23, -59.88, -38.26, -35.18] -56.14  Inventory: [490.0, 148.0, 12.0, 10.0]  Order: [9.7, 10.36, 10.46, 10.5] Demand: [7.33]
+Reward for thread 2: [-227.86, -69.95, -65.01, -55.97] -104.7  Inventory: [378.0, 126.0, 56.0, 15.0]  Order: [8.82, 9.32, 9.52, 9.46] Demand: [6.875]
+Reward for thread 3: [-119.53, -67.26, -83.93, -77.32] -87.01  Inventory: [0.0, 0.0, 164.0, 6.0]  Order: [9.57, 9.3, 10.12, 10.09] Demand: [12.91]
+Reward for thread 4: [-268.9, -95.78, -83.75, -34.88] -120.83  Inventory: [0.0, 6.0, 112.0, 0.0]  Order: [9.9, 9.85, 10.54, 10.32] Demand: [15.455]
+Reward for thread 5: [-329.15, -72.86, -143.64, -118.35] -166.0  Inventory: [0.0, 43.0, 24.0, 48.0]  Order: [9.85, 10.04, 10.03, 10.12] Demand: [15.09]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 16/3000 | Cost: 127732.00 | SL: 0.019 | Bullwhip: 2.13 | alpha: [0.09,0.54,0.68,0.68]
+
+ Algo happo Exp check updates 15/3000 episodes, total num timesteps 16000/3000000.0, FPS 50.
+
+Reward for thread 1: [-192.79, -93.85, -85.09, -67.97] -109.93  Inventory: [0.0, 0.0, 25.0, 55.0]  Order: [10.22, 9.84, 9.91, 10.08] Demand: [14.325]
+Reward for thread 2: [-163.43, -114.69, -117.41, -34.32] -107.46  Inventory: [1021.0, 192.0, 0.0, 0.0]  Order: [9.18, 10.05, 10.01, 9.9] Demand: [4.085]
+Reward for thread 3: [-392.85, -140.08, -103.91, -90.06] -181.73  Inventory: [904.0, 246.0, 98.0, 0.0]  Order: [8.19, 9.44, 9.85, 9.71] Demand: [3.825]
+Reward for thread 4: [-141.06, -76.54, -103.15, -52.23] -93.24  Inventory: [265.0, 78.0, 150.0, 3.0]  Order: [8.9, 9.33, 10.04, 10.1] Demand: [7.79]
+Reward for thread 5: [-86.52, -52.43, -79.58, -23.41] -60.48  Inventory: [165.0, 50.0, 151.0, 0.0]  Order: [8.52, 8.64, 9.51, 9.32] Demand: [7.765]
+Episode 17/3000 | Cost: 60906.00 | SL: 0.307 | Bullwhip: 1.40 | alpha: [0.41,0.11,0.67,0.64]
+
+ Algo happo Exp check updates 16/3000 episodes, total num timesteps 17000/3000000.0, FPS 50.
+
+Reward for thread 1: [-116.56, -71.35, -77.99, -38.47] -76.09  Inventory: [330.0, 95.0, 116.0, 0.0]  Order: [9.12, 9.46, 10.05, 9.86] Demand: [7.62]
+Reward for thread 2: [-278.85, -167.17, -36.86, -160.17] -160.76  Inventory: [1318.0, 13.0, 122.0, 2.0]  Order: [9.68, 9.72, 10.42, 10.42] Demand: [3.12]
+Reward for thread 3: [-90.91, -66.71, -50.96, -36.28] -61.22  Inventory: [0.0, 0.0, 83.0, 14.0]  Order: [10.2, 9.78, 10.09, 10.06] Demand: [13.245]
+Reward for thread 4: [-86.42, -66.5, -60.61, -26.05] -59.9  Inventory: [387.0, 70.0, 121.0, 9.0]  Order: [8.96, 9.22, 9.75, 9.73] Demand: [7.1]
+Reward for thread 5: [-352.02, -48.76, -99.27, -49.86] -137.48  Inventory: [777.0, 0.0, 12.0, 0.0]  Order: [10.26, 9.96, 10.08, 9.84] Demand: [6.165]
+Episode 18/3000 | Cost: 27936.00 | SL: 0.339 | Bullwhip: 2.07 | alpha: [0.65,0.66,0.49,0.53]
+
+ Algo happo Exp check updates 17/3000 episodes, total num timesteps 18000/3000000.0, FPS 50.
+
+Reward for thread 1: [-39.29, -33.67, -37.64, -29.43] -35.01  Inventory: [135.0, 0.0, 133.0, 15.0]  Order: [9.66, 9.43, 9.95, 9.93] Demand: [8.93]
+Reward for thread 2: [-495.63, -91.58, -80.33, -51.75] -179.82  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.8, 9.26, 9.28, 9.18] Demand: [15.335]
+Reward for thread 3: [-162.0, -85.59, -76.02, -41.65] -91.32  Inventory: [745.0, 92.0, 129.0, 0.0]  Order: [8.72, 9.15, 9.74, 9.63] Demand: [5.055]
+Reward for thread 4: [-28.05, -29.07, -34.38, -23.01] -28.63  Inventory: [111.0, 62.0, 67.0, 18.0]  Order: [9.54, 9.72, 9.96, 10.05] Demand: [9.16]
+Reward for thread 5: [-234.69, -119.0, -51.58, -73.13] -119.6  Inventory: [817.0, 255.0, 0.0, 0.0]  Order: [8.0, 9.36, 9.58, 9.32] Demand: [4.045]
+Episode 19/3000 | Cost: 65092.00 | SL: 0.968 | Bullwhip: 1.69 | alpha: [0.50,0.23,0.98,0.67]
+
+ Algo happo Exp check updates 18/3000 episodes, total num timesteps 19000/3000000.0, FPS 50.
+
+Reward for thread 1: [-136.48, -67.12, -93.27, -41.46] -84.58  Inventory: [389.0, 10.0, 100.0, 6.0]  Order: [8.77, 8.7, 9.18, 9.04] Demand: [6.88]
+Reward for thread 2: [-164.94, -27.64, -66.48, -55.7] -78.69  Inventory: [94.0, 38.0, 113.0, 0.0]  Order: [8.81, 8.93, 9.44, 9.32] Demand: [8.4]
+Reward for thread 3: [-327.49, -143.39, -76.66, -57.74] -151.32  Inventory: [0.0, 0.0, 9.0, 0.0]  Order: [9.5, 9.19, 9.42, 9.25] Demand: [13.5]
+Reward for thread 4: [-436.6, -83.9, -110.33, -138.19] -192.26  Inventory: [1096.0, 0.0, 0.0, 0.0]  Order: [9.38, 9.56, 9.32, 9.06] Demand: [3.875]
+Reward for thread 5: [-107.08, -49.65, -61.47, -72.3] -72.62  Inventory: [77.0, 0.0, 26.0, 23.0]  Order: [8.98, 8.88, 8.94, 8.91] Demand: [8.505]
+Episode 20/3000 | Cost: 54146.00 | SL: 1.000 | Bullwhip: 2.31 | alpha: [0.89,0.72,0.21,0.46]
+
+ Algo happo Exp check updates 19/3000 episodes, total num timesteps 20000/3000000.0, FPS 50.
+
+Reward for thread 1: [-159.5, -43.93, -61.99, -47.85] -78.32  Inventory: [344.0, 37.0, 22.0, 0.0]  Order: [9.3, 9.45, 9.48, 9.5] Demand: [7.68]
+Reward for thread 2: [-108.48, -41.05, -63.66, -39.93] -63.28  Inventory: [198.0, 26.0, 39.0, 0.0]  Order: [10.28, 10.43, 10.66, 10.6] Demand: [9.435]
+Reward for thread 3: [-74.98, -67.18, -66.98, -60.63] -67.44  Inventory: [0.0, 92.0, 16.0, 9.0]  Order: [8.71, 9.14, 9.3, 9.18] Demand: [9.6]
+Reward for thread 4: [-348.11, -42.87, -92.7, -103.81] -146.87  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.55, 9.72, 9.93, 9.38] Demand: [11.16]
+Reward for thread 5: [-73.33, -84.08, -47.4, -47.93] -63.18  Inventory: [0.0, 130.0, 73.0, 12.0]  Order: [8.67, 9.25, 9.49, 9.49] Demand: [9.54]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 21/3000 | Cost: 110326.00 | SL: 1.000 | Bullwhip: 2.19 | alpha: [0.99,0.41,0.55,0.28]
+
+ Algo happo Exp check updates 20/3000 episodes, total num timesteps 21000/3000000.0, FPS 50.
+
+Reward for thread 1: [-389.69, -120.87, -80.86, -106.78] -174.55  Inventory: [880.0, 109.0, 70.0, 28.0]  Order: [8.7, 9.1, 9.43, 9.55] Demand: [4.49]
+Reward for thread 2: [-68.38, -45.87, -24.43, -41.78] -45.12  Inventory: [331.0, 107.0, 51.0, 0.0]  Order: [8.98, 9.4, 9.81, 9.62] Demand: [7.42]
+Reward for thread 3: [-76.5, -161.38, -34.03, -61.19] -83.28  Inventory: [0.0, 367.0, 5.0, 35.0]  Order: [8.93, 10.69, 10.68, 10.72] Demand: [9.4]
+Reward for thread 4: [-276.06, -53.46, -88.76, -63.77] -120.51  Inventory: [0.0, 0.0, 87.0, 2.0]  Order: [9.42, 9.26, 9.65, 9.52] Demand: [10.045]
+Reward for thread 5: [-52.01, -43.93, -46.14, -44.72] -46.7  Inventory: [271.0, 85.0, 0.0, 13.0]  Order: [9.68, 10.4, 10.06, 9.96] Demand: [8.4]
+Episode 22/3000 | Cost: 122970.00 | SL: 0.018 | Bullwhip: 3.04 | alpha: [0.91,0.91,0.12,0.31]
+
+ Algo happo Exp check updates 21/3000 episodes, total num timesteps 22000/3000000.0, FPS 49.
+
+Reward for thread 1: [-486.32, -45.53, -138.17, -117.87] -196.97  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.86, 9.79, 9.96, 9.46] Demand: [15.915]
+Reward for thread 2: [-176.71, -92.23, -92.7, -61.71] -105.84  Inventory: [400.0, 118.0, 138.0, 44.0]  Order: [7.96, 8.51, 9.1, 9.28] Demand: [5.98]
+Reward for thread 3: [-245.55, -87.54, -72.68, -31.47] -109.31  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.3, 9.87, 9.62, 9.47] Demand: [13.965]
+Reward for thread 4: [-61.39, -62.77, -44.07, -38.07] -51.58  Inventory: [0.0, 28.0, 68.0, 31.0]  Order: [9.12, 9.28, 9.56, 9.65] Demand: [9.57]
+Reward for thread 5: [-126.18, -69.59, -71.99, -32.05] -74.95  Inventory: [0.0, 0.0, 74.0, 40.0]  Order: [9.32, 9.02, 9.32, 9.41] Demand: [9.5]
+Episode 23/3000 | Cost: 35661.00 | SL: 0.088 | Bullwhip: 2.08 | alpha: [0.50,0.45,0.95,0.28]
+
+ Algo happo Exp check updates 22/3000 episodes, total num timesteps 23000/3000000.0, FPS 49.
+
+Reward for thread 1: [-72.23, -35.86, -34.82, -37.43] -45.08  Inventory: [0.0, 16.0, 63.0, 58.0]  Order: [9.21, 9.28, 9.48, 9.74] Demand: [9.59]
+Reward for thread 2: [-47.11, -38.35, -27.07, -21.78] -33.58  Inventory: [174.0, 107.0, 0.0, 6.0]  Order: [9.09, 9.64, 9.56, 9.43] Demand: [8.33]
+Reward for thread 3: [-283.38, -39.39, -80.88, -139.72] -135.84  Inventory: [0.0, 20.0, 0.0, 42.0]  Order: [9.83, 10.14, 9.8, 9.98] Demand: [14.27]
+Reward for thread 4: [-212.07, -149.68, -154.29, -42.6] -139.66  Inventory: [1021.0, 315.0, 26.0, 11.0]  Order: [7.69, 9.18, 9.34, 9.34] Demand: [2.705]
+Reward for thread 5: [-124.53, -54.35, -65.48, -59.98] -76.09  Inventory: [0.0, 26.0, 8.0, 47.0]  Order: [9.54, 9.71, 9.6, 9.76] Demand: [9.73]
+Episode 24/3000 | Cost: 99834.00 | SL: 0.030 | Bullwhip: 1.90 | alpha: [0.49,0.18,0.58,0.93]
+
+ Algo happo Exp check updates 23/3000 episodes, total num timesteps 24000/3000000.0, FPS 49.
+
+Reward for thread 1: [-227.06, -118.71, -79.62, -32.66] -114.51  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.88, 10.76, 10.23, 10.18] Demand: [15.33]
+Reward for thread 2: [-162.25, -38.67, -53.69, -60.98] -78.9  Inventory: [0.0, 3.0, 0.0, 29.0]  Order: [10.05, 10.24, 9.91, 10.04] Demand: [15.16]
+Reward for thread 3: [-121.66, -75.48, -56.69, -75.99] -82.46  Inventory: [0.0, 24.0, 87.0, 0.0]  Order: [9.51, 9.46, 9.96, 9.72] Demand: [10.945]
+Reward for thread 4: [-135.94, -73.46, -78.21, -65.8] -88.35  Inventory: [587.0, 182.0, 16.0, 95.0]  Order: [8.22, 8.98, 8.96, 9.38] Demand: [5.36]
+Reward for thread 5: [-132.76, -100.85, -60.48, -31.99] -81.52  Inventory: [574.0, 258.0, 15.0, 0.0]  Order: [8.96, 10.15, 10.24, 9.91] Demand: [6.09]
+Episode 25/3000 | Cost: 53955.00 | SL: 0.050 | Bullwhip: 1.95 | alpha: [0.50,0.64,0.46,0.23]
+
+ Algo happo Exp check updates 24/3000 episodes, total num timesteps 25000/3000000.0, FPS 49.
+
+Reward for thread 1: [-124.48, -45.65, -51.0, -57.35] -69.62  Inventory: [0.0, 0.0, 0.0, 51.0]  Order: [9.36, 9.24, 8.96, 9.12] Demand: [12.985]
+Reward for thread 2: [-194.13, -52.73, -62.19, -55.08] -91.03  Inventory: [0.0, 98.0, 15.0, 0.0]  Order: [9.28, 9.69, 9.94, 9.56] Demand: [16.01]
+Reward for thread 3: [-57.51, -34.07, -28.67, -34.05] -38.58  Inventory: [0.0, 0.0, 0.0, 36.0]  Order: [9.82, 9.84, 9.64, 9.68] Demand: [11.135]
+Reward for thread 4: [-107.61, -75.63, -71.77, -74.38] -82.35  Inventory: [347.0, 239.0, 22.0, 101.0]  Order: [8.06, 9.15, 9.05, 9.4] Demand: [6.365]
+Reward for thread 5: [-226.35, -78.67, -51.13, -82.12] -109.57  Inventory: [0.0, 67.0, 44.0, 0.0]  Order: [9.13, 9.3, 9.59, 9.51] Demand: [10.915]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 26/3000 | Cost: 114203.00 | SL: 0.022 | Bullwhip: 2.28 | alpha: [0.11,0.07,0.26,0.92]
+
+ Algo happo Exp check updates 25/3000 episodes, total num timesteps 26000/3000000.0, FPS 49.
+
+Reward for thread 1: [-176.47, -136.58, -118.91, -36.71] -117.17  Inventory: [0.0, 11.0, 143.0, 35.0]  Order: [9.74, 9.84, 10.44, 10.57] Demand: [15.635]
+Reward for thread 2: [-622.08, -108.41, -143.33, -133.24] -251.76  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.67, 10.15, 9.66, 9.48] Demand: [16.535]
+Reward for thread 3: [-69.09, -59.65, -58.15, -21.92] -52.2  Inventory: [0.0, 0.0, 47.0, 0.0]  Order: [9.18, 9.04, 9.22, 8.96] Demand: [11.895]
+Reward for thread 4: [-191.42, -204.24, -116.66, -51.9] -141.05  Inventory: [493.0, 396.0, 94.0, 27.0]  Order: [7.08, 8.94, 9.35, 9.43] Demand: [4.665]
+Reward for thread 5: [-89.43, -43.41, -48.14, -31.33] -53.08  Inventory: [0.0, 0.0, 64.0, 31.0]  Order: [10.05, 9.9, 10.17, 10.29] Demand: [10.12]
+Episode 27/3000 | Cost: 69098.00 | SL: 0.041 | Bullwhip: 1.39 | alpha: [0.70,0.04,0.55,0.49]
+
+ Algo happo Exp check updates 26/3000 episodes, total num timesteps 27000/3000000.0, FPS 49.
+
+Reward for thread 1: [-193.67, -83.97, -65.25, -57.0] -99.97  Inventory: [0.0, 0.0, 0.0, 25.0]  Order: [10.05, 10.22, 10.04, 10.01] Demand: [11.59]
+Reward for thread 2: [-237.12, -127.22, -103.99, -180.4] -162.18  Inventory: [0.0, 81.0, 0.0, 0.0]  Order: [9.77, 10.6, 10.34, 10.14] Demand: [15.955]
+Reward for thread 3: [-209.62, -84.15, -105.44, -141.54] -135.19  Inventory: [0.0, 17.0, 55.0, 0.0]  Order: [10.12, 10.12, 10.32, 10.18] Demand: [15.175]
+Reward for thread 4: [-189.28, -62.66, -73.26, -28.6] -88.45  Inventory: [0.0, 59.0, 59.0, 0.0]  Order: [9.3, 9.57, 9.9, 9.76] Demand: [12.72]
+Reward for thread 5: [-165.91, -113.6, -86.91, -132.79] -124.8  Inventory: [0.0, 0.0, 14.0, 24.0]  Order: [9.84, 9.73, 9.82, 9.87] Demand: [15.015]
+Episode 28/3000 | Cost: 126815.00 | SL: 0.017 | Bullwhip: 2.62 | alpha: [0.85,0.11,0.41,0.63]
+
+ Algo happo Exp check updates 27/3000 episodes, total num timesteps 28000/3000000.0, FPS 49.
+
+Reward for thread 1: [-476.33, -146.3, -101.21, -81.49] -201.33  Inventory: [0.0, 51.0, 77.0, 0.0]  Order: [9.13, 9.32, 9.74, 9.72] Demand: [14.765]
+Reward for thread 2: [-58.43, -239.38, -44.46, -72.33] -103.65  Inventory: [0.0, 355.0, 17.0, 0.0]  Order: [7.6, 9.3, 9.37, 9.25] Demand: [7.735]
+Reward for thread 3: [-123.27, -135.1, -70.23, -55.25] -95.96  Inventory: [0.0, 289.0, 1.0, 0.0]  Order: [8.71, 10.06, 10.12, 9.97] Demand: [10.935]
+Reward for thread 4: [-145.52, -49.81, -64.06, -34.58] -73.49  Inventory: [0.0, 0.0, 16.0, 43.0]  Order: [9.74, 9.68, 9.74, 9.82] Demand: [12.98]
+Reward for thread 5: [-139.9, -76.75, -73.51, -67.71] -89.47  Inventory: [0.0, 0.0, 54.0, 46.0]  Order: [9.08, 8.93, 9.07, 9.15] Demand: [12.58]
+Episode 29/3000 | Cost: 50903.00 | SL: 0.206 | Bullwhip: 1.46 | alpha: [0.20,0.78,0.78,0.91]
+
+ Algo happo Exp check updates 28/3000 episodes, total num timesteps 29000/3000000.0, FPS 49.
+
+Reward for thread 1: [-62.53, -122.5, -37.24, -30.61] -63.22  Inventory: [21.0, 355.0, 46.0, 36.0]  Order: [7.52, 9.22, 9.22, 9.35] Demand: [7.57]
+Reward for thread 2: [-228.46, -154.33, -123.34, -58.7] -141.21  Inventory: [824.0, 427.0, 0.0, 0.0]  Order: [7.06, 9.23, 9.33, 9.07] Demand: [3.085]
+Reward for thread 3: [-605.6, -138.05, -75.87, -185.73] -251.31  Inventory: [0.0, 12.0, 0.0, 0.0]  Order: [9.44, 9.7, 9.82, 9.66] Demand: [16.985]
+Reward for thread 4: [-165.02, -165.38, -104.57, -94.39] -132.34  Inventory: [387.0, 413.0, 35.0, 61.0]  Order: [7.02, 9.02, 9.03, 9.18] Demand: [5.28]
+Reward for thread 5: [-71.68, -64.21, -48.08, -42.56] -56.63  Inventory: [190.0, 181.0, 77.0, 41.0]  Order: [8.64, 9.44, 9.64, 9.68] Demand: [7.905]
+Episode 30/3000 | Cost: 105524.00 | SL: 0.023 | Bullwhip: 2.10 | alpha: [0.62,0.91,0.93,0.59]
+
+ Algo happo Exp check updates 29/3000 episodes, total num timesteps 30000/3000000.0, FPS 49.
+
+Reward for thread 1: [-297.42, -65.32, -45.2, -71.5] -119.86  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.64, 9.72, 9.49, 9.38] Demand: [15.51]
+Reward for thread 2: [-118.99, -79.62, -71.6, -40.45] -77.67  Inventory: [0.0, 155.0, 22.0, 0.0]  Order: [8.6, 9.22, 9.36, 9.22] Demand: [12.805]
+Reward for thread 3: [-360.04, -103.3, -92.9, -100.15] -164.1  Inventory: [0.0, 0.0, 0.0, 21.0]  Order: [9.92, 10.46, 9.74, 9.75] Demand: [14.305]
+Reward for thread 4: [-123.92, -44.03, -66.39, -49.14] -70.87  Inventory: [0.0, 59.0, 0.0, 0.0]  Order: [9.54, 9.96, 9.85, 9.64] Demand: [11.8]
+Reward for thread 5: [-283.48, -146.83, -74.48, -102.87] -151.92  Inventory: [659.0, 322.0, 51.0, 32.0]  Order: [7.06, 8.62, 8.82, 8.98] Demand: [3.89]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 31/3000 | Cost: 146896.00 | SL: 0.015 | Bullwhip: 1.88 | alpha: [0.39,0.39,0.84,0.98]
+
+ Algo happo Exp check updates 30/3000 episodes, total num timesteps 31000/3000000.0, FPS 49.
+
+Reward for thread 1: [-361.19, -123.53, -52.21, -36.61] -143.39  Inventory: [0.0, 24.0, 4.0, 0.0]  Order: [9.86, 9.89, 9.95, 9.85] Demand: [15.335]
+Reward for thread 2: [-158.78, -201.6, -85.79, -133.65] -144.96  Inventory: [853.0, 380.0, 0.0, 99.0]  Order: [6.98, 8.81, 8.65, 9.06] Demand: [2.9]
+Reward for thread 3: [-156.57, -63.24, -72.42, -90.53] -95.69  Inventory: [0.0, 0.0, 11.0, 99.0]  Order: [9.18, 9.15, 9.15, 9.64] Demand: [13.99]
+Reward for thread 4: [-70.95, -83.2, -44.38, -62.08] -65.15  Inventory: [8.0, 106.0, 16.0, 0.0]  Order: [8.35, 8.83, 9.02, 8.85] Demand: [8.35]
+Reward for thread 5: [-56.48, -71.69, -67.45, -48.0] -60.9  Inventory: [0.0, 134.0, 51.0, 32.0]  Order: [9.01, 9.62, 9.81, 9.86] Demand: [10.225]
+Episode 32/3000 | Cost: 50869.00 | SL: 0.138 | Bullwhip: 1.60 | alpha: [0.43,0.94,0.34,0.39]
+
+ Algo happo Exp check updates 31/3000 episodes, total num timesteps 32000/3000000.0, FPS 49.
+
+Reward for thread 1: [-71.4, -29.59, -75.05, -57.49] -58.38  Inventory: [0.0, 48.0, 0.0, 0.0]  Order: [9.2, 10.29, 9.64, 9.6] Demand: [10.97]
+Reward for thread 2: [-170.4, -72.32, -54.88, -77.88] -93.87  Inventory: [461.0, 226.0, 64.0, 4.0]  Order: [8.32, 9.36, 9.62, 9.55] Demand: [6.1]
+Reward for thread 3: [-273.12, -86.08, -67.48, -80.06] -126.68  Inventory: [420.0, 59.0, 12.0, 0.0]  Order: [8.07, 8.24, 8.52, 8.38] Demand: [6.135]
+Reward for thread 4: [-99.35, -84.09, -47.14, -18.5] -62.27  Inventory: [391.0, 337.0, 11.0, 0.0]  Order: [7.19, 8.74, 8.87, 8.64] Demand: [5.375]
+Reward for thread 5: [-103.57, -121.44, -99.85, -88.23] -103.27  Inventory: [535.0, 288.0, 49.0, 37.0]  Order: [8.34, 9.7, 9.84, 9.91] Demand: [5.885]
+Episode 33/3000 | Cost: 62740.00 | SL: 0.784 | Bullwhip: 1.49 | alpha: [0.58,0.03,0.69,0.79]
+
+ Algo happo Exp check updates 32/3000 episodes, total num timesteps 33000/3000000.0, FPS 49.
+
+Reward for thread 1: [-138.55, -76.76, -56.06, -62.69] -83.52  Inventory: [521.0, 39.0, 54.0, 93.0]  Order: [8.23, 8.32, 8.43, 8.74] Demand: [5.725]
+Reward for thread 2: [-111.47, -86.76, -66.23, -53.32] -79.45  Inventory: [97.0, 104.0, 40.0, 77.0]  Order: [7.85, 8.21, 8.32, 8.68] Demand: [7.415]
+Reward for thread 3: [-226.48, -97.3, -95.92, -95.55] -128.81  Inventory: [0.0, 0.0, 0.0, 44.0]  Order: [9.85, 9.55, 9.47, 9.57] Demand: [12.745]
+Reward for thread 4: [-56.17, -47.38, -42.13, -35.61] -45.32  Inventory: [14.0, 52.0, 147.0, 33.0]  Order: [8.22, 8.34, 8.9, 8.96] Demand: [8.325]
+Reward for thread 5: [-160.52, -145.78, -111.17, -122.35] -134.96  Inventory: [530.0, 436.0, 1.0, 16.0]  Order: [6.5, 8.56, 8.55, 8.53] Demand: [4.]
+Episode 34/3000 | Cost: 81585.00 | SL: 0.948 | Bullwhip: 1.04 | alpha: [0.61,0.97,0.46,0.13]
+
+ Algo happo Exp check updates 33/3000 episodes, total num timesteps 34000/3000000.0, FPS 49.
+
+Reward for thread 1: [-151.79, -168.56, -69.63, -91.91] -120.47  Inventory: [418.0, 455.0, 46.0, 77.0]  Order: [7.58, 9.77, 9.82, 10.12] Demand: [5.7]
+Reward for thread 2: [-178.42, -91.37, -42.6, -47.74] -90.03  Inventory: [377.0, 169.0, 25.0, 8.0]  Order: [7.99, 8.79, 8.82, 8.81] Demand: [6.225]
+Reward for thread 3: [-165.05, -104.52, -38.6, -50.76] -89.73  Inventory: [302.0, 354.0, 24.0, 31.0]  Order: [6.83, 8.44, 8.44, 8.48] Demand: [5.43]
+Reward for thread 4: [-167.82, -76.72, -59.39, -82.39] -96.58  Inventory: [778.0, 23.0, 5.0, 182.0]  Order: [7.17, 7.26, 7.22, 8.06] Demand: [3.33]
+Reward for thread 5: [-286.54, -55.84, -80.78, -58.01] -120.29  Inventory: [0.0, 0.0, 68.0, 46.0]  Order: [9.72, 9.57, 9.75, 9.82] Demand: [13.465]
+Episode 35/3000 | Cost: 88810.00 | SL: 0.988 | Bullwhip: 1.67 | alpha: [0.82,0.81,0.89,0.40]
+
+ Algo happo Exp check updates 34/3000 episodes, total num timesteps 35000/3000000.0, FPS 49.
+
+Reward for thread 1: [-185.39, -167.84, -45.11, -76.46] -118.7  Inventory: [337.0, 266.0, 34.0, 20.0]  Order: [6.68, 7.97, 8.09, 8.12] Demand: [5.15]
+Reward for thread 2: [-191.69, -58.42, -58.24, -94.68] -100.76  Inventory: [588.0, 40.0, 30.0, 113.0]  Order: [7.34, 7.44, 7.46, 7.92] Demand: [4.505]
+Reward for thread 3: [-68.03, -46.8, -35.37, -32.79] -45.75  Inventory: [0.0, 8.0, 0.0, 0.0]  Order: [9.12, 9.16, 9.2, 9.21] Demand: [11.46]
+Reward for thread 4: [-128.72, -66.15, -67.66, -69.75] -83.07  Inventory: [341.0, 156.0, 124.0, 62.0]  Order: [7.67, 8.48, 9.04, 9.31] Demand: [6.135]
+Reward for thread 5: [-260.94, -155.08, -97.2, -75.93] -147.29  Inventory: [0.0, 0.0, 83.0, 45.0]  Order: [10.3, 8.56, 8.86, 8.93] Demand: [13.615]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 36/3000 | Cost: 34071.00 | SL: 0.159 | Bullwhip: 2.13 | alpha: [0.33,0.56,0.77,0.48]
+
+ Algo happo Exp check updates 35/3000 episodes, total num timesteps 36000/3000000.0, FPS 49.
+
+Reward for thread 1: [-50.64, -41.19, -34.47, -37.27] -40.89  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.46, 9.65, 9.37, 8.92] Demand: [9.925]
+Reward for thread 2: [-125.08, -66.58, -51.34, -71.71] -78.68  Inventory: [0.0, 0.0, 0.0, 100.0]  Order: [8.99, 8.25, 8.14, 8.56] Demand: [11.22]
+Reward for thread 3: [-251.27, -128.18, -99.17, -131.45] -152.52  Inventory: [816.0, 120.0, 19.0, 62.0]  Order: [7.78, 8.3, 8.3, 8.47] Demand: [3.755]
+Reward for thread 4: [-198.78, -120.2, -91.8, -78.17] -122.24  Inventory: [477.0, 263.0, 0.0, 49.0]  Order: [6.03, 7.33, 7.2, 7.38] Demand: [3.79]
+Reward for thread 5: [-244.78, -189.9, -81.21, -117.01] -158.22  Inventory: [0.0, 0.0, 4.0, 26.0]  Order: [10.74, 9.14, 9.11, 9.12] Demand: [13.34]
+Episode 37/3000 | Cost: 134711.00 | SL: 0.019 | Bullwhip: 2.89 | alpha: [0.48,0.26,0.51,0.31]
+
+ Algo happo Exp check updates 36/3000 episodes, total num timesteps 37000/3000000.0, FPS 49.
+
+Reward for thread 1: [-331.76, -153.82, -95.26, -124.44] -176.32  Inventory: [0.0, 0.0, 0.0, 47.0]  Order: [10.96, 9.71, 9.5, 9.56] Demand: [16.46]
+Reward for thread 2: [-48.43, -72.76, -40.58, -40.85] -50.65  Inventory: [98.0, 172.0, 104.0, 97.0]  Order: [7.22, 7.88, 8.27, 8.74] Demand: [6.895]
+Reward for thread 3: [-41.26, -54.62, -41.15, -35.54] -43.14  Inventory: [80.0, 33.0, 89.0, 37.0]  Order: [8.96, 9.06, 9.34, 9.36] Demand: [8.745]
+Reward for thread 4: [-575.8, -80.12, -130.73, -140.52] -231.79  Inventory: [0.0, 0.0, 102.0, 41.0]  Order: [10.28, 10.18, 10.5, 10.64] Demand: [17.2]
+Reward for thread 5: [-164.22, -125.17, -38.74, -72.58] -100.18  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.66, 9.24, 9.2, 9.2] Demand: [12.92]
+Episode 38/3000 | Cost: 52826.00 | SL: 0.935 | Bullwhip: 2.10 | alpha: [0.76,0.27,0.67,0.65]
+
+ Algo happo Exp check updates 37/3000 episodes, total num timesteps 38000/3000000.0, FPS 49.
+
+Reward for thread 1: [-77.55, -72.39, -48.69, -57.88] -64.13  Inventory: [83.0, 216.0, 64.0, 37.0]  Order: [6.94, 7.94, 8.14, 8.27] Demand: [6.705]
+Reward for thread 2: [-197.16, -158.55, -80.82, -38.18] -118.68  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.92, 9.96, 9.72, 9.48] Demand: [13.2]
+Reward for thread 3: [-70.54, -46.59, -43.37, -56.23] -54.18  Inventory: [0.0, 0.0, 19.0, 23.0]  Order: [9.36, 8.87, 8.9, 9.0] Demand: [11.88]
+Reward for thread 4: [-33.79, -39.59, -33.09, -52.86] -39.83  Inventory: [0.0, 49.0, 20.0, 32.0]  Order: [8.43, 8.58, 8.65, 8.68] Demand: [8.655]
+Reward for thread 5: [-84.81, -117.69, -62.17, -37.59] -75.56  Inventory: [268.0, 0.0, 0.0, 12.0]  Order: [10.27, 9.49, 9.3, 9.26] Demand: [8.11]
+Episode 39/3000 | Cost: 71456.00 | SL: 0.905 | Bullwhip: 2.43 | alpha: [0.13,0.64,0.75,0.11]
+
+ Algo happo Exp check updates 38/3000 episodes, total num timesteps 39000/3000000.0, FPS 48.
+
+Reward for thread 1: [-96.16, -92.23, -72.12, -85.58] -86.52  Inventory: [226.0, 217.0, 18.0, 142.0]  Order: [6.43, 7.43, 7.4, 7.96] Demand: [5.45]
+Reward for thread 2: [-171.31, -37.26, -44.29, -44.36] -74.3  Inventory: [0.0, 0.0, 28.0, 0.0]  Order: [10.4, 10.09, 10.31, 10.32] Demand: [13.82]
+Reward for thread 3: [-236.6, -122.99, -73.21, -32.12] -116.23  Inventory: [0.0, 0.0, 50.0, 24.0]  Order: [11.5, 10.07, 10.22, 10.26] Demand: [13.535]
+Reward for thread 4: [-74.65, -68.2, -56.58, -55.17] -63.65  Inventory: [284.0, 134.0, 31.0, 68.0]  Order: [7.3, 7.87, 7.98, 8.2] Demand: [6.005]
+Reward for thread 5: [-126.2, -37.87, -52.42, -50.4] -66.72  Inventory: [0.0, 0.0, 10.0, 0.0]  Order: [10.74, 10.02, 10.47, 10.21] Demand: [12.745]
+Episode 40/3000 | Cost: 85120.00 | SL: 0.034 | Bullwhip: 1.23 | alpha: [0.75,0.93,0.10,0.33]
+
+ Algo happo Exp check updates 39/3000 episodes, total num timesteps 40000/3000000.0, FPS 48.
+
+Reward for thread 1: [-256.53, -63.69, -98.66, -82.57] -125.36  Inventory: [0.0, 0.0, 28.0, 0.0]  Order: [11.59, 10.68, 10.87, 10.71] Demand: [12.385]
+Reward for thread 2: [-304.84, -118.77, -87.14, -105.1] -153.96  Inventory: [0.0, 0.0, 0.0, 53.0]  Order: [11.82, 10.38, 10.16, 10.35] Demand: [14.43]
+Reward for thread 3: [-93.24, -172.37, -86.38, -80.72] -108.18  Inventory: [296.0, 350.0, 30.0, 93.0]  Order: [6.5, 8.18, 8.18, 8.5] Demand: [5.185]
+Reward for thread 4: [-35.25, -42.32, -41.58, -40.62] -39.94  Inventory: [163.0, 0.0, 0.0, 0.0]  Order: [9.18, 9.38, 9.39, 9.12] Demand: [8.285]
+Reward for thread 5: [-78.18, -200.41, -30.79, -33.11] -85.62  Inventory: [0.0, 0.0, 28.0, 5.0]  Order: [12.24, 10.22, 10.3, 10.24] Demand: [11.025]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 41/3000 | Cost: 48777.00 | SL: 0.878 | Bullwhip: 1.24 | alpha: [0.68,0.39,0.03,0.08]
+
+ Algo happo Exp check updates 40/3000 episodes, total num timesteps 41000/3000000.0, FPS 48.
+
+Reward for thread 1: [-89.67, -63.54, -59.88, -59.94] -68.26  Inventory: [278.0, 165.0, 51.0, 89.0]  Order: [7.24, 7.98, 8.07, 8.44] Demand: [6.055]
+Reward for thread 2: [-92.61, -86.08, -100.58, -84.99] -91.06  Inventory: [0.0, 29.0, 90.0, 141.0]  Order: [6.56, 6.6, 7.08, 7.64] Demand: [6.65]
+Reward for thread 3: [-52.58, -46.0, -43.05, -42.7] -46.08  Inventory: [132.0, 79.0, 48.0, 91.0]  Order: [8.1, 8.32, 8.35, 8.66] Demand: [7.6]
+Reward for thread 4: [-41.95, -34.0, -44.29, -44.72] -41.24  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.05, 10.02, 9.9, 9.74] Demand: [10.065]
+Reward for thread 5: [-157.5, -129.64, -119.87, -110.44] -129.36  Inventory: [569.0, 183.0, 79.0, 150.0]  Order: [5.94, 6.72, 7.1, 7.72] Demand: [3.275]
+Episode 42/3000 | Cost: 42594.00 | SL: 0.144 | Bullwhip: 2.83 | alpha: [0.54,0.74,0.43,0.13]
+
+ Algo happo Exp check updates 41/3000 episodes, total num timesteps 42000/3000000.0, FPS 48.
+
+Reward for thread 1: [-58.65, -50.07, -59.77, -50.55] -54.76  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.99, 10.12, 10.09, 9.94] Demand: [10.645]
+Reward for thread 2: [-334.65, -147.57, -113.25, -44.12] -159.9  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.82, 10.7, 10.5, 10.42] Demand: [14.665]
+Reward for thread 3: [-35.14, -38.33, -43.24, -45.83] -40.64  Inventory: [0.0, 0.0, 34.0, 26.0]  Order: [8.14, 7.94, 8.08, 8.18] Demand: [8.365]
+Reward for thread 4: [-36.31, -37.44, -36.29, -35.36] -36.35  Inventory: [80.0, 11.0, 22.0, 20.0]  Order: [9.26, 9.35, 9.25, 9.2] Demand: [8.93]
+Reward for thread 5: [-59.29, -71.56, -64.56, -81.61] -69.26  Inventory: [103.0, 129.0, 0.0, 237.0]  Order: [7.0, 7.54, 7.53, 8.64] Demand: [6.585]
+Episode 43/3000 | Cost: 111968.00 | SL: 1.000 | Bullwhip: 1.21 | alpha: [0.67,0.71,0.06,0.74]
+
+ Algo happo Exp check updates 42/3000 episodes, total num timesteps 43000/3000000.0, FPS 48.
+
+Reward for thread 1: [-242.59, -176.32, -132.7, -75.05] -156.66  Inventory: [586.0, 262.0, 37.0, 70.0]  Order: [5.77, 6.9, 6.92, 7.16] Demand: [2.835]
+Reward for thread 2: [-48.4, -58.49, -67.8, -72.29] -61.74  Inventory: [56.0, 29.0, 66.0, 100.0]  Order: [6.49, 6.44, 6.78, 7.12] Demand: [6.27]
+Reward for thread 3: [-298.63, -132.09, -113.61, -110.34] -163.67  Inventory: [0.0, 0.0, 24.0, 4.0]  Order: [11.78, 10.88, 10.94, 10.78] Demand: [14.54]
+Reward for thread 4: [-30.51, -32.61, -38.44, -31.72] -33.32  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [8.88, 8.65, 8.54, 8.14] Demand: [8.745]
+Reward for thread 5: [-75.59, -70.64, -53.78, -39.6] -59.9  Inventory: [53.0, 112.0, 35.0, 72.0]  Order: [7.17, 7.68, 7.79, 8.06] Demand: [6.92]
+Episode 44/3000 | Cost: 67290.00 | SL: 0.041 | Bullwhip: 1.36 | alpha: [0.76,0.54,0.07,0.11]
+
+ Algo happo Exp check updates 43/3000 episodes, total num timesteps 44000/3000000.0, FPS 48.
+
+Reward for thread 1: [-181.51, -71.75, -80.71, -77.97] -102.98  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.25, 9.24, 8.81, 8.66] Demand: [12.995]
+Reward for thread 2: [-82.02, -79.54, -52.24, -35.17] -62.24  Inventory: [144.0, 292.0, 27.0, 74.0]  Order: [6.36, 7.69, 7.64, 7.84] Demand: [5.79]
+Reward for thread 3: [-330.11, -146.15, -50.31, -58.04] -146.15  Inventory: [0.0, 0.0, 0.0, 10.0]  Order: [11.38, 11.25, 10.7, 10.66] Demand: [15.755]
+Reward for thread 4: [-137.34, -70.64, -65.28, -70.19] -85.86  Inventory: [460.0, 40.0, 22.0, 0.0]  Order: [6.86, 6.98, 7.17, 6.93] Demand: [4.74]
+Reward for thread 5: [-76.4, -60.27, -32.86, -50.98] -55.13  Inventory: [232.0, 68.0, 59.0, 71.0]  Order: [9.45, 9.64, 9.8, 10.06] Demand: [8.47]
+Episode 45/3000 | Cost: 55438.00 | SL: 0.102 | Bullwhip: 1.50 | alpha: [0.83,0.24,0.34,0.68]
+
+ Algo happo Exp check updates 44/3000 episodes, total num timesteps 45000/3000000.0, FPS 48.
+
+Reward for thread 1: [-89.7, -85.46, -54.26, -36.53] -66.49  Inventory: [0.0, 0.0, 47.0, 0.0]  Order: [11.66, 10.28, 10.58, 10.45] Demand: [12.56]
+Reward for thread 2: [-44.99, -95.88, -43.17, -30.64] -53.67  Inventory: [0.0, 0.0, 125.0, 57.0]  Order: [7.78, 7.59, 8.04, 8.27] Demand: [8.41]
+Reward for thread 3: [-121.23, -125.3, -60.1, -62.73] -92.34  Inventory: [398.0, 250.0, 110.0, 0.0]  Order: [5.83, 6.98, 7.47, 7.38] Demand: [3.93]
+Reward for thread 4: [-54.77, -63.43, -53.43, -46.13] -54.44  Inventory: [0.0, 0.0, 21.0, 0.0]  Order: [8.6, 8.32, 8.45, 8.31] Demand: [8.96]
+Reward for thread 5: [-86.32, -78.11, -77.14, -33.53] -68.78  Inventory: [231.0, 0.0, 0.0, 0.0]  Order: [10.22, 10.84, 9.89, 9.84] Demand: [8.655]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 46/3000 | Cost: 43277.00 | SL: 0.124 | Bullwhip: 2.65 | alpha: [0.18,0.46,0.75,0.98]
+
+ Algo happo Exp check updates 45/3000 episodes, total num timesteps 46000/3000000.0, FPS 48.
+
+Reward for thread 1: [-58.59, -64.2, -42.89, -22.86] -47.14  Inventory: [0.0, 0.0, 0.0, 12.0]  Order: [9.92, 9.56, 9.34, 9.34] Demand: [10.12]
+Reward for thread 2: [-34.8, -46.09, -50.68, -42.74] -43.58  Inventory: [16.0, 79.0, 105.0, 69.0]  Order: [6.72, 6.96, 7.38, 7.56] Demand: [6.685]
+Reward for thread 3: [-356.93, -136.47, -53.96, -33.65] -145.25  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.03, 9.72, 9.66, 9.48] Demand: [15.355]
+Reward for thread 4: [-31.42, -47.15, -31.22, -35.56] -36.34  Inventory: [14.0, 0.0, 13.0, 0.0]  Order: [10.01, 9.32, 9.62, 9.45] Demand: [9.25]
+Reward for thread 5: [-61.46, -58.83, -51.28, -40.1] -52.92  Inventory: [0.0, 0.0, 0.0, 10.0]  Order: [9.34, 9.35, 9.1, 9.02] Demand: [11.4]
+Episode 47/3000 | Cost: 43153.00 | SL: 0.101 | Bullwhip: 1.26 | alpha: [0.37,0.16,0.83,0.31]
+
+ Algo happo Exp check updates 46/3000 episodes, total num timesteps 47000/3000000.0, FPS 48.
+
+Reward for thread 1: [-77.1, -52.76, -33.61, -44.66] -52.03  Inventory: [142.0, 152.0, 47.0, 42.0]  Order: [8.84, 9.4, 9.56, 9.72] Demand: [8.345]
+Reward for thread 2: [-29.62, -27.99, -33.48, -42.97] -33.52  Inventory: [85.0, 31.0, 0.0, 0.0]  Order: [8.49, 8.61, 8.8, 8.56] Demand: [8.13]
+Reward for thread 3: [-40.28, -40.44, -41.01, -39.52] -40.31  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [8.66, 8.38, 8.47, 8.1] Demand: [8.075]
+Reward for thread 4: [-61.11, -68.13, -56.15, -35.33] -55.18  Inventory: [62.0, 260.0, 95.0, 42.0]  Order: [6.34, 7.46, 7.78, 7.88] Demand: [6.195]
+Reward for thread 5: [-125.77, -89.07, -99.88, -94.07] -102.2  Inventory: [0.0, 23.0, 49.0, 2.0]  Order: [11.04, 11.06, 11.41, 11.44] Demand: [14.3]
+Episode 48/3000 | Cost: 70392.00 | SL: 0.106 | Bullwhip: 1.20 | alpha: [0.22,0.01,0.87,0.05]
+
+ Algo happo Exp check updates 47/3000 episodes, total num timesteps 48000/3000000.0, FPS 48.
+
+Reward for thread 1: [-102.84, -88.33, -44.22, -85.04] -80.11  Inventory: [450.0, 82.0, 57.0, 12.0]  Order: [9.25, 9.49, 9.72, 9.76] Demand: [7.13]
+Reward for thread 2: [-87.46, -54.55, -59.15, -32.15] -58.33  Inventory: [0.0, 10.0, 31.0, 18.0]  Order: [9.44, 9.48, 9.65, 9.74] Demand: [11.945]
+Reward for thread 3: [-113.99, -67.6, -35.38, -44.93] -65.47  Inventory: [266.0, 106.0, 82.0, 53.0]  Order: [9.56, 9.99, 10.19, 10.32] Demand: [8.35]
+Reward for thread 4: [-38.45, -48.94, -38.12, -32.01] -39.38  Inventory: [28.0, 69.0, 43.0, 67.0]  Order: [9.63, 9.96, 10.01, 10.3] Demand: [9.63]
+Reward for thread 5: [-187.81, -128.7, -56.91, -109.29] -120.68  Inventory: [0.0, 0.0, 38.0, 0.0]  Order: [11.5, 10.19, 10.66, 10.52] Demand: [13.135]
+Episode 49/3000 | Cost: 54660.00 | SL: 0.858 | Bullwhip: 1.39 | alpha: [0.46,0.09,0.83,0.22]
+
+ Algo happo Exp check updates 48/3000 episodes, total num timesteps 49000/3000000.0, FPS 48.
+
+Reward for thread 1: [-85.02, -70.27, -57.85, -58.16] -67.82  Inventory: [276.0, 259.0, 29.0, 58.0]  Order: [5.78, 7.01, 6.96, 7.12] Demand: [4.53]
+Reward for thread 2: [-36.5, -50.8, -41.73, -41.06] -42.52  Inventory: [98.0, 45.0, 58.0, 105.0]  Order: [6.97, 7.04, 7.15, 7.58] Demand: [6.62]
+Reward for thread 3: [-85.41, -74.45, -70.89, -50.4] -70.29  Inventory: [198.0, 136.0, 86.0, 38.0]  Order: [8.1, 8.68, 8.99, 8.96] Demand: [7.18]
+Reward for thread 4: [-119.45, -78.89, -56.39, -70.62] -81.34  Inventory: [312.0, 160.0, 36.0, 6.0]  Order: [5.94, 6.62, 6.71, 6.62] Demand: [4.41]
+Reward for thread 5: [-387.16, -76.34, -179.3, -153.42] -199.05  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.42, 11.28, 11.1, 10.94] Demand: [17.315]
+Episode 50/3000 | Cost: 86710.00 | SL: 0.152 | Bullwhip: 0.96 | alpha: [0.84,1.00,0.82,0.21]
+
+ Algo happo Exp check updates 49/3000 episodes, total num timesteps 50000/3000000.0, FPS 48.
+
+Reward for thread 1: [-191.55, -122.54, -67.93, -95.05] -119.27  Inventory: [452.0, 157.0, 8.0, 93.0]  Order: [9.36, 10.04, 10.0, 10.36] Demand: [7.315]
+Reward for thread 2: [-48.96, -48.42, -42.01, -56.92] -49.08  Inventory: [27.0, 0.0, 28.0, 66.0]  Order: [7.96, 7.77, 7.83, 8.03] Demand: [7.75]
+Reward for thread 3: [-548.26, -191.52, -72.7, -109.19] -230.42  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.12, 11.43, 11.38, 11.14] Demand: [15.79]
+Reward for thread 4: [-74.88, -52.73, -65.61, -56.63] -62.46  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.76, 11.14, 10.78, 10.2] Demand: [11.29]
+Reward for thread 5: [-78.71, -55.63, -72.65, -70.71] -69.42  Inventory: [404.0, 46.0, 135.0, 164.0]  Order: [6.42, 6.49, 7.0, 7.69] Demand: [4.49]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 51/3000 | Cost: 69252.00 | SL: 0.040 | Bullwhip: 1.62 | alpha: [0.74,0.31,0.98,0.25]
+
+ Algo happo Exp check updates 50/3000 episodes, total num timesteps 51000/3000000.0, FPS 48.
+
+Reward for thread 1: [-207.99, -71.23, -33.29, -71.64] -96.04  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.62, 10.38, 10.32, 10.12] Demand: [14.69]
+Reward for thread 2: [-66.83, -72.73, -70.93, -53.59] -66.02  Inventory: [62.0, 12.0, 85.0, 146.0]  Order: [5.95, 5.96, 6.18, 6.8] Demand: [5.76]
+Reward for thread 3: [-102.88, -138.39, -72.9, -94.13] -102.07  Inventory: [120.0, 356.0, 47.0, 168.0]  Order: [4.93, 6.55, 6.64, 7.3] Demand: [4.55]
+Reward for thread 4: [-110.93, -74.18, -85.88, -78.71] -87.42  Inventory: [366.0, 53.0, 103.0, 188.0]  Order: [7.34, 7.48, 7.84, 8.61] Demand: [5.52]
+Reward for thread 5: [-79.6, -76.06, -56.82, -29.41] -60.47  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.35, 9.02, 9.02, 8.93] Demand: [11.135]
+Episode 52/3000 | Cost: 117302.00 | SL: 0.024 | Bullwhip: 2.00 | alpha: [0.32,0.49,0.51,0.82]
+
+ Algo happo Exp check updates 51/3000 episodes, total num timesteps 52000/3000000.0, FPS 48.
+
+Reward for thread 1: [-236.26, -125.62, -85.33, -53.98] -125.3  Inventory: [0.0, 0.0, 0.0, 27.0]  Order: [11.28, 10.32, 10.26, 10.32] Demand: [16.44]
+Reward for thread 2: [-45.54, -48.65, -54.28, -48.65] -49.28  Inventory: [0.0, 81.0, 154.0, 119.0]  Order: [8.22, 8.48, 9.06, 9.48] Demand: [8.38]
+Reward for thread 3: [-129.66, -65.28, -43.24, -47.87] -71.51  Inventory: [0.0, 0.0, 0.0, 2.0]  Order: [12.2, 11.56, 11.42, 11.32] Demand: [15.455]
+Reward for thread 4: [-60.77, -66.15, -60.51, -59.97] -61.85  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.12, 8.49, 8.62, 8.44] Demand: [8.6]
+Reward for thread 5: [-56.17, -99.53, -65.65, -75.96] -74.33  Inventory: [0.0, 0.0, 7.0, 123.0]  Order: [7.2, 6.74, 6.76, 7.3] Demand: [7.14]
+Episode 53/3000 | Cost: 39650.00 | SL: 0.106 | Bullwhip: 1.97 | alpha: [0.37,0.25,0.93,0.70]
+
+ Algo happo Exp check updates 52/3000 episodes, total num timesteps 53000/3000000.0, FPS 48.
+
+Reward for thread 1: [-64.52, -47.19, -37.73, -37.06] -46.62  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.96, 9.8, 10.09, 9.87] Demand: [10.6]
+Reward for thread 2: [-57.77, -60.72, -38.23, -32.19] -47.23  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.54, 11.14, 11.1, 11.06] Demand: [11.99]
+Reward for thread 3: [-109.79, -119.96, -102.33, -102.83] -108.73  Inventory: [399.0, 158.0, 204.0, 93.0]  Order: [5.16, 5.8, 6.68, 7.02] Demand: [3.275]
+Reward for thread 4: [-227.74, -55.37, -78.38, -30.16] -97.91  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.2, 11.15, 11.47, 11.12] Demand: [13.78]
+Reward for thread 5: [-67.76, -73.25, -60.8, -52.73] -63.64  Inventory: [55.0, 132.0, 70.0, 85.0]  Order: [8.76, 9.23, 9.4, 9.7] Demand: [8.655]
+Episode 54/3000 | Cost: 65346.00 | SL: 1.000 | Bullwhip: 1.48 | alpha: [0.33,0.66,0.72,0.17]
+
+ Algo happo Exp check updates 53/3000 episodes, total num timesteps 54000/3000000.0, FPS 48.
+
+Reward for thread 1: [-85.25, -71.55, -91.87, -80.1] -82.19  Inventory: [223.0, 95.0, 220.0, 102.0]  Order: [5.01, 5.29, 6.25, 6.61] Demand: [3.92]
+Reward for thread 2: [-62.25, -50.94, -60.08, -32.79] -51.51  Inventory: [0.0, 1.0, 173.0, 49.0]  Order: [6.84, 6.68, 7.34, 7.5] Demand: [7.195]
+Reward for thread 3: [-42.44, -44.06, -42.33, -37.25] -41.52  Inventory: [0.0, 0.0, 0.0, 22.0]  Order: [11.56, 11.26, 11.18, 11.24] Demand: [12.035]
+Reward for thread 4: [-43.05, -43.17, -53.39, -41.22] -45.21  Inventory: [0.0, 0.0, 0.0, 23.0]  Order: [6.9, 6.66, 6.44, 6.46] Demand: [6.98]
+Reward for thread 5: [-46.15, -49.7, -45.85, -44.17] -46.47  Inventory: [58.0, 86.0, 23.0, 0.0]  Order: [9.74, 10.07, 10.14, 9.98] Demand: [9.685]
+Episode 55/3000 | Cost: 37298.00 | SL: 0.864 | Bullwhip: 3.46 | alpha: [0.50,0.85,0.88,0.40]
+
+ Algo happo Exp check updates 54/3000 episodes, total num timesteps 55000/3000000.0, FPS 48.
+
+Reward for thread 1: [-32.44, -40.29, -83.52, -44.24] -50.12  Inventory: [20.0, 92.0, 69.0, 105.0]  Order: [6.2, 6.5, 6.7, 7.13] Demand: [6.29]
+Reward for thread 2: [-44.86, -55.04, -81.14, -54.33] -58.84  Inventory: [0.0, 2.0, 0.0, 42.0]  Order: [7.3, 7.23, 7.14, 7.22] Demand: [7.375]
+Reward for thread 3: [-126.15, -85.94, -116.89, -40.77] -92.44  Inventory: [430.0, 91.0, 361.0, 30.0]  Order: [4.92, 5.22, 6.94, 7.02] Demand: [2.915]
+Reward for thread 4: [-50.79, -47.14, -99.84, -55.27] -63.26  Inventory: [6.0, 0.0, 170.0, 69.0]  Order: [7.36, 7.36, 8.08, 8.28] Demand: [7.305]
+Reward for thread 5: [-67.95, -45.84, -56.43, -39.69] -52.48  Inventory: [181.0, 69.0, 255.0, 26.0]  Order: [8.7, 8.86, 10.02, 10.11] Demand: [7.93]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 56/3000 | Cost: 86739.00 | SL: 0.993 | Bullwhip: 1.96 | alpha: [0.76,0.82,0.88,0.88]
+
+ Algo happo Exp check updates 55/3000 episodes, total num timesteps 56000/3000000.0, FPS 48.
+
+Reward for thread 1: [-108.96, -75.05, -220.12, -32.42] -109.14  Inventory: [198.0, 39.0, 491.0, 17.0]  Order: [5.28, 5.36, 7.62, 7.52] Demand: [4.47]
+Reward for thread 2: [-28.93, -30.37, -41.06, -31.66] -33.01  Inventory: [91.0, 1.0, 0.0, 0.0]  Order: [10.07, 10.2, 10.03, 10.06] Demand: [9.59]
+Reward for thread 3: [-329.56, -123.77, -125.74, -41.57] -155.16  Inventory: [0.0, 0.0, 0.0, 2.0]  Order: [11.46, 10.74, 10.48, 10.44] Demand: [15.52]
+Reward for thread 4: [-34.31, -33.23, -47.16, -26.28] -35.24  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [7.53, 7.56, 7.42, 7.22] Demand: [7.56]
+Reward for thread 5: [-138.35, -53.22, -63.84, -73.47] -82.22  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.56, 10.42, 10.38, 10.01] Demand: [13.73]
+Episode 57/3000 | Cost: 33686.00 | SL: 0.395 | Bullwhip: 2.49 | alpha: [0.71,0.96,0.78,0.79]
+
+ Algo happo Exp check updates 56/3000 episodes, total num timesteps 57000/3000000.0, FPS 48.
+
+Reward for thread 1: [-36.96, -39.59, -57.84, -34.05] -42.11  Inventory: [88.0, 33.0, 27.0, 75.0]  Order: [8.86, 8.98, 8.96, 9.2] Demand: [8.55]
+Reward for thread 2: [-33.55, -33.51, -36.8, -33.17] -34.26  Inventory: [16.0, 4.0, 0.0, 23.0]  Order: [8.68, 8.75, 8.63, 8.72] Demand: [8.7]
+Reward for thread 3: [-27.94, -28.74, -26.84, -30.83] -28.59  Inventory: [77.0, 7.0, 19.0, 38.0]  Order: [10.18, 10.24, 10.24, 10.32] Demand: [9.835]
+Reward for thread 4: [-261.05, -46.06, -39.69, -98.28] -111.27  Inventory: [0.0, 0.0, 0.0, 9.0]  Order: [12.39, 12.56, 12.04, 12.12] Demand: [15.255]
+Reward for thread 5: [-50.27, -49.4, -94.47, -61.22] -63.84  Inventory: [19.0, 95.0, 102.0, 140.0]  Order: [5.54, 5.84, 6.26, 6.86] Demand: [5.615]
+Episode 58/3000 | Cost: 68376.00 | SL: 0.734 | Bullwhip: 2.29 | alpha: [0.45,0.61,0.29,0.24]
+
+ Algo happo Exp check updates 57/3000 episodes, total num timesteps 58000/3000000.0, FPS 48.
+
+Reward for thread 1: [-75.72, -107.31, -79.41, -87.24] -87.42  Inventory: [41.0, 89.0, 68.0, 220.0]  Order: [6.12, 6.46, 6.58, 7.55] Demand: [5.915]
+Reward for thread 2: [-105.59, -90.89, -65.29, -86.74] -87.13  Inventory: [0.0, 0.0, 0.0, 37.0]  Order: [11.26, 9.76, 9.7, 9.7] Demand: [13.215]
+Reward for thread 3: [-157.23, -138.39, -98.76, -67.21] -115.4  Inventory: [0.0, 0.0, 46.0, 0.0]  Order: [11.93, 10.36, 10.52, 10.42] Demand: [12.555]
+Reward for thread 4: [-173.55, -120.6, -90.78, -51.55] -109.12  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.08, 10.55, 10.6, 10.55] Demand: [12.54]
+Reward for thread 5: [-40.92, -44.22, -45.11, -44.1] -43.59  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [8.07, 7.74, 7.65, 7.44] Demand: [8.165]
+Episode 59/3000 | Cost: 70571.00 | SL: 0.049 | Bullwhip: 2.03 | alpha: [0.43,0.53,0.01,0.01]
+
+ Algo happo Exp check updates 58/3000 episodes, total num timesteps 59000/3000000.0, FPS 48.
+
+Reward for thread 1: [-141.92, -65.95, -87.95, -87.58] -95.85  Inventory: [0.0, 17.0, 40.0, 45.0]  Order: [10.88, 10.87, 10.87, 10.96] Demand: [12.35]
+Reward for thread 2: [-81.87, -55.89, -52.21, -57.32] -61.82  Inventory: [229.0, 38.0, 67.0, 177.0]  Order: [7.04, 7.06, 7.22, 8.08] Demand: [6.075]
+Reward for thread 3: [-67.39, -45.64, -44.56, -40.5] -49.52  Inventory: [12.0, 90.0, 107.0, 59.0]  Order: [10.78, 11.05, 11.41, 11.58] Demand: [10.85]
+Reward for thread 4: [-44.93, -35.24, -54.31, -40.22] -43.68  Inventory: [96.0, 19.0, 142.0, 43.0]  Order: [8.38, 8.32, 8.85, 8.94] Demand: [7.91]
+Reward for thread 5: [-57.31, -56.92, -71.58, -74.06] -64.97  Inventory: [130.0, 119.0, 169.0, 82.0]  Order: [4.81, 5.21, 5.88, 6.17] Demand: [4.355]
+Episode 60/3000 | Cost: 129848.00 | SL: 0.022 | Bullwhip: 2.29 | alpha: [0.74,0.80,0.81,0.31]
+
+ Algo happo Exp check updates 59/3000 episodes, total num timesteps 60000/3000000.0, FPS 48.
+
+Reward for thread 1: [-422.11, -69.07, -80.26, -120.38] -172.96  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.81, 12.18, 11.96, 11.77] Demand: [15.235]
+Reward for thread 2: [-48.66, -36.62, -46.1, -47.18] -44.64  Inventory: [43.0, 51.0, 0.0, 0.0]  Order: [9.76, 10.24, 9.96, 9.87] Demand: [9.705]
+Reward for thread 3: [-67.76, -58.08, -33.85, -49.88] -52.39  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.24, 9.46, 9.54, 9.27] Demand: [11.06]
+Reward for thread 4: [-55.01, -81.47, -139.84, -63.3] -84.9  Inventory: [48.0, 71.0, 268.0, 133.0]  Order: [5.88, 6.09, 7.28, 7.76] Demand: [5.835]
+Reward for thread 5: [-129.83, -62.13, -90.46, -181.0] -115.86  Inventory: [372.0, 67.0, 40.0, 331.0]  Order: [5.08, 5.37, 5.42, 6.93] Demand: [3.415]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Training finished because of no imporvement for 10 evaluations
+Calling Stability Gate...
+Gate evaluation exception/fail: Command '['C:\\Users\\thims\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', 'D:\\SCM_TARAN\\Episodic_Meta_LLM\\MADRL\\training\\stability_gate.py']' returned non-zero exit status 1.
+Gate failed. Unfreezing weights and continuing for 500 episodes.
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 61/3000 | Cost: 57292.00 | SL: 0.973 | Bullwhip: 1.78 | alpha: [0.92,0.52,0.06,0.06]
+
+ Algo happo Exp check updates 0/3000 episodes, total num timesteps 1000/3000000.0, FPS 51.
+
+Reward for thread 1: [-59.3, -57.14, -70.8, -74.69] -65.48  Inventory: [156.0, 45.0, 61.0, 240.0]  Order: [5.44, 5.56, 5.79, 6.82] Demand: [4.88]
+Reward for thread 2: [-95.25, -84.97, -60.09, -72.82] -78.28  Inventory: [273.0, 0.0, 188.0, 146.0]  Order: [8.38, 8.13, 8.97, 9.56] Demand: [7.1]
+Reward for thread 3: [-108.62, -139.91, -42.39, -63.16] -88.52  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.18, 10.74, 10.86, 10.85] Demand: [12.71]
+Reward for thread 4: [-119.13, -89.33, -92.61, -85.67] -96.68  Inventory: [215.0, 63.0, 224.0, 205.0]  Order: [6.62, 6.72, 7.74, 8.7] Demand: [5.69]
+Reward for thread 5: [-29.45, -55.39, -35.23, -37.3] -39.34  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.94, 10.81, 10.8, 10.79] Demand: [10.77]
+Episode 62/3000 | Cost: 29244.00 | SL: 0.451 | Bullwhip: 2.83 | alpha: [0.68,0.49,0.62,0.38]
+
+ Algo happo Exp check updates 1/3000 episodes, total num timesteps 2000/3000000.0, FPS 50.
+
+Reward for thread 1: [-28.86, -37.01, -44.33, -35.71] -36.48  Inventory: [0.0, 0.0, 3.0, 51.0]  Order: [9.12, 9.06, 8.98, 9.07] Demand: [9.09]
+Reward for thread 2: [-33.0, -32.7, -52.53, -36.5] -38.68  Inventory: [0.0, 17.0, 127.0, 17.0]  Order: [7.6, 7.46, 7.92, 7.8] Demand: [7.69]
+Reward for thread 3: [-33.7, -40.92, -48.24, -77.4] -50.07  Inventory: [1.0, 0.0, 0.0, 133.0]  Order: [5.84, 5.9, 5.76, 6.4] Demand: [5.815]
+Reward for thread 4: [-47.5, -54.03, -78.69, -56.55] -59.19  Inventory: [125.0, 44.0, 211.0, 137.0]  Order: [5.72, 5.71, 6.56, 7.08] Demand: [5.28]
+Reward for thread 5: [-191.41, -84.46, -37.53, -36.25] -87.41  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.92, 11.32, 11.26, 11.19] Demand: [14.035]
+Episode 63/3000 | Cost: 108830.00 | SL: 0.024 | Bullwhip: 2.67 | alpha: [0.29,0.43,0.16,0.02]
+
+ Algo happo Exp check updates 2/3000 episodes, total num timesteps 3000/3000000.0, FPS 48.
+
+Reward for thread 1: [-227.61, -90.2, -119.39, -133.44] -142.66  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.99, 10.95, 10.94, 10.89] Demand: [14.975]
+Reward for thread 2: [-52.58, -43.07, -38.46, -31.41] -41.38  Inventory: [35.0, 54.0, 105.0, 70.0]  Order: [8.67, 8.86, 9.29, 9.53] Demand: [8.645]
+Reward for thread 3: [-34.02, -28.38, -45.27, -45.06] -38.18  Inventory: [70.0, 37.0, 81.0, 64.0]  Order: [6.7, 6.64, 6.94, 7.18] Demand: [6.56]
+Reward for thread 4: [-79.64, -72.3, -130.65, -72.95] -88.88  Inventory: [26.0, 33.0, 319.0, 237.0]  Order: [4.77, 4.86, 6.26, 7.37] Demand: [4.855]
+Reward for thread 5: [-171.29, -110.22, -151.83, -97.56] -132.73  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.7, 10.9, 10.96, 10.78] Demand: [14.565]
+Episode 64/3000 | Cost: 31525.00 | SL: 0.163 | Bullwhip: 1.72 | alpha: [0.67,0.50,0.77,0.23]
+
+ Algo happo Exp check updates 3/3000 episodes, total num timesteps 4000/3000000.0, FPS 48.
+
+Reward for thread 1: [-48.08, -35.98, -40.41, -37.72] -40.55  Inventory: [0.0, 18.0, 0.0, 0.0]  Order: [7.68, 7.83, 7.85, 7.63] Demand: [9.085]
+Reward for thread 2: [-180.2, -67.49, -65.12, -38.37] -87.8  Inventory: [0.0, 22.0, 0.0, 1.0]  Order: [9.85, 9.93, 9.86, 9.8] Demand: [11.04]
+Reward for thread 3: [-123.17, -75.7, -118.6, -56.13] -93.4  Inventory: [292.0, 111.0, 334.0, 22.0]  Order: [5.0, 5.34, 6.85, 6.84] Demand: [3.705]
+Reward for thread 4: [-221.02, -78.31, -84.75, -95.86] -119.99  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.24, 10.54, 9.98, 9.8] Demand: [12.915]
+Reward for thread 5: [-40.79, -22.65, -24.23, -31.34] -29.75  Inventory: [0.0, 0.0, 0.0, 26.0]  Order: [10.18, 10.12, 10.06, 10.02] Demand: [11.655]
+Episode 65/3000 | Cost: 53638.00 | SL: 0.860 | Bullwhip: 1.44 | alpha: [0.86,0.14,0.04,0.29]
+
+ Algo happo Exp check updates 4/3000 episodes, total num timesteps 5000/3000000.0, FPS 49.
+
+Reward for thread 1: [-63.03, -70.78, -67.69, -56.16] -64.41  Inventory: [120.0, 145.0, 239.0, 16.0]  Order: [4.77, 5.3, 6.34, 6.29] Demand: [4.22]
+Reward for thread 2: [-174.71, -37.18, -52.92, -53.79] -79.65  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.24, 10.36, 10.35, 10.12] Demand: [12.74]
+Reward for thread 3: [-312.22, -159.27, -153.56, -128.39] -188.36  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.98, 10.72, 10.64, 10.5] Demand: [15.525]
+Reward for thread 4: [-48.95, -42.83, -60.16, -44.0] -48.98  Inventory: [0.0, 0.0, 62.0, 27.0]  Order: [6.02, 5.9, 6.05, 6.06] Demand: [6.385]
+Reward for thread 5: [-69.41, -56.45, -58.72, -83.51] -67.02  Inventory: [144.0, 151.0, 28.0, 241.0]  Order: [5.04, 5.66, 5.59, 6.68] Demand: [4.55]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 66/3000 | Cost: 81010.00 | SL: 0.033 | Bullwhip: 2.38 | alpha: [0.15,0.12,0.91,0.29]
+
+ Algo happo Exp check updates 5/3000 episodes, total num timesteps 6000/3000000.0, FPS 48.
+
+Reward for thread 1: [-133.09, -92.9, -37.79, -79.84] -85.9  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.98, 11.02, 11.04, 10.78] Demand: [14.125]
+Reward for thread 2: [-144.26, -50.57, -67.8, -60.92] -80.89  Inventory: [0.0, 0.0, 0.0, 32.0]  Order: [11.08, 10.9, 10.82, 10.92] Demand: [12.655]
+Reward for thread 3: [-109.7, -60.83, -78.43, -84.01] -83.24  Inventory: [365.0, 11.0, 69.0, 177.0]  Order: [5.0, 4.89, 5.06, 5.83] Demand: [3.34]
+Reward for thread 4: [-280.66, -90.71, -94.63, -79.59] -136.4  Inventory: [0.0, 12.0, 34.0, 16.0]  Order: [9.06, 9.05, 9.02, 8.98] Demand: [14.5]
+Reward for thread 5: [-336.07, -64.27, -70.21, -103.54] -143.52  Inventory: [0.0, 0.0, 3.0, 0.0]  Order: [10.68, 10.58, 10.66, 10.48] Demand: [14.7]
+Episode 67/3000 | Cost: 83478.00 | SL: 0.034 | Bullwhip: 2.24 | alpha: [0.16,0.83,0.01,0.02]
+
+ Algo happo Exp check updates 6/3000 episodes, total num timesteps 7000/3000000.0, FPS 48.
+
+Reward for thread 1: [-136.98, -50.26, -103.62, -102.82] -98.42  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.87, 10.8, 10.72, 10.63] Demand: [14.675]
+Reward for thread 2: [-43.35, -42.02, -52.97, -42.12] -45.12  Inventory: [31.0, 14.0, 158.0, 78.0]  Order: [4.55, 4.37, 5.0, 5.35] Demand: [4.58]
+Reward for thread 3: [-48.49, -38.32, -51.84, -60.93] -49.9  Inventory: [0.0, 0.0, 0.0, 145.0]  Order: [6.26, 6.1, 6.02, 6.62] Demand: [6.24]
+Reward for thread 4: [-211.44, -74.3, -61.37, -67.44] -103.64  Inventory: [0.0, 1.0, 0.0, 0.0]  Order: [11.58, 11.57, 11.63, 11.53] Demand: [12.42]
+Reward for thread 5: [-86.06, -25.32, -44.05, -52.7] -52.03  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.79, 9.9, 9.96, 9.7] Demand: [10.895]
+Episode 68/3000 | Cost: 70984.00 | SL: 0.039 | Bullwhip: 2.15 | alpha: [0.41,0.88,0.41,0.08]
+
+ Algo happo Exp check updates 7/3000 episodes, total num timesteps 8000/3000000.0, FPS 49.
+
+Reward for thread 1: [-160.37, -30.56, -70.08, -83.43] -86.11  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.55, 10.92, 10.8, 10.71] Demand: [15.105]
+Reward for thread 2: [-82.49, -51.61, -37.8, -59.83] -57.93  Inventory: [56.0, 1.0, 0.0, 0.0]  Order: [11.5, 12.01, 11.69, 11.58] Demand: [11.3]
+Reward for thread 3: [-45.63, -42.11, -62.92, -55.54] -51.55  Inventory: [94.0, 32.0, 104.0, 39.0]  Order: [5.78, 5.8, 6.18, 6.16] Demand: [5.495]
+Reward for thread 4: [-65.76, -34.89, -43.83, -41.81] -46.57  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [7.6, 7.58, 7.66, 7.53] Demand: [8.085]
+Reward for thread 5: [-80.38, -90.2, -46.95, -37.12] -63.66  Inventory: [27.0, 137.0, 68.0, 104.0]  Order: [8.27, 8.78, 8.94, 9.3] Demand: [8.295]
+Episode 69/3000 | Cost: 28204.00 | SL: 0.503 | Bullwhip: 2.67 | alpha: [0.68,0.71,0.30,0.30]
+
+ Algo happo Exp check updates 8/3000 episodes, total num timesteps 9000/3000000.0, FPS 49.
+
+Reward for thread 1: [-34.36, -33.59, -36.28, -35.33] -34.89  Inventory: [29.0, 58.0, 121.0, 19.0]  Order: [9.4, 9.51, 9.98, 9.86] Demand: [9.29]
+Reward for thread 2: [-50.1, -29.99, -36.09, -35.29] -37.87  Inventory: [29.0, 56.0, 11.0, 0.0]  Order: [8.21, 8.34, 8.44, 8.36] Demand: [8.245]
+Reward for thread 3: [-98.74, -58.32, -60.16, -72.95] -72.54  Inventory: [288.0, 44.0, 3.0, 117.0]  Order: [5.48, 5.58, 5.67, 6.12] Demand: [4.165]
+Reward for thread 4: [-347.05, -110.2, -60.08, -37.39] -138.68  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.92, 11.96, 12.06, 11.95] Demand: [16.255]
+Reward for thread 5: [-73.64, -50.17, -76.78, -51.83] -63.1  Inventory: [214.0, 39.0, 115.0, 98.0]  Order: [5.47, 5.45, 5.86, 6.2] Demand: [4.585]
+Episode 70/3000 | Cost: 33413.00 | SL: 0.169 | Bullwhip: 1.92 | alpha: [0.94,0.85,0.58,0.00]
+
+ Algo happo Exp check updates 9/3000 episodes, total num timesteps 10000/3000000.0, FPS 49.
+
+Reward for thread 1: [-56.18, -38.86, -36.48, -41.76] -43.32  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.56, 9.23, 9.09, 8.83] Demand: [10.635]
+Reward for thread 2: [-46.77, -37.36, -36.29, -31.05] -37.87  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.59, 10.4, 10.44, 10.4] Demand: [10.75]
+Reward for thread 3: [-101.66, -100.7, -86.59, -69.25] -89.55  Inventory: [280.0, 256.0, 57.0, 57.0]  Order: [4.54, 5.68, 5.72, 5.85] Demand: [3.345]
+Reward for thread 4: [-91.0, -67.82, -51.8, -81.27] -72.97  Inventory: [427.0, 18.0, 74.0, 124.0]  Order: [4.99, 4.84, 4.96, 5.44] Demand: [2.995]
+Reward for thread 5: [-29.24, -38.51, -31.9, -28.37] -32.01  Inventory: [45.0, 82.0, 40.0, 65.0]  Order: [5.84, 6.1, 6.06, 6.28] Demand: [5.735]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 71/3000 | Cost: 31826.00 | SL: 0.286 | Bullwhip: 1.44 | alpha: [0.07,0.20,0.71,0.91]
+
+ Algo happo Exp check updates 10/3000 episodes, total num timesteps 11000/3000000.0, FPS 49.
+
+Reward for thread 1: [-41.44, -37.33, -36.27, -35.43] -37.62  Inventory: [256.0, 34.0, 57.0, 43.0]  Order: [8.01, 8.01, 8.07, 8.1] Demand: [6.925]
+Reward for thread 2: [-61.44, -51.98, -44.15, -34.88] -48.11  Inventory: [16.0, 8.0, 0.0, 28.0]  Order: [9.85, 10.01, 9.83, 9.87] Demand: [9.765]
+Reward for thread 3: [-148.87, -63.79, -54.11, -45.48] -78.06  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.8, 11.72, 11.66, 11.54] Demand: [11.95]
+Reward for thread 4: [-25.79, -32.09, -34.23, -35.33] -31.86  Inventory: [26.0, 55.0, 0.0, 0.0]  Order: [6.78, 6.92, 7.12, 7.04] Demand: [6.86]
+Reward for thread 5: [-34.71, -25.87, -34.35, -35.28] -32.55  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.84, 9.93, 9.88, 9.68] Demand: [10.34]
+Episode 72/3000 | Cost: 39076.00 | SL: 0.138 | Bullwhip: 1.87 | alpha: [0.56,0.91,0.02,0.46]
+
+ Algo happo Exp check updates 11/3000 episodes, total num timesteps 12000/3000000.0, FPS 49.
+
+Reward for thread 1: [-65.37, -47.31, -48.7, -39.76] -50.28  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.74, 11.67, 11.72, 11.64] Demand: [12.83]
+Reward for thread 2: [-186.19, -45.36, -55.11, -49.38] -84.01  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.9, 12.02, 11.58, 11.52] Demand: [13.435]
+Reward for thread 3: [-165.4, -80.45, -36.6, -40.37] -80.71  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [13.58, 12.66, 12.42, 12.38] Demand: [15.67]
+Reward for thread 4: [-123.65, -69.6, -48.59, -67.64] -77.37  Inventory: [439.0, 99.0, 47.0, 85.0]  Order: [4.61, 4.94, 4.97, 5.22] Demand: [2.605]
+Reward for thread 5: [-74.11, -44.02, -33.01, -35.55] -46.67  Inventory: [207.0, 80.0, 59.0, 54.0]  Order: [9.12, 9.28, 9.36, 9.49] Demand: [8.26]
+Episode 73/3000 | Cost: 30834.00 | SL: 0.312 | Bullwhip: 2.47 | alpha: [0.25,0.67,0.75,0.30]
+
+ Algo happo Exp check updates 12/3000 episodes, total num timesteps 13000/3000000.0, FPS 49.
+
+Reward for thread 1: [-39.15, -49.34, -33.36, -35.0] -39.21  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.06, 8.94, 8.85, 8.6] Demand: [9.12]
+Reward for thread 2: [-48.03, -32.42, -33.68, -27.11] -35.31  Inventory: [84.0, 95.0, 92.0, 26.0]  Order: [10.27, 10.56, 10.92, 10.86] Demand: [9.94]
+Reward for thread 3: [-39.6, -43.53, -44.97, -47.29] -43.85  Inventory: [93.0, 61.0, 28.0, 67.0]  Order: [6.04, 6.19, 6.12, 6.26] Demand: [5.77]
+Reward for thread 4: [-197.92, -102.95, -65.69, -42.79] -102.34  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.14, 12.38, 11.99, 11.91] Demand: [15.875]
+Reward for thread 5: [-38.7, -51.46, -45.11, -45.13] -45.1  Inventory: [65.0, 59.0, 0.0, 0.0]  Order: [7.34, 7.72, 7.75, 7.6] Demand: [7.14]
+Episode 74/3000 | Cost: 55692.00 | SL: 0.070 | Bullwhip: 1.50 | alpha: [0.88,0.51,0.01,0.52]
+
+ Algo happo Exp check updates 13/3000 episodes, total num timesteps 14000/3000000.0, FPS 49.
+
+Reward for thread 1: [-140.12, -59.16, -69.51, -46.25] -78.76  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.31, 11.65, 11.36, 11.34] Demand: [11.13]
+Reward for thread 2: [-201.47, -58.58, -52.04, -45.25] -89.34  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.74, 10.7, 10.56, 10.45] Demand: [14.33]
+Reward for thread 3: [-67.79, -55.66, -51.72, -52.54] -56.93  Inventory: [0.0, 0.0, 19.0, 0.0]  Order: [9.35, 9.18, 9.17, 9.16] Demand: [11.135]
+Reward for thread 4: [-137.29, -76.68, -63.87, -107.55] -96.35  Inventory: [339.0, 38.0, 43.0, 278.0]  Order: [5.0, 4.95, 4.97, 6.19] Demand: [3.48]
+Reward for thread 5: [-79.49, -67.28, -70.38, -70.6] -71.94  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.16, 11.26, 10.72, 10.66] Demand: [13.54]
+Episode 75/3000 | Cost: 26643.00 | SL: 0.456 | Bullwhip: 2.36 | alpha: [0.52,0.95,0.34,0.41]
+
+ Algo happo Exp check updates 14/3000 episodes, total num timesteps 15000/3000000.0, FPS 49.
+
+Reward for thread 1: [-26.82, -31.0, -35.0, -37.38] -32.55  Inventory: [21.0, 55.0, 53.0, 74.0]  Order: [7.38, 7.48, 7.55, 7.7] Demand: [7.46]
+Reward for thread 2: [-81.77, -48.18, -40.92, -48.84] -54.93  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.52, 10.6, 10.74, 10.65] Demand: [12.98]
+Reward for thread 3: [-62.01, -50.73, -39.82, -47.9] -50.12  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.43, 9.46, 9.24, 9.16] Demand: [10.99]
+Reward for thread 4: [-373.34, -131.59, -125.87, -96.03] -181.71  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.43, 12.1, 11.97, 11.8] Demand: [16.67]
+Reward for thread 5: [-45.81, -38.08, -44.34, -81.7] -52.48  Inventory: [68.0, 43.0, 1.0, 163.0]  Order: [4.46, 4.57, 4.56, 5.24] Demand: [4.215]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 76/3000 | Cost: 90902.00 | SL: 0.045 | Bullwhip: 2.01 | alpha: [0.12,0.59,0.28,0.74]
+
+ Algo happo Exp check updates 15/3000 episodes, total num timesteps 16000/3000000.0, FPS 49.
+
+Reward for thread 1: [-128.97, -79.05, -120.43, -46.07] -93.63  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.56, 11.47, 11.59, 11.5] Demand: [14.72]
+Reward for thread 2: [-27.12, -35.83, -36.83, -45.51] -36.32  Inventory: [1.0, 14.0, 0.0, 0.0]  Order: [7.62, 7.76, 7.77, 7.56] Demand: [7.69]
+Reward for thread 3: [-44.05, -53.97, -45.47, -44.86] -47.09  Inventory: [43.0, 131.0, 26.0, 66.0]  Order: [5.64, 6.06, 5.98, 6.1] Demand: [5.66]
+Reward for thread 4: [-39.63, -32.26, -43.01, -33.36] -37.06  Inventory: [113.0, 36.0, 42.0, 69.0]  Order: [7.99, 8.05, 8.04, 8.15] Demand: [7.65]
+Reward for thread 5: [-35.51, -35.93, -39.34, -37.94] -37.18  Inventory: [0.0, 0.0, 54.0, 75.0]  Order: [8.56, 8.43, 8.49, 8.68] Demand: [8.7]
+Episode 77/3000 | Cost: 45008.00 | SL: 0.081 | Bullwhip: 1.83 | alpha: [0.86,0.45,0.15,0.34]
+
+ Algo happo Exp check updates 16/3000 episodes, total num timesteps 17000/3000000.0, FPS 49.
+
+Reward for thread 1: [-109.94, -42.04, -54.81, -48.98] -63.94  Inventory: [0.0, 0.0, 7.0, 13.0]  Order: [10.54, 10.42, 10.34, 10.38] Demand: [13.2]
+Reward for thread 2: [-27.65, -35.32, -41.51, -63.5] -42.0  Inventory: [48.0, 39.0, 51.0, 151.0]  Order: [5.04, 5.01, 5.04, 5.62] Demand: [4.81]
+Reward for thread 3: [-23.56, -26.9, -34.65, -28.81] -28.48  Inventory: [4.0, 0.0, 0.0, 0.0]  Order: [7.85, 7.82, 7.8, 7.6] Demand: [7.805]
+Reward for thread 4: [-66.82, -29.98, -42.13, -40.21] -44.78  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.76, 9.75, 9.54, 9.52] Demand: [11.355]
+Reward for thread 5: [-137.62, -67.42, -62.37, -36.52] -75.98  Inventory: [0.0, 0.0, 44.0, 52.0]  Order: [11.9, 11.7, 11.68, 11.76] Demand: [13.955]
+Episode 78/3000 | Cost: 34429.00 | SL: 0.734 | Bullwhip: 3.11 | alpha: [0.28,0.30,0.48,0.83]
+
+ Algo happo Exp check updates 17/3000 episodes, total num timesteps 18000/3000000.0, FPS 48.
+
+Reward for thread 1: [-36.52, -38.24, -52.68, -59.44] -46.72  Inventory: [6.0, 21.0, 101.0, 72.0]  Order: [5.58, 5.43, 5.7, 6.0] Demand: [5.75]
+Reward for thread 2: [-91.57, -59.94, -91.8, -83.64] -81.74  Inventory: [0.0, 8.0, 0.0, 0.0]  Order: [10.67, 11.14, 10.9, 10.8] Demand: [13.455]
+Reward for thread 3: [-49.69, -40.25, -45.53, -37.19] -43.16  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.1, 10.22, 10.1, 9.93] Demand: [11.625]
+Reward for thread 4: [-84.9, -83.51, -64.8, -90.72] -80.98  Inventory: [260.0, 45.0, 129.0, 239.0]  Order: [3.95, 3.96, 4.35, 5.38] Demand: [2.865]
+Reward for thread 5: [-29.88, -36.91, -38.44, -43.73] -37.24  Inventory: [9.0, 84.0, 42.0, 71.0]  Order: [4.97, 5.2, 5.25, 5.44] Demand: [5.14]
+Episode 79/3000 | Cost: 33217.00 | SL: 0.516 | Bullwhip: 1.93 | alpha: [0.40,0.21,0.67,0.25]
+
+ Algo happo Exp check updates 18/3000 episodes, total num timesteps 19000/3000000.0, FPS 48.
+
+Reward for thread 1: [-35.24, -38.21, -45.34, -47.84] -41.66  Inventory: [28.0, 58.0, 17.0, 97.0]  Order: [6.34, 6.51, 6.52, 6.79] Demand: [6.425]
+Reward for thread 2: [-28.08, -38.29, -37.9, -39.92] -36.05  Inventory: [35.0, 53.0, 25.0, 108.0]  Order: [6.47, 6.52, 6.58, 7.0] Demand: [6.51]
+Reward for thread 3: [-64.52, -36.09, -51.4, -31.03] -45.76  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.5, 10.89, 10.72, 10.69] Demand: [12.335]
+Reward for thread 4: [-290.11, -84.0, -98.48, -59.97] -133.14  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [13.06, 13.26, 12.86, 12.72] Demand: [16.7]
+Reward for thread 5: [-178.83, -72.33, -79.01, -42.25] -93.1  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.87, 12.88, 12.9, 12.84] Demand: [13.835]
+Episode 80/3000 | Cost: 40222.00 | SL: 0.171 | Bullwhip: 1.56 | alpha: [0.08,0.12,0.75,0.70]
+
+ Algo happo Exp check updates 19/3000 episodes, total num timesteps 20000/3000000.0, FPS 48.
+
+Reward for thread 1: [-50.72, -49.26, -59.17, -44.03] -50.79  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [7.66, 7.84, 7.66, 7.54] Demand: [8.725]
+Reward for thread 2: [-153.64, -68.37, -77.93, -65.76] -91.42  Inventory: [0.0, 0.0, 9.0, 0.0]  Order: [12.43, 12.33, 12.34, 12.22] Demand: [12.97]
+Reward for thread 3: [-213.11, -83.99, -77.84, -61.26] -109.05  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.98, 12.06, 11.86, 11.74] Demand: [15.49]
+Reward for thread 4: [-41.3, -46.84, -48.03, -39.81] -44.0  Inventory: [0.0, 162.0, 68.0, 32.0]  Order: [10.22, 10.84, 10.96, 10.98] Demand: [10.61]
+Reward for thread 5: [-44.27, -39.14, -39.57, -32.71] -38.92  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.76, 9.75, 9.8, 9.68] Demand: [10.33]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 81/3000 | Cost: 70313.00 | SL: 0.041 | Bullwhip: 1.96 | alpha: [0.24,0.69,0.12,0.35]
+
+ Algo happo Exp check updates 20/3000 episodes, total num timesteps 21000/3000000.0, FPS 48.
+
+Reward for thread 1: [-128.78, -44.69, -81.96, -65.84] -80.32  Inventory: [0.0, 39.0, 4.0, 0.0]  Order: [11.06, 11.17, 11.3, 11.26] Demand: [14.965]
+Reward for thread 2: [-118.07, -33.32, -54.63, -49.57] -63.9  Inventory: [392.0, 39.0, 46.0, 75.0]  Order: [4.42, 4.36, 4.36, 4.54] Demand: [2.685]
+Reward for thread 3: [-22.68, -30.3, -35.02, -36.8] -31.2  Inventory: [33.0, 27.0, 90.0, 84.0]  Order: [5.96, 5.94, 6.18, 6.44] Demand: [5.96]
+Reward for thread 4: [-37.3, -31.56, -43.4, -49.6] -40.46  Inventory: [48.0, 0.0, 96.0, 78.0]  Order: [5.51, 5.48, 5.74, 5.96] Demand: [5.36]
+Reward for thread 5: [-58.94, -35.39, -35.05, -43.46] -43.21  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.24, 11.0, 11.1, 11.02] Demand: [12.295]
+Episode 82/3000 | Cost: 45381.00 | SL: 1.000 | Bullwhip: 1.81 | alpha: [0.06,0.35,0.89,0.63]
+
+ Algo happo Exp check updates 21/3000 episodes, total num timesteps 22000/3000000.0, FPS 48.
+
+Reward for thread 1: [-57.83, -45.14, -43.03, -75.03] -55.26  Inventory: [176.0, 33.0, 46.0, 190.0]  Order: [3.98, 3.89, 3.96, 4.76] Demand: [3.3]
+Reward for thread 2: [-53.31, -42.23, -40.91, -46.85] -45.82  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.04, 9.98, 9.96, 9.82] Demand: [11.68]
+Reward for thread 3: [-275.58, -44.47, -40.37, -107.48] -116.98  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [12.46, 12.21, 12.07, 11.99] Demand: [16.27]
+Reward for thread 4: [-104.66, -51.48, -54.5, -37.62] -62.06  Inventory: [0.0, 36.0, 0.0, 0.0]  Order: [11.32, 11.38, 11.5, 11.42] Demand: [12.575]
+Reward for thread 5: [-23.24, -26.28, -35.75, -45.08] -32.59  Inventory: [50.0, 22.0, 121.0, 93.0]  Order: [5.17, 5.07, 5.46, 5.73] Demand: [5.145]
+Episode 83/3000 | Cost: 49194.00 | SL: 0.624 | Bullwhip: 1.31 | alpha: [0.55,0.08,0.69,0.61]
+
+ Algo happo Exp check updates 22/3000 episodes, total num timesteps 23000/3000000.0, FPS 48.
+
+Reward for thread 1: [-57.99, -59.26, -58.06, -84.74] -65.01  Inventory: [102.0, 22.0, 51.0, 269.0]  Order: [4.36, 4.22, 4.24, 5.5] Demand: [4.05]
+Reward for thread 2: [-341.89, -57.33, -104.55, -114.38] -154.54  Inventory: [0.0, 41.0, 0.0, 0.0]  Order: [11.84, 12.06, 12.28, 12.24] Demand: [16.195]
+Reward for thread 3: [-397.55, -131.1, -142.94, -128.63] -200.05  Inventory: [0.0, 3.0, 0.0, 18.0]  Order: [11.84, 11.94, 11.6, 11.48] Demand: [17.295]
+Reward for thread 4: [-51.31, -60.62, -62.12, -65.56] -59.9  Inventory: [54.0, 90.0, 124.0, 79.0]  Order: [5.18, 5.38, 5.74, 5.96] Demand: [5.13]
+Reward for thread 5: [-40.48, -39.13, -41.11, -39.47] -40.05  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.85, 10.06, 10.02, 10.01] Demand: [10.025]
+Episode 84/3000 | Cost: 22316.00 | SL: 0.399 | Bullwhip: 2.61 | alpha: [0.83,0.53,0.64,0.60]
+
+ Algo happo Exp check updates 23/3000 episodes, total num timesteps 24000/3000000.0, FPS 48.
+
+Reward for thread 1: [-20.51, -26.73, -33.37, -29.35] -27.49  Inventory: [22.0, 16.0, 0.0, 12.0]  Order: [8.14, 8.21, 8.03, 7.92] Demand: [8.175]
+Reward for thread 2: [-104.61, -56.87, -68.97, -39.22] -67.42  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.75, 10.67, 10.69, 10.49] Demand: [14.045]
+Reward for thread 3: [-170.42, -27.56, -58.42, -62.3] -79.68  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.46, 10.67, 10.54, 10.48] Demand: [14.705]
+Reward for thread 4: [-44.29, -39.84, -38.3, -33.03] -38.86  Inventory: [12.0, 0.0, 28.0, 98.0]  Order: [9.06, 8.96, 8.93, 9.22] Demand: [9.095]
+Reward for thread 5: [-31.27, -26.2, -40.99, -38.45] -34.23  Inventory: [22.0, 15.0, 0.0, 48.0]  Order: [8.16, 8.18, 8.07, 8.09] Demand: [8.045]
+Episode 85/3000 | Cost: 32509.00 | SL: 0.219 | Bullwhip: 1.98 | alpha: [0.86,0.63,0.70,0.45]
+
+ Algo happo Exp check updates 24/3000 episodes, total num timesteps 25000/3000000.0, FPS 48.
+
+Reward for thread 1: [-38.31, -40.27, -50.72, -35.6] -41.22  Inventory: [15.0, 28.0, 82.0, 58.0]  Order: [8.4, 8.34, 8.57, 8.72] Demand: [8.535]
+Reward for thread 2: [-132.15, -50.69, -55.68, -54.49] -73.25  Inventory: [54.0, 40.0, 17.0, 0.0]  Order: [11.28, 11.49, 11.88, 11.64] Demand: [11.095]
+Reward for thread 3: [-15.97, -27.4, -34.2, -29.32] -26.72  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [6.93, 6.85, 6.76, 6.56] Demand: [6.92]
+Reward for thread 4: [-136.31, -46.32, -72.13, -68.93] -80.92  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.76, 11.74, 11.72, 11.5] Demand: [14.93]
+Reward for thread 5: [-22.14, -30.79, -38.13, -45.95] -34.25  Inventory: [0.0, 61.0, 61.0, 21.0]  Order: [5.5, 5.66, 5.8, 5.74] Demand: [5.59]
+
+Eval average reward:  nan  Eval ordering fluctuation measurement (downstream to upstream):  [0.0, 0.0, 0.0, 0.0]
+Episode 86/3000 | Cost: 33097.00 | SL: 0.369 | Bullwhip: 2.59 | alpha: [0.81,0.71,0.99,0.23]
+
+ Algo happo Exp check updates 25/3000 episodes, total num timesteps 26000/3000000.0, FPS 48.
+
+Reward for thread 1: [-27.09, -46.21, -59.63, -39.62] -43.14  Inventory: [6.0, 14.0, 0.0, 0.0]  Order: [8.18, 8.32, 8.36, 8.2] Demand: [8.115]
+Reward for thread 2: [-31.11, -41.96, -56.45, -41.87] -42.85  Inventory: [25.0, 99.0, 81.0, 42.0]  Order: [8.07, 8.38, 8.56, 8.6] Demand: [8.13]
+Reward for thread 3: [-58.6, -42.18, -37.32, -32.84] -42.74  Inventory: [0.0, 37.0, 56.0, 0.0]  Order: [11.53, 11.52, 11.94, 11.96] Demand: [12.255]
+Reward for thread 4: [-91.97, -50.62, -47.42, -30.0] -55.0  Inventory: [0.0, 0.0, 22.0, 25.0]  Order: [11.63, 11.5, 11.44, 11.41] Demand: [12.35]
+Reward for thread 5: [-181.82, -80.03, -69.37, -34.27] -91.37  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [10.32, 10.09, 10.21, 10.1] Demand: [14.3]
+Episode 87/3000 | Cost: 24987.00 | SL: 0.238 | Bullwhip: 2.24 | alpha: [0.62,0.88,0.79,0.15]
+
+ Algo happo Exp check updates 26/3000 episodes, total num timesteps 27000/3000000.0, FPS 48.
+
+Reward for thread 1: [-31.37, -30.84, -36.2, -30.33] -32.18  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.06, 8.99, 8.89, 8.81] Demand: [9.1]
+Reward for thread 2: [-40.37, -41.31, -38.07, -34.22] -38.49  Inventory: [16.0, 0.0, 55.0, 47.0]  Order: [10.56, 10.37, 10.44, 10.45] Demand: [10.415]
+Reward for thread 3: [-126.13, -51.73, -62.44, -34.55] -68.71  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [9.85, 9.81, 9.96, 9.71] Demand: [11.735]
+Reward for thread 4: [-20.03, -22.54, -28.18, -23.93] -23.67  Inventory: [16.0, 33.0, 44.0, 44.0]  Order: [8.72, 8.74, 8.74, 8.91] Demand: [8.78]
+Reward for thread 5: [-30.39, -28.02, -33.84, -31.07] -30.83  Inventory: [0.0, 0.0, 0.0, 53.0]  Order: [8.29, 8.29, 8.13, 8.18] Demand: [8.715]
+Episode 88/3000 | Cost: 26883.00 | SL: 0.491 | Bullwhip: 3.68 | alpha: [0.89,0.80,0.28,0.27]
+
+ Algo happo Exp check updates 27/3000 episodes, total num timesteps 28000/3000000.0, FPS 48.
+
+Reward for thread 1: [-20.32, -39.61, -36.09, -33.17] -32.3  Inventory: [37.0, 54.0, 86.0, 57.0]  Order: [9.42, 9.46, 9.68, 9.8] Demand: [9.375]
+Reward for thread 2: [-44.42, -42.38, -38.08, -41.98] -41.72  Inventory: [0.0, 0.0, 0.0, 1.0]  Order: [12.03, 11.89, 11.86, 11.9] Demand: [12.18]
+Reward for thread 3: [-19.1, -23.83, -35.04, -29.81] -26.94  Inventory: [27.0, 43.0, 72.0, 89.0]  Order: [6.84, 6.81, 6.93, 7.16] Demand: [6.79]
+Reward for thread 4: [-28.2, -39.55, -42.11, -47.92] -39.44  Inventory: [22.0, 59.0, 20.0, 108.0]  Order: [6.98, 7.04, 7.12, 7.46] Demand: [7.09]
+Reward for thread 5: [-33.76, -33.96, -48.01, -57.29] -43.26  Inventory: [40.0, 18.0, 0.0, 0.0]  Order: [4.49, 4.72, 4.82, 4.68] Demand: [4.435]
+Episode 89/3000 | Cost: 65321.00 | SL: 0.048 | Bullwhip: 1.77 | alpha: [0.06,0.02,0.48,0.70]
+
+ Algo happo Exp check updates 28/3000 episodes, total num timesteps 29000/3000000.0, FPS 48.
+
+Reward for thread 1: [-90.25, -80.82, -59.29, -44.55] -68.73  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [11.14, 10.82, 10.81, 10.72] Demand: [13.135]
+Reward for thread 2: [-33.1, -29.33, -33.74, -38.42] -33.65  Inventory: [0.0, 0.0, 0.0, 0.0]  Order: [7.12, 7.26, 7.16, 7.1] Demand: [7.13]
+Reward for thread 3: [-138.9, -49.5, -38.21, -60.59] -71.8  Inventory: [80.0, 25.0, 56.0, 50.0]  Order: [10.88, 10.8, 10.89, 10.94] Demand: [10.645]
+Reward for thread 4: [-44.47, -44.04, -30.61, -34.24] -38.34  Inventory: [0.0, 22.0, 5.0, 46.0]  Order: [11.96, 12.02, 11.9, 11.9] Demand: [12.245]
+Reward for thread 5: [-45.86, -43.69, -42.68, -51.19] -45.86  Inventory: [110.0, 22.0, 37.0, 67.0]  Order: [7.11, 7.1, 7.12, 7.28] Demand: [6.73]
+Traceback (most recent call last):
+  File "MADRL/training/train_phase1.py", line 221, in <module>
+    main()
+  File "MADRL/training/train_phase1.py", line 207, in main
+    runner.run()
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\runners\separated\runner.py", line 90, in run
+    train_infos = self.train()
+  File "MADRL/training/train_phase1.py", line 33, in train
+    train_infos = super().train()
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\runners\separated\base_runner.py", line 145, in train
+    train_info = self.trainer[agent_id].train(self.buffer[agent_id])
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\algorithms\happo_trainer.py", line 211, in train
+    value_loss, critic_grad_norm, policy_loss, dist_entropy, actor_grad_norm, imp_weights = self.ppo_update(sample, update_actor=update_actor)
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\algorithms\happo_trainer.py", line 150, in ppo_update
+    (policy_loss - dist_entropy * self.entropy_coef).backward()
+  File "C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\torch\_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\torch\autograd\__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "MADRL/training/train_phase1.py", line 221, in <module>
+    main()
+  File "MADRL/training/train_phase1.py", line 207, in main
+    runner.run()
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\runners\separated\runner.py", line 90, in run
+    train_infos = self.train()
+  File "MADRL/training/train_phase1.py", line 33, in train
+    train_infos = super().train()
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\runners\separated\base_runner.py", line 145, in train
+    train_info = self.trainer[agent_id].train(self.buffer[agent_id])
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\algorithms\happo_trainer.py", line 211, in train
+    value_loss, critic_grad_norm, policy_loss, dist_entropy, actor_grad_norm, imp_weights = self.ppo_update(sample, update_actor=update_actor)
+  File "D:\SCM_TARAN\Episodic_Meta_LLM\MADRL\training\..\algorithms\happo_trainer.py", line 150, in ppo_update
+    (policy_loss - dist_entropy * self.entropy_coef).backward()
+  File "C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\torch\_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "C:\Users\thims\AppData\Local\Programs\Python\Python38\lib\site-packages\torch\autograd\__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
