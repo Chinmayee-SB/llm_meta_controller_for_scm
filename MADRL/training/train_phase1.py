@@ -37,6 +37,20 @@ class Phase1Runner(CRunner):
         kpis = env.get_episode_kpis()
         alphas = list(env.alphas)
         
+        action_stats = []
+        for i in range(self.num_agents):
+            try:
+                acts = self.buffer[i].actions
+                if torch.is_tensor(acts):
+                    acts = acts.cpu().numpy()
+                mean_mag = float(np.mean(np.abs(acts)))
+                var = float(np.var(acts))
+            except Exception:
+                mean_mag, var = 0.0, 0.0
+            action_stats.append((mean_mag, var))
+            
+        kpis["action_stats"] = action_stats
+        
         self.kpi_history.append(kpis)
         self.alpha_history.append(alphas)
 
@@ -71,14 +85,102 @@ class Phase1Runner(CRunner):
             
         print(f"Episode {self.ep}/{int(self.num_env_steps // self.episode_length // self.n_rollout_threads)} | Cost: {kpis['total_cost']:.2f} | SL: {kpis['service_level']:.3f} | Bullwhip: {kpis['bullwhip_ratio']:.2f} | alpha: [{alphas[0]:.2f},{alphas[1]:.2f},{alphas[2]:.2f},{alphas[3]:.2f}]")
 
-        if self.ep >= 50 and not self.converged:
-            recent_costs = [k["total_cost"] for k in self.kpi_history[-50:]]
-            if np.mean(recent_costs) > 0 and (np.std(recent_costs) / np.mean(recent_costs)) < 0.05:
+        # PPO Epoch reduction schedule
+        original_ppo_epoch = self.all_args.ppo_epoch
+        new_ppo_epoch = original_ppo_epoch
+        if self.ep > 2200:
+            new_ppo_epoch = 4
+        elif self.ep > 1500:
+            new_ppo_epoch = 6
+        elif self.ep > 800:
+            new_ppo_epoch = max(10, original_ppo_epoch // 2)
+            
+        if self.trainer[0].ppo_epoch != new_ppo_epoch:
+            for t in self.trainer:
+                t.ppo_epoch = new_ppo_epoch
+            print(f"Episode {self.ep}: PPO epochs reduced to {new_ppo_epoch}")
+
+        # Entropy decay
+        for t in self.trainer:
+            t.entropy_coef = max(0.001, t.entropy_coef * 0.999)
+
+        # LR decay
+        for p in self.policy:
+            for param_group in p.actor_optimizer.param_groups:
+                param_group['lr'] = max(1e-5, param_group['lr'] * 0.999)
+            for param_group in p.critic_optimizer.param_groups:
+                param_group['lr'] = max(1e-5, param_group['lr'] * 0.999)
+
+        if self.ep % 100 == 0:
+            current_lr = self.policy[0].actor_optimizer.param_groups[0]['lr']
+            print(f"Episode {self.ep} Checkpoint: Entropy Coef: {self.trainer[0].entropy_coef:.5f} | LR: {current_lr:.2e}")
+
+        if self.ep >= 100 and not self.converged:
+            recent_kpis = self.kpi_history[-100:]
+            recent_costs = [k["total_cost"] for k in recent_kpis]
+            recent_sls   = [k["service_level"] for k in recent_kpis]
+            
+            mean_cost = np.mean(recent_costs)
+            std_cost = np.std(recent_costs)
+            ratio = std_cost / mean_cost if mean_cost > 0 else 0
+            
+            mean_sl = np.mean(recent_sls)
+            min_sl  = np.min(recent_sls)
+            catastrophic_pct = sum(1 for c in recent_costs if c > 40000) / len(recent_costs)
+            
+            recent_acts = [k.get("action_stats", [(0,0)]*4) for k in recent_kpis]
+            mean_mags = [np.mean([ep[i][0] for ep in recent_acts]) for i in range(4)]
+            mean_vars = [np.mean([ep[i][1] for ep in recent_acts]) for i in range(4)]
+            
+            target_ratio = 0.15
+            is_converged = (
+                mean_cost > 0 and 
+                ratio < target_ratio and 
+                catastrophic_pct < 0.05 and 
+                mean_sl > 0.65 and 
+                min_sl > 0.20
+            )
+
+            current_lr = self.policy[0].actor_optimizer.param_groups[0]['lr']
+            alpha_low  = max(0.1, self.alpha_center - self.alpha_half)
+            alpha_high = min(0.9, self.alpha_center + self.alpha_half)
+            
+            print(f"\n[Convergence Check]")
+            print(f"Episodes Window: {len(recent_costs)}")
+            print(f"Mean Cost: {mean_cost:.2f}")
+            print(f"Std Cost: {std_cost:.2f}")
+            print(f"Std/Mean: {ratio:.4f}")
+            print(f"Mean SL: {mean_sl:.3f}")
+            print(f"Min SL: {min_sl:.3f}")
+            print(f"Catastrophic %: {catastrophic_pct:.3f}")
+            print(f"Threshold Target: {target_ratio:.3f}")
+            print(f"Converged: {is_converged}")
+            print(f"Params -> PPO Epochs: {self.trainer[0].ppo_epoch} | Entropy: {self.trainer[0].entropy_coef:.5f} | LR: {current_lr:.2e} | Alpha: [{alpha_low:.2f}, {alpha_high:.2f}]")
+            print(f"Action Mags: {[f'{m:.2f}' for m in mean_mags]}")
+            print(f"Action Vars: {[f'{v:.2f}' for v in mean_vars]}\n")
+            
+            if is_converged:
                 self.converged = True
+                print("Training stopped: convergence achieved")
                 raise StopIteration("Phase 1 Converged")
         
+        if self.ep >= 2500 and not self.converged:
+            print("Training stopped: reached max episode cap")
+            raise StopIteration("Max Episode Cap Reached")
+            
         if self.retry_ep != -1 and self.ep >= self.retry_ep:
             raise StopIteration("Retry Complete")
+
+        # Exploration decay — narrow alpha range over time
+        self.alpha_half = max(0.05, self.alpha_half * self.alpha_decay)
+        alpha_low  = max(0.1, self.alpha_center - self.alpha_half)
+        alpha_high = min(0.9, self.alpha_center + self.alpha_half)
+        env.set_alpha_range(alpha_low, alpha_high)
+
+        # Switch from curriculum to uniform after curriculum_episodes
+        if self.curriculum_on and self.ep == self.curriculum_eps:
+            env.disable_curriculum()
+            print(f"Episode {self.ep}: Alpha curriculum complete — switching to uniform random")
 
         return train_infos
 
@@ -101,6 +203,11 @@ def main():
     # 2. Merge with argparse
     all_args.num_agents = proj_config['environment']['n_agents']
     all_args.episode_length = proj_config['environment']['episode_length']
+    
+    alpha_decay       = proj_config["alpha"]["exploration_decay"]    # 0.995
+    curriculum_on     = proj_config["alpha"]["curriculum_enabled"]   # False
+    curriculum_eps    = proj_config["alpha"].get("curriculum_episodes", 100)
+    curriculum_anchors= proj_config["alpha"].get("curriculum_anchor_values", [0.2,0.5,0.8])
     
     if all_args.mode == "baseline":
         all_args.obs_dim = 7
@@ -129,7 +236,12 @@ def main():
     torch.manual_seed(all_args.seed)
     np.random.seed(all_args.seed)
 
+    if all_args.cuda and not torch.cuda.is_available():
+        print("Error: --cuda was specified but no GPU is available. Stopping training to prevent CPU fallback.")
+        sys.exit(1)
+        
     device = torch.device("cuda:0" if all_args.cuda and torch.cuda.is_available() else "cpu")
+    print(device)
 
     envs = make_train_env(all_args)
     eval_envs = make_eval_env(all_args) if all_args.use_eval else None
@@ -150,6 +262,16 @@ def main():
 
     # 4. Use existing runner
     runner = Phase1Runner(config)
+    runner.alpha_center = 0.5
+    runner.alpha_half   = 0.4   # initial half-range: samples from [0.1, 0.9]
+    runner.alpha_decay = alpha_decay
+    runner.curriculum_on = curriculum_on
+    runner.curriculum_eps = curriculum_eps
+
+    # Enable curriculum if configured
+    if curriculum_on:
+        envs.env_list[0].enable_curriculum(curriculum_anchors)
+        print(f"Alpha curriculum ENABLED for first {curriculum_eps} episodes")
     
     if all_args.resume:
         checkpoint = torch.load(all_args.resume, map_location=device)

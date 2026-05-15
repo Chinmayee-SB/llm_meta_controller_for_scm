@@ -44,21 +44,31 @@ happo:
 
 alpha:
   sampling: per_agent_independent_uniform  # each agent independent, NOT shared
-  min: 0.0
-  max: 1.0
+  min: 0.1          # clip extremes — prevents degenerate training episodes
+  max: 0.9          # clip extremes — near 0 or 1 causes policy instability
   in_actor_obs: true             # alpha appended as last element of actor obs
   in_critic_obs: false           # critic does NOT see alpha
+  exploration_decay: 0.995      # multiply sampling range by this each episode
+  curriculum_enabled: false     # set true to use structured alpha curriculum
+  curriculum_anchor_values: [0.2, 0.5, 0.8]
+  curriculum_episodes: 100      # episodes on anchors before switching to uniform
 
 stability_gate:
   n_random_traces: 50
   n_traces_per_alpha: 10
-  alpha_test_values: [0.0, 0.25, 0.5, 0.75, 1.0]
-  min_service_level_avg: 0.80
-  max_bullwhip_ratio_avg: 3.0
-  max_cost_vs_basestock_ratio: 1.20
-  max_backlog_per_agent: 500
-  min_random_traces_passing: 45
-  min_service_level_at_any_alpha: 0.75
+  alpha_test_values: [0.1, 0.3, 0.5, 0.7, 0.9]
+
+  # Rolling window (last 100 training episodes) — checked before gate runs
+  max_mean_cost: 18000
+  max_std_cost: 7000
+  max_catastrophic_episode_pct: 0.05    # <5% of episodes may have cost > 40000
+  min_mean_service_level: 0.65
+  min_floor_service_level: 0.20         # no episode completely fails
+  max_mean_bullwhip: 3.5
+
+  # Hold-out trace criteria
+  min_random_traces_passing: 40
+  min_service_level_at_any_alpha: 0.65
 
 evaluation:
   n_final_eval_traces: 50

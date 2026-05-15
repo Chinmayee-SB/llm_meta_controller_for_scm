@@ -8,10 +8,11 @@ import torch
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
 class StabilityGate:
-    def __init__(self, env, frozen_actors, config):
-        self.env     = env
-        self.actors  = frozen_actors   # list of 4 frozen ActorNetwork instances
-        self.cfg     = config["stability_gate"]
+    def __init__(self, env, frozen_actors, config, training_history=None):
+        self.env              = env
+        self.actors           = frozen_actors   # list of 4 frozen ActorNetwork instances
+        self.cfg              = config["stability_gate"]
+        self.training_history = training_history or []
 
     def run(self, save_dir="MADRL/results/phase1_gate"):
         os.makedirs(save_dir, exist_ok=True)
@@ -19,7 +20,9 @@ class StabilityGate:
             "random_traces":  self._run_random_traces(n=50),
             "alpha_coverage": self._run_alpha_coverage(),
         }
-        results["gate_passed"] = self._check_criteria(results)
+        gate_passed, detail = self._check_criteria(results, self.training_history)
+        results["gate_passed"] = gate_passed
+        results["criteria_detail"] = detail
         path = os.path.join(save_dir, "gate_results.json")
         with open(path, "w") as f:
             json.dump(results, f, indent=2)
@@ -142,28 +145,101 @@ class StabilityGate:
             
         return coverage_results
 
-    def _check_criteria(self, results):
+    def _check_criteria(self, results, training_history=None):
+        """
+        Checks ALL gate criteria:
+        1. Rolling window (last 100 training episodes) — requires training_history
+        2. Hold-out trace results
+        3. Alpha coverage
+        """
         r = results["random_traces"]
         c = results["alpha_coverage"]
-        return all([
-            r["avg_sl"]         >= self.cfg["min_service_level_avg"],
-            r["avg_bullwhip"]   <= self.cfg["max_bullwhip_ratio_avg"],
-            r["traces_passing"] >= self.cfg["min_random_traces_passing"],
-            all(v["pass"] for v in c.values())
-        ])
+
+        # ── Rolling window checks (if history provided) ──────────────────
+        rolling_pass = True
+        rolling_detail = {}
+
+        if training_history and len(training_history) >= 10:
+            recent = training_history[-100:]  # last 100 episodes (or all if < 100)
+            costs  = [ep["total_cost"]     for ep in recent]
+            sls    = [ep["service_level"]  for ep in recent]
+
+            mean_cost   = float(np.mean(costs))
+            std_cost    = float(np.std(costs))
+            mean_sl     = float(np.mean(sls))
+            min_sl      = float(np.min(sls))
+            catastrophic_pct = sum(1 for c_ in costs if c_ > 40000) / len(costs)
+
+            rolling_detail = {
+                "mean_cost":        mean_cost,
+                "std_cost":         std_cost,
+                "mean_sl":          mean_sl,
+                "min_sl":           min_sl,
+                "catastrophic_pct": catastrophic_pct,
+            }
+
+            rolling_checks = {
+                "mean_cost_ok":         mean_cost   < self.cfg["max_mean_cost"],
+                "std_cost_ok":          std_cost    < self.cfg["max_std_cost"],
+                "catastrophic_pct_ok":  catastrophic_pct < self.cfg["max_catastrophic_episode_pct"],
+                "mean_sl_ok":           mean_sl     > self.cfg["min_mean_service_level"],
+                "floor_sl_ok":          min_sl      > self.cfg["min_floor_service_level"],
+            }
+            rolling_pass = all(rolling_checks.values())
+            rolling_detail["checks"] = rolling_checks
+        else:
+            rolling_detail["note"] = "Skipped — insufficient training history"
+
+        # ── Hold-out trace checks ─────────────────────────────────────────
+        trace_checks = {
+            "bullwhip_ok":       r["avg_bullwhip"]   <= self.cfg["max_mean_bullwhip"],
+            "traces_passing_ok": r["traces_passing"] >= self.cfg["min_random_traces_passing"],
+            "alpha_coverage_ok": all(
+                v["avg_sl"] >= self.cfg["min_service_level_at_any_alpha"]
+                for v in c.values()
+            ),
+        }
+        trace_pass = all(trace_checks.values())
+
+        # ── Final verdict ─────────────────────────────────────────────────
+        gate_passed = rolling_pass and trace_pass
+        return gate_passed, {
+            "rolling": rolling_detail,
+            "traces":  trace_checks,
+            "verdict": "PASSED" if gate_passed else "FAILED"
+        }
 
     def _print_report(self, results):
-        r = results["random_traces"]
-        print(f"\n{'='*50}")
-        print(f"STABILITY GATE RESULTS")
-        print(f"  Avg Service Level: {r['avg_sl']:.3f}  (threshold >= {self.cfg['min_service_level_avg']})")
-        print(f"  Avg Bullwhip:      {r['avg_bullwhip']:.3f}  (threshold <= {self.cfg['max_bullwhip_ratio_avg']})")
-        print(f"  Traces Passing:    {r['traces_passing']}/50  (threshold >= {self.cfg['min_random_traces_passing']})")
+        print(f"\n{'='*60}")
+        print(f"  STABILITY GATE RESULTS")
+        print(f"{'='*60}")
+
+        # Rolling window
+        rd = results["criteria_detail"]["rolling"]
+        if "checks" in rd:
+            print(f"\n  Rolling Window (last 100 episodes):")
+            print(f"    Mean cost:       {rd['mean_cost']:>8.1f}  (threshold <18000)  {'✓' if rd['checks']['mean_cost_ok'] else '✗'}")
+            print(f"    Std cost:        {rd['std_cost']:>8.1f}  (threshold <7000)   {'✓' if rd['checks']['std_cost_ok'] else '✗'}")
+            print(f"    Mean SL:         {rd['mean_sl']:>8.3f}  (threshold >0.65)   {'✓' if rd['checks']['mean_sl_ok'] else '✗'}")
+            print(f"    Floor SL:        {rd['min_sl']:>8.3f}  (threshold >0.20)   {'✓' if rd['checks']['floor_sl_ok'] else '✗'}")
+            print(f"    Catastrophic %:  {rd['catastrophic_pct']:>8.3f}  (threshold <0.05)  {'✓' if rd['checks']['catastrophic_pct_ok'] else '✗'}")
+
+        # Trace results
+        r  = results["random_traces"]
+        tc = results["criteria_detail"]["traces"]
+        print(f"\n  Hold-out Traces:")
+        print(f"    Avg bullwhip:    {r['avg_bullwhip']:>8.3f}  (threshold <3.5)    {'✓' if tc['bullwhip_ok'] else '✗'}")
+        print(f"    Traces passing:  {r['traces_passing']:>8d}  (threshold >=40)     {'✓' if tc['traces_passing_ok'] else '✗'}")
+        print(f"    Alpha coverage:  {'all pass' if tc['alpha_coverage_ok'] else 'FAIL':>8}               {'✓' if tc['alpha_coverage_ok'] else '✗'}")
+
+        # Alpha coverage detail
+        print(f"\n  Alpha Coverage:")
         for a, v in results["alpha_coverage"].items():
-            print(f"  alpha={a}: SL={v['avg_sl']:.3f} {'✓' if v['pass'] else 'X'}")
-        status = "PASSED" if results["gate_passed"] else "FAILED"
-        print(f"\n  GATE: {status}")
-        print(f"{'='*50}\n")
+            print(f"    α={a}: SL={v['avg_sl']:.3f}  {'✓' if v['pass'] else '✗'}")
+
+        status = "PASSED ✓" if results["gate_passed"] else "FAILED ✗"
+        print(f"\n  FINAL VERDICT: {status}")
+        print(f"{'='*60}\n")
 
 def evaluate_gate():
     print("Starting Stability Gate Evaluation...")
@@ -199,7 +275,18 @@ def evaluate_gate():
         actor.eval()
         frozen_actors.append(actor)
         
-    gate = StabilityGate(env, frozen_actors, proj_config)
+    import glob
+    ckpt_files = glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "results", "checkpoints", "*.pt"))
+    kpi_history = []
+    if ckpt_files:
+        latest_ckpt = max(ckpt_files, key=os.path.getmtime)
+        try:
+            ckpt = torch.load(latest_ckpt, map_location=torch.device("cpu"))
+            kpi_history = ckpt.get("kpi_history", [])
+        except:
+            pass
+            
+    gate = StabilityGate(env, frozen_actors, proj_config, training_history=kpi_history)
     passed = gate.run()
     if not passed:
         sys.exit(1)

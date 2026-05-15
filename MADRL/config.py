@@ -31,8 +31,10 @@ def get_config():
                         default=True, help="Random or specify seed for numpy/torch")
     parser.add_argument("--running_id", type=int, 
                         default=1, help="the running index of experiment")
-    parser.add_argument("--cuda", action='store_false', 
-                        default=True, help="by default True, will use GPU to train; or else will use CPU;")
+    parser.add_argument("--cuda", action='store_true', 
+                        default=True, help="by default True, will use GPU to train; passing --cuda keeps it True.")
+    parser.add_argument("--cpu", action='store_false', dest="cuda",
+                        help="passing --cpu will force the script to use CPU.")
     parser.add_argument("--cuda_deterministic", action='store_false', 
                         default=True, help="by default, make sure random seed effective. if set, bypass such function.")
     parser.add_argument("--n_training_threads", type=int,
