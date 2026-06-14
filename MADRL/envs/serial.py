@@ -115,20 +115,26 @@ class Env(object):
         self.inventory = [S_I for i in range(self.level_num)]
         self.order = [[S_O for i in range(LEAD_TIME)] for j in range(self.level_num)]
         
-        # Alpha clipped to [0.1, 0.9] — prevents degenerate extreme episodes
-        # Near alpha=0 or alpha=1, one reward term dominates completely
-        # causing highly unstable ordering behavior
-        alpha_low  = getattr(self, '_alpha_low',  0.1)
-        alpha_high = getattr(self, '_alpha_high', 0.9)
-        self.alphas = [np.random.uniform(alpha_low, alpha_high)
-                       for _ in range(self.level_num)]
-        
-        # Alpha curriculum: if enabled, use anchor values in early training
-        if getattr(self, '_curriculum_mode', False):
-            anchor_values = getattr(self, '_curriculum_anchors', [0.2, 0.5, 0.8])
-            self.alphas = [float(np.random.choice(anchor_values))
+        # Alpha generation: Skip if external alphas were set via set_alphas()
+        if getattr(self, 'alpha_randomized', True):
+            # Alpha clipped to [0.1, 0.9] — prevents degenerate extreme episodes
+            # Near alpha=0 or alpha=1, one reward term dominates completely
+            # causing highly unstable ordering behavior
+            alpha_low  = getattr(self, '_alpha_low',  0.1)
+            alpha_high = getattr(self, '_alpha_high', 0.9)
+            self.alphas = [np.random.uniform(alpha_low, alpha_high)
                            for _ in range(self.level_num)]
-                           
+            
+            # Alpha curriculum: if enabled, use anchor values in early training
+            if getattr(self, '_curriculum_mode', False):
+                anchor_values = getattr(self, '_curriculum_anchors', [0.2, 0.5, 0.8])
+                self.alphas = [float(np.random.choice(anchor_values))
+                               for _ in range(self.level_num)]
+        else:
+            # Alphas were externally supplied. Use them for this episode.
+            pass
+            
+        # Reset flag so future episodes randomize unless set_alphas is called again
         self.alpha_randomized = True
 
         # KPI tracking

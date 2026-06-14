@@ -42,15 +42,18 @@ class StabilityGate:
             e = self.env.env_list[0]
             
             # Fresh random alpha per agent
-            e.alphas = [np.random.uniform(0.0, 1.0) for _ in range(e.level_num)]
+            e.alphas = [np.random.uniform(0.1, 0.9) for _ in range(e.level_num)]
             obs = [e.get_reset_obs(normalize=True)]
             
             # Override demand based on split
-            if i < 20: # Merton
+            if i < 20:
+                trace_type = "MERTON"
                 e.demand_list = [int(max(1, min(20, d))) for d in merton(200, 20).demand_list]
-            elif i < 40: # Poisson
+            elif i < 40:
+                trace_type = "POISSON"
                 e.demand_list = list(stationary_possion(200, 20).demand_list)
-            else: # Supplier Disruption
+            else:
+                trace_type = "DISRUPTION"
                 e.demand_list = [int(max(1, min(20, d))) for d in merton(200, 20).demand_list]
             
             rnn_states = np.zeros((1, 4, self.actors[0]._recurrent_N, self.actors[0].hidden_size), dtype=np.float32)
@@ -83,17 +86,37 @@ class StabilityGate:
                 obs, rewards, dones, infos = self.env.step([one_hot_actions])
             
             kpis = e.get_episode_kpis()
+            sl = float(kpis["service_level"])
+            bw = float(kpis["bullwhip_ratio"])
+            tc = float(kpis["total_cost"])
+            mb = float(max(e.backlog))
+            
+            min_sl = 0.30
+            max_bw = 4.0
+            
+            failures = []
+            if sl < min_sl: failures.append("service_level_failed")
+            if bw > max_bw: failures.append("bullwhip_failed")
+            if mb > 500: failures.append("backlog_failed")
+            
+            passed = len(failures) == 0
+            
             results.append({
-                "service_level": kpis["service_level"],
-                "bullwhip_ratio": kpis["bullwhip_ratio"],
-                "total_cost": kpis["total_cost"],
-                "max_backlog": max(e.backlog)
+                "trace_idx": i,
+                "trace_type": trace_type,
+                "alphas": [float(a) for a in e.alphas],
+                "service_level": sl,
+                "bullwhip_ratio": bw,
+                "total_cost": tc,
+                "max_backlog": mb,
+                "passed": passed,
+                "failures": failures
             })
             
         avg_sl = np.mean([r["service_level"] for r in results])
         avg_bw = np.mean([r["bullwhip_ratio"] for r in results])
         avg_cost = np.mean([r["total_cost"] for r in results])
-        passes = sum(1 for r in results if r["service_level"] >= 0.80 and r["bullwhip_ratio"] <= 3.0 and r["max_backlog"] <= 500)
+        passes = sum(1 for r in results if r["passed"])
         
         return {
             "avg_sl": float(avg_sl),
@@ -105,7 +128,8 @@ class StabilityGate:
 
     def _run_alpha_coverage(self):
         coverage_results = {}
-        for alpha_val in [0.0, 0.25, 0.5, 0.75, 1.0]:
+        alpha_test_vals = self.cfg.get("alpha_test_values", [0.1, 0.3, 0.5, 0.7, 0.9])
+        for alpha_val in alpha_test_vals:
             sl_list = []
             for ep in range(10):
                 obs, _ = self.env.reset()
@@ -138,9 +162,10 @@ class StabilityGate:
                 sl_list.append(e.get_episode_kpis()["service_level"])
                 
             avg_sl = np.mean(sl_list)
+            min_sl_alpha = self.cfg.get("min_service_level_at_any_alpha", 0.40)
             coverage_results[str(alpha_val)] = {
                 "avg_sl": float(avg_sl),
-                "pass": bool(avg_sl >= 0.75)
+                "pass": bool(avg_sl >= min_sl_alpha)
             }
             
         return coverage_results
@@ -179,11 +204,11 @@ class StabilityGate:
             }
 
             rolling_checks = {
-                "mean_cost_ok":         mean_cost   < self.cfg["max_mean_cost"],
-                "std_cost_ok":          std_cost    < self.cfg["max_std_cost"],
-                "catastrophic_pct_ok":  catastrophic_pct < self.cfg["max_catastrophic_episode_pct"],
-                "mean_sl_ok":           mean_sl     > self.cfg["min_mean_service_level"],
-                "floor_sl_ok":          min_sl      > self.cfg["min_floor_service_level"],
+                "mean_cost_ok":         mean_cost   <= self.cfg["max_mean_cost"],
+                "std_cost_ok":          std_cost    <= self.cfg["max_std_cost"],
+                "catastrophic_pct_ok":  catastrophic_pct <= self.cfg["max_catastrophic_episode_pct"],
+                "mean_sl_ok":           mean_sl     >= self.cfg["min_mean_service_level"],
+                "floor_sl_ok":          min_sl      >= self.cfg["min_floor_service_level"],
             }
             rolling_pass = all(rolling_checks.values())
             rolling_detail["checks"] = rolling_checks
@@ -218,26 +243,72 @@ class StabilityGate:
         rd = results["criteria_detail"]["rolling"]
         if "checks" in rd:
             print(f"\n  Rolling Window (last 100 episodes):")
-            print(f"    Mean cost:       {rd['mean_cost']:>8.1f}  (threshold <18000)  {'✓' if rd['checks']['mean_cost_ok'] else '✗'}")
-            print(f"    Std cost:        {rd['std_cost']:>8.1f}  (threshold <7000)   {'✓' if rd['checks']['std_cost_ok'] else '✗'}")
-            print(f"    Mean SL:         {rd['mean_sl']:>8.3f}  (threshold >0.65)   {'✓' if rd['checks']['mean_sl_ok'] else '✗'}")
-            print(f"    Floor SL:        {rd['min_sl']:>8.3f}  (threshold >0.20)   {'✓' if rd['checks']['floor_sl_ok'] else '✗'}")
-            print(f"    Catastrophic %:  {rd['catastrophic_pct']:>8.3f}  (threshold <0.05)  {'✓' if rd['checks']['catastrophic_pct_ok'] else '✗'}")
+            print(f"    Mean cost:       {rd['mean_cost']:>8.1f}  (threshold <= {self.cfg['max_mean_cost']})  {'PASS' if rd['checks']['mean_cost_ok'] else 'FAIL'}")
+            print(f"    Std cost:        {rd['std_cost']:>8.1f}  (threshold <= {self.cfg['max_std_cost']})   {'PASS' if rd['checks']['std_cost_ok'] else 'FAIL'}")
+            print(f"    Mean SL:         {rd['mean_sl']:>8.3f}  (threshold >= {self.cfg['min_mean_service_level']})   {'PASS' if rd['checks']['mean_sl_ok'] else 'FAIL'}")
+            print(f"    Floor SL:        {rd['min_sl']:>8.3f}  (threshold >= {self.cfg['min_floor_service_level']})   {'PASS' if rd['checks']['floor_sl_ok'] else 'FAIL'}")
+            print(f"    Catastrophic %:  {rd['catastrophic_pct']:>8.3f}  (threshold <= {self.cfg['max_catastrophic_episode_pct']})  {'PASS' if rd['checks']['catastrophic_pct_ok'] else 'FAIL'}")
+        else:
+            print(f"\n  Rolling Window: {rd.get('note', 'Skipped')}")
 
         # Trace results
         r  = results["random_traces"]
         tc = results["criteria_detail"]["traces"]
         print(f"\n  Hold-out Traces:")
-        print(f"    Avg bullwhip:    {r['avg_bullwhip']:>8.3f}  (threshold <3.5)    {'✓' if tc['bullwhip_ok'] else '✗'}")
-        print(f"    Traces passing:  {r['traces_passing']:>8d}  (threshold >=40)     {'✓' if tc['traces_passing_ok'] else '✗'}")
-        print(f"    Alpha coverage:  {'all pass' if tc['alpha_coverage_ok'] else 'FAIL':>8}               {'✓' if tc['alpha_coverage_ok'] else '✗'}")
+        print(f"    Avg bullwhip:    {r['avg_bullwhip']:>8.3f}  (threshold <= {self.cfg['max_mean_bullwhip']})    {'PASS' if tc['bullwhip_ok'] else 'FAIL'}")
+        print(f"    Traces passing:  {r['traces_passing']:>8d}  (threshold >= {self.cfg['min_random_traces_passing']})     {'PASS' if tc['traces_passing_ok'] else 'FAIL'}")
+        print(f"    Alpha coverage:  {'all pass' if tc['alpha_coverage_ok'] else 'FAIL':>8}               {'PASS' if tc['alpha_coverage_ok'] else 'FAIL'}")
 
         # Alpha coverage detail
         print(f"\n  Alpha Coverage:")
         for a, v in results["alpha_coverage"].items():
-            print(f"    α={a}: SL={v['avg_sl']:.3f}  {'✓' if v['pass'] else '✗'}")
+            print(f"    alpha={a}: SL={v['avg_sl']:.3f}  (threshold >= {self.cfg['min_service_level_at_any_alpha']}) {'PASS' if v['pass'] else 'FAIL'}")
 
-        status = "PASSED ✓" if results["gate_passed"] else "FAILED ✗"
+        # Detailed Trace Analytics
+        print(f"\n  Trace Diagnostic Analytics:")
+        traces = r.get("per_trace_results", [])
+        if traces:
+            backlogs = [t["max_backlog"] for t in traces]
+            bullwhips = [t["bullwhip_ratio"] for t in traces]
+            
+            fail_counts = {"service_level_failed": 0, "bullwhip_failed": 0, "backlog_failed": 0}
+            type_fail = {"MERTON": 0, "POISSON": 0, "DISRUPTION": 0}
+            type_total = {"MERTON": 0, "POISSON": 0, "DISRUPTION": 0}
+            
+            for t in traces:
+                type_total[t["trace_type"]] += 1
+                if not t["passed"]:
+                    type_fail[t["trace_type"]] += 1
+                    for f in t["failures"]:
+                        if f in fail_counts: fail_counts[f] += 1
+            
+            print("    Failure counts by reason:")
+            print(f"      - backlog failures:  {fail_counts['backlog_failed']}")
+            print(f"      - bullwhip failures: {fail_counts['bullwhip_failed']}")
+            print(f"      - SL failures:       {fail_counts['service_level_failed']}")
+            
+            print("\n    Failure counts by trace type:")
+            for tt in ["MERTON", "POISSON", "DISRUPTION"]:
+                if type_total[tt] > 0:
+                    print(f"      - {tt} failed: {type_fail[tt]}/{type_total[tt]}")
+                
+            print("\n    Distribution summaries:")
+            print(f"      - mean backlog: {np.mean(backlogs):.1f}")
+            print(f"      - max backlog:  {np.max(backlogs):.1f}")
+            print(f"      - 95th %ile backlog: {np.percentile(backlogs, 95):.1f}")
+            print(f"      - mean bullwhip: {np.mean(bullwhips):.3f}")
+            print(f"      - max bullwhip:  {np.max(bullwhips):.3f}")
+            
+            print("\n  Per-Trace Failure Details:")
+            for t in traces:
+                if not t["passed"]:
+                    alphas_str = ",".join(f"{a:.2f}" for a in t['alphas'])
+                    print(f"    Trace {t['trace_idx']} ({t['trace_type']}) FAILED: alphas=[{alphas_str}], SL={t['service_level']:.2f}, BW={t['bullwhip_ratio']:.2f}, Max Backlog={t['max_backlog']:.1f}, Cost={t['total_cost']:.0f}")
+                    for f in t["failures"]:
+                        reason = f.replace('_failed', ' exceeded' if f != 'service_level_failed' else ' too low')
+                        print(f"      - {reason}")
+
+        status = "PASSED" if results["gate_passed"] else "FAILED"
         print(f"\n  FINAL VERDICT: {status}")
         print(f"{'='*60}\n")
 

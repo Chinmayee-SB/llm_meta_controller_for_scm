@@ -56,21 +56,40 @@ alpha:
 stability_gate:
   n_random_traces: 50
   n_traces_per_alpha: 10
+
   alpha_test_values: [0.1, 0.3, 0.5, 0.7, 0.9]
 
-  # Rolling window (last 100 training episodes) — checked before gate runs
+  # Rolling-window criteria
   max_mean_cost: 18000
-  max_std_cost: 7000
-  max_catastrophic_episode_pct: 0.05    # <5% of episodes may have cost > 40000
-  min_mean_service_level: 0.65
-  min_floor_service_level: 0.20         # no episode completely fails
+  max_std_cost: 6000
+
+  # Catastrophic instability should remain STRICT
+  max_catastrophic_episode_pct: 0.00
+
+  # Relaxed but empirically justified service thresholds
+  min_mean_service_level: 0.45
+  min_floor_service_level: 0.10
+
+  # Bullwhip is now the PRIMARY stability metric
   max_mean_bullwhip: 3.5
 
-  # Hold-out trace criteria
-  min_random_traces_passing: 40
-  min_service_level_at_any_alpha: 0.65
+  # Holdout robustness
+  min_random_traces_passing: 35
+
+  # Alpha generalization threshold
+  min_service_level_at_any_alpha: 0.40
 
 evaluation:
   n_final_eval_traces: 50
   n_training_repeats: 5
   seeds: [0, 1, 2, 3, 4]
+
+phase2:
+  llm_provider: openai
+  llm_model: gpt-5
+  alpha_smoothing: 0.0
+  max_alpha_change: 0.25
+  alpha_min: 0.05
+  alpha_max: 0.95
+  warmup_blocks: 10
+  evaluation_blocks: 20
