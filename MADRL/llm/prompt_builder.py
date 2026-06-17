@@ -21,11 +21,11 @@ Each agent has an individual alpha in [0.05, 0.95] that controls its incentive s
 AGENT-SPECIFIC ANALYSIS REQUIRED:
 You must reason about each agent individually, not just the global system.
 For each agent, consider:
-  - Is their individual cost disproportionately high vs other agents?
-  - Is their alpha causing them to over-order (high alpha = selfish = 
-    may hoard) or under-order (low alpha = cooperative = may deplete 
-    their own inventory to serve downstream)?
-  - What specific behavior change would reduce their cost burden?
+  - Are they expensive because they hoard inventory (inventory_heavy, high avg_inventory)?
+  - Or are they expensive because they are starved of stock (stock_starved, high backlog)?
+  - Are their backlogs or inventories rapidly increasing/decreasing (check trends)?
+  - Is their ordering behavior erratic (high order_variance) contributing to the bullwhip?
+  - Use cost share, inventory level, backlog level, bottleneck type, and ordering behavior to make your decision instead of cost share alone.
 
 A good response assigns DIFFERENT alpha values to different agents 
 based on their individual cost share and role.
@@ -119,6 +119,20 @@ def build_input_b(block_metrics_history: list, current_block_metrics: dict) -> d
             if delta < -threshold: return "degrading"
             
         return "stable"
+
+    def get_direction(history, agent, key, threshold=0.05):
+        if len(history) < 2:
+            return "N/A"
+        recent = []
+        for h in history[-3:]:
+            if "agent_behavior_raw" in h and agent in h["agent_behavior_raw"]:
+                recent.append(h["agent_behavior_raw"][agent].get(key, 0.0))
+        if len(recent) < 2:
+            return "N/A"
+        delta = (recent[-1] - recent[0]) / (abs(recent[0]) + 1e-8)
+        if delta > threshold: return "increasing"
+        if delta < -threshold: return "decreasing"
+        return "stable"
     
     m = current_block_metrics.copy()
     
@@ -145,6 +159,35 @@ def build_input_b(block_metrics_history: list, current_block_metrics: dict) -> d
     sl = m.get("service_level", 1.0)
     
     m["conflicting_signals"] = (bw > 2.0 and sl < 0.85)
+
+    m["agent_state"] = {}
+    m["agent_behavior"] = {}
+    raw = m.pop("agent_behavior_raw", {})
+    for agent, stats in raw.items():
+        ratio = stats["inventory_backlog_ratio"]
+        if ratio < 0.2:
+            bottleneck = "stock_starved"
+            recommended_alpha_bias = "consider_higher_alpha"
+        elif ratio > 5.0:
+            bottleneck = "inventory_heavy"
+            recommended_alpha_bias = "consider_lower_alpha"
+        else:
+            bottleneck = "balanced"
+            recommended_alpha_bias = "maintain_or_small_adjustment"
+
+        m["agent_state"][agent] = {
+            "avg_inventory": round(stats["avg_inventory"], 1),
+            "avg_backlog": round(stats["avg_backlog"], 1),
+            "inventory_backlog_ratio": round(ratio, 2),
+            "bottleneck_type": bottleneck,
+            "recommended_alpha_bias": recommended_alpha_bias,
+            "inventory_trend": get_direction(block_metrics_history, agent, "avg_inventory"),
+            "backlog_trend": get_direction(block_metrics_history, agent, "avg_backlog")
+        }
+        m["agent_behavior"][agent] = {
+            "avg_order_qty": round(stats["avg_order_qty"], 1),
+            "order_variance": round(stats["order_variance"], 1)
+        }
     
     return m
 
@@ -198,8 +241,18 @@ def build_full_prompt(input_a: dict, input_b: dict, input_c: list, system_prompt
     prompt += f"Recovery time: {input_b.get('recovery_time', 'N/A')} periods\n"
     prompt += f"Inter-agent reward variance: {input_b.get('reward_variance')}\n"
     prompt += f"WARNING Conflicting signals: {input_b.get('conflicting_signals')}\n\n"
+
+    prompt += "--- AGENT PHYSICAL STATES ---\n"
+    for agent, state in input_b.get("agent_state", {}).items():
+        prompt += f"{agent.capitalize()} ({state['bottleneck_type']}):\n"
+        prompt += f"  Inventory: {state['avg_inventory']} ({state['inventory_trend']}) | Backlog: {state['avg_backlog']} ({state['backlog_trend']})\n"
+        prompt += f"  Inv/Backlog Ratio: {state['inventory_backlog_ratio']} -> Bias: {state['recommended_alpha_bias']}\n"
+
+    prompt += "\n--- AGENT ORDERING BEHAVIOR ---\n"
+    for agent, beh in input_b.get("agent_behavior", {}).items():
+        prompt += f"{agent.capitalize()}: Avg Order Qty: {beh['avg_order_qty']} | Order Variance: {beh['order_variance']}\n"
     
-    prompt += "--- YOUR HISTORICAL TRACK RECORD (Input C) ---\n"
+    prompt += "\n--- YOUR HISTORICAL TRACK RECORD (Input C) ---\n"
     if not input_c:
         prompt += "No history available yet. This is the first block.\n"
     else:
