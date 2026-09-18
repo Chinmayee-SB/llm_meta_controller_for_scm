@@ -1,1 +1,1 @@
-2026-Language-Guided-Multi-Agent-Reinforcement-Learning-for-Resilient-Decentralized-Supply-Chain
+An LLM Meta-Controller for Regime-Switching Cooperation in Multi-Echelon Inventory Management
