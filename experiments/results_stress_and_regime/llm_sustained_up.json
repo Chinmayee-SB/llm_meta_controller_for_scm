@@ -1,0 +1,1872 @@
+[
+  {
+    "trace_idx": 0,
+    "cost_per_period": 204.1,
+    "f1": 0.32395841462024616,
+    "f2": 0.3632204628416697,
+    "f3": 0.38866259558958677,
+    "f4": 0.4643562426439551,
+    "avg_f": 0.38504942892386446,
+    "amp": 43.29399321048939,
+    "service_level": 0.0,
+    "cfr": 16.122448890664927,
+    "post_shock_holding_cost": 72.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Since upstream inventory is stable and healthy while the retailer has a lingering backlog, deploying TARGETED_HYBRID allows the retailer to pull inventory and clear customer demand while upstream stages act as cooperative frictionless pipes.",
+        "window_cost": 44.85,
+        "bullwhip_amp": 95.9
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY enables the retailer and warehouse to aggressively pull inventory while forcing the manufacturer to produce at maximum capacity (20 units/period) to replenish the depleted pipeline, utilizing the distributor as a frictionless conduit.",
+        "window_cost": 111.95,
+        "bullwhip_amp": 49.76
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Applying TARGETED_HYBRID empowers the Retailer to continue pulling inventory to resolve remaining customer backlogs while setting upstream tiers to 0.10 to suppress the severe 208% bullwhip amplification and prevent holding cost accumulation.",
+        "window_cost": 94.2,
+        "bullwhip_amp": 208.53
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High combined multi-tier backlogs require aggressive pull and production support. Retailer, Warehouse, and Manufacturer are set to 0.65 to flood the pipeline and clear bottlenecks, while Distributor acts as a frictionless pipe at 0.10.",
+        "window_cost": 147.95,
+        "bullwhip_amp": 224.8
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand and multi-tier backlogs necessitate MULTI_TIER_RECOVERY to enforce maximum factory output (20 units/period), maintain aggressive pull at Retailer and Warehouse to clear customer deficits, and utilize Distributor as a low-alpha frictionless conduit.",
+        "window_cost": 229.55,
+        "bullwhip_amp": 174.93
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand requires active multi-tier backlog clearance with Retailer, Warehouse, and Factory operating at 0.65 to aggressively pull and push production at maximum capacity, while Distributor acts as a 0.10 cooperative conduit to rapidly flood the pipeline.",
+        "window_cost": 290.3,
+        "bullwhip_amp": -72.1
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with Retailer, Warehouse, and Factory at 0.65 to pull and push maximum inventory through the pipeline, while Distributor acts as a frictionless 0.10 conduit to alleviate ongoing multi-echelon starvation.",
+        "window_cost": 277.1,
+        "bullwhip_amp": 142.52
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY forces the factory to maximum production (20 units/period) while enabling aggressive pulling at retailer and warehouse tiers, using the distributor as a frictionless transit pipe to resolve multi-tier starvation.",
+        "window_cost": 270.65,
+        "bullwhip_amp": 43.58
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintaining MULTI_TIER_RECOVERY ensures maximum factory production and aggressive pull capacity at downstream echelons to rapidly clear remaining backlogs while utilizing the distributor as a smooth conduit.",
+        "window_cost": 290.55,
+        "bullwhip_amp": 143.46
+      }
+    ]
+  },
+  {
+    "trace_idx": 1,
+    "cost_per_period": 225.17,
+    "f1": 0.3167873128924393,
+    "f2": 0.3687742608995612,
+    "f3": 0.40615045015441775,
+    "f4": 0.4982192699575693,
+    "avg_f": 0.3974828234759969,
+    "amp": 57.22285168503398,
+    "service_level": 0.0,
+    "cfr": 12.397710356592281,
+    "post_shock_holding_cost": 98.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Multi-tier recovery is activated to aggressively clear severe backlogs at Retailer and Warehouse while forcing the Manufacturer to push at maximum capacity (20 units/period) to flood the 16-period pipeline, with Distributor operating as a frictionless pipe.",
+        "window_cost": 36.1,
+        "bullwhip_amp": 155.25
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing multi-tier recovery pushes the manufacturer to max capacity (20 units/period) and coordinates aggressive pull replenishment at retailer and warehouse tiers while keeping the distributor at 0.10 to act as a smooth conduit, resolving systemic starvation without worsening bullwhip.",
+        "window_cost": 70.35,
+        "bullwhip_amp": 397.59
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "With all backlogs successfully cleared and customer demand stabilizing at moderate levels, the system must transition to CRUISER to optimize long-run cost efficiency and prevent excessive holding costs.",
+        "window_cost": 84.05,
+        "bullwhip_amp": 24.73
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enabling MULTI_TIER_RECOVERY activates aggressive pull at the retailer and warehouse to resolve lingering customer backlogs, maintains a frictionless distributor pipe (0.10), and forces the manufacturer to push maximum production to replenish exhausted pipeline buffers.",
+        "window_cost": 90.55,
+        "bullwhip_amp": 389.02
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with Retailer, Warehouse, and Manufacturer at 0.65 to pull and produce at maximum capacity, flooding the pipeline to clear severe backlogs, while Distributor acts as a frictionless conduit at 0.10.",
+        "window_cost": 371.7,
+        "bullwhip_amp": -72.0
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation and multi-tier stock starvation require an aggressive push-pull saturation defense, where Retailer, Warehouse, and Factory are set to 0.65 to pull inventory and maximize production while Distributor acts as a frictionless pipe at 0.10.",
+        "window_cost": 430.95,
+        "bullwhip_amp": -74.93
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High customer demand (>= 14) combined with multi-tier backlogs requires MULTI_TIER_RECOVERY. Retailer, Warehouse, and Manufacturer are set to 0.65 to pull inventory and push maximum production capacity (20 units/period) into the pipeline, while Distributor is set to 0.10 to act as a frictionless transit conduit.",
+        "window_cost": 359.35,
+        "bullwhip_amp": -56.69
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery to aggressively pull inventory through the chain and force the manufacturer to produce at maximum capacity (20 units/period), clearing the heavy backlogs while keeping the distributor functioning as a smooth conduit.",
+        "window_cost": 309.05,
+        "bullwhip_amp": -72.45
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain MULTI_TIER_RECOVERY to force maximum factory production (20 units/period) and aggressive pipeline restocking at Retailer and Warehouse, ensuring exhausted inventory buffers are rebuilt to clear persistent customer backlogs before the final episode window.",
+        "window_cost": 265.7,
+        "bullwhip_amp": -73.97
+      }
+    ]
+  },
+  {
+    "trace_idx": 2,
+    "cost_per_period": 151.215,
+    "f1": 0.33391600703291496,
+    "f2": 0.377430338828979,
+    "f3": 0.4028875827371296,
+    "f4": 0.4902355986751917,
+    "avg_f": 0.4011173818185538,
+    "amp": 46.77009135879,
+    "service_level": 0.0,
+    "cfr": 16.260300167850204,
+    "post_shock_holding_cost": 783.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Applying BACKLOG_CLEARER to the Retailer (alpha = 0.65) accelerates inventory pull to clear customer backlogs while setting upstream tiers to SHOCK_ABSORBER (alpha = 0.10) ensures smooth, frictionless flow of goods without generating unnecessary bullwhip amplification.",
+        "window_cost": 46.85,
+        "bullwhip_amp": 127.47
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying Multi-Tier Recovery ensures Retailer, Warehouse, and Manufacturer aggressively pull and push maximum production capacity to clear severe accumulated backlogs while the Distributor acts as a cooperative frictionless pipe.",
+        "window_cost": 72.0,
+        "bullwhip_amp": 78.98
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Transitioning to SHOCK_ABSORBER clamps alpha to 0.10 across all tiers to damp out the extreme 384.66% bullwhip amplification and flush excess holding buffers down the chain now that customer backlogs have largely resolved.",
+        "window_cost": 112.65,
+        "bullwhip_amp": 384.66
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY pushes the Retailer, Warehouse, and Manufacturer to aggressively pull and produce stock (alpha=0.65) while keeping the Distributor at alpha=0.10 to act as a frictionless pipeline, resolving widespread starvation and restoring service levels.",
+        "window_cost": 44.5,
+        "bullwhip_amp": -0.57
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing MULTI_TIER_RECOVERY ensures active inventory pulls at the Retailer and Warehouse, maintains a smooth frictionless Distributor pipe, and commands the Manufacturer to push at maximum 20 units/period to flood the starved pipeline.",
+        "window_cost": 153.75,
+        "bullwhip_amp": 141.08
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing MULTI_TIER_RECOVERY keeps the factory at maximum production capacity (20 units/period) and aggressive pull settings at the Retailer and Warehouse to flood the pipeline and resolve system-wide stock starvation while maintaining a frictionless distributor pipe.",
+        "window_cost": 258.2,
+        "bullwhip_amp": -73.05
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintaining multi-tier recovery ensures that Retailer and Warehouse actively pull replenishment while the Manufacturer operates at maximum production capacity (0.65) to flood the depleted pipelines, with the Distributor acting as a frictionless pipe (0.10) to clear systemic backlogs.",
+        "window_cost": 195.2,
+        "bullwhip_amp": 40.11
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain MULTI_TIER_RECOVERY to ensure the factory produces at max capacity (20 units/period) and intermediate echelons aggressively pull and clear persistent backlogs while the distributor acts as a cooperative frictionless pipe.",
+        "window_cost": 174.0,
+        "bullwhip_amp": 125.23
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforce Multi-Tier Recovery with maximum factory output and aggressive pull from Retailer and Warehouse to resolve severe intermediate starvation while keeping the Distributor frictionless.",
+        "window_cost": 201.4,
+        "bullwhip_amp": 179.83
+      }
+    ]
+  },
+  {
+    "trace_idx": 3,
+    "cost_per_period": 147.53,
+    "f1": 0.3326581971580027,
+    "f2": 0.36093910624104164,
+    "f3": 0.3884235671445625,
+    "f4": 0.4715427773219117,
+    "avg_f": 0.38839091196637965,
+    "amp": 41.70733624272229,
+    "service_level": 0.0,
+    "cfr": 16.418504112193087,
+    "post_shock_holding_cost": 219.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Applying TARGETED_HYBRID empowers the retailer to pull necessary inventory to clear the 3.0 backlog while setting upstream tiers to shock absorber mode to flush stock efficiently and minimize holding costs.",
+        "window_cost": 50.6,
+        "bullwhip_amp": 126.47
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY activates maximum factory production and urgent pipeline pulls at Retailer and Warehouse to clear severe multi-tier backlogs, while keeping the Distributor at 0.10 to act as a frictionless conduit.",
+        "window_cost": 40.45,
+        "bullwhip_amp": 92.34
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "With backlogs fully cleared and demand returning to stable nominal levels, transitioning immediately to CRUISER eliminates aggressive holding cost accumulation and restores optimal long-run cost efficiency (~34.00 benchmark).",
+        "window_cost": 70.3,
+        "bullwhip_amp": 48.87
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY enables Retailer and Warehouse to aggressively pull needed inventory, keeps Distributor as a frictionless shock absorber pipeline, and forces the Manufacturer to push at maximum capacity to flood the 16-period pipeline and eliminate pervasive backlogs.",
+        "window_cost": 60.9,
+        "bullwhip_amp": 242.2
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing MULTI_TIER_RECOVERY ensures that the Retailer, Warehouse, and Factory aggressively pull and produce at maximum capacity (20 units/period) to flood the 16-period pipeline, while the Distributor acts as a frictionless pipe to rapidly relieve severe system-wide starvation.",
+        "window_cost": 190.15,
+        "bullwhip_amp": -78.82
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforces a Push-Pull Saturation Defense where Retailer, Warehouse, and Manufacturer operate at 0.65 to pull inventory and push maximum production (20 units/period), while Distributor acts as a 90% cooperative frictionless pipe to rapidly clear widespread backlogs.",
+        "window_cost": 170.35,
+        "bullwhip_amp": -73.37
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High ongoing demand (>=14) and severe multi-tier backlogs require MULTI_TIER_RECOVERY to pull stock aggressively through Retailer and Warehouse, keep Distributor frictionless at 0.10, and force the Manufacturer to push at maximum capacity (0.65) to flood the 16-period pipeline.",
+        "window_cost": 190.5,
+        "bullwhip_amp": 272.78
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing MULTI_TIER_RECOVERY maintains maximum factory output and pulls inventory aggressively through the distributor conduit to systematically resolve extreme multi-tier starvation and backlogs.",
+        "window_cost": 232.8,
+        "bullwhip_amp": -75.9
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY enables the retailer, warehouse, and factory to aggressively pull and push maximum inventory to clear severe persistent backlogs under sustained high demand, while the distributor acts as a frictionless conduit.",
+        "window_cost": 174.4,
+        "bullwhip_amp": 257.94
+      }
+    ]
+  },
+  {
+    "trace_idx": 4,
+    "cost_per_period": 125.535,
+    "f1": 0.3273956229544022,
+    "f2": 0.3500649515825409,
+    "f3": 0.3759444748720912,
+    "f4": 0.4468399495022352,
+    "avg_f": 0.3750612497278174,
+    "amp": 36.44150278138207,
+    "service_level": 0.0,
+    "cfr": 19.9728167178198,
+    "post_shock_holding_cost": 273.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enabling Multi-Tier Recovery allows Retailer and Warehouse to pull stock aggressively to clear accumulated backlogs while Manufacturer pushes production to flood the pipeline, with Distributor acting as a cooperative frictionless channel.",
+        "window_cost": 64.3,
+        "bullwhip_amp": 154.2
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforces a multi-tier crisis recovery strategy where Retailer, Warehouse, and Manufacturer pull and produce aggressively (alpha 0.65) to eliminate persistent backlogs while Distributor acts as a cooperative frictionless conduit (alpha 0.10).",
+        "window_cost": 90.95,
+        "bullwhip_amp": 47.62
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Switching to SHOCK_ABSORBER suppresses the high bullwhip amplification (164.86%) and allows the excessive upstream inventory buffers at the distributor and manufacturer to flush through the system without generating additional unnecessary orders.",
+        "window_cost": 74.35,
+        "bullwhip_amp": 164.86
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY pulls inventory urgently through Retailer, Warehouse, and Manufacturer at max production capacity while keeping the Distributor acting as a smooth cooperative pipe, resolving widespread starvation without excessive bullwhip escalation.",
+        "window_cost": 107.45,
+        "bullwhip_amp": 39.39
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "With high demand >= 14 and multi-tier backlogs exceeding critical thresholds, MULTI_TIER_RECOVERY forces the manufacturer to push max capacity (20 units/period) while retailer and warehouse aggressively pull, using the distributor as a frictionless pipe to flood the 16-period pipeline and clear backlogs.",
+        "window_cost": 124.25,
+        "bullwhip_amp": -74.78
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation and multi-tier backlogs require aggressive pull and production at the retailer, warehouse, and factory levels (alpha = 0.65), while the distributor acts as a frictionless conduit (alpha = 0.10) to flush inventory through the pipeline.",
+        "window_cost": 81.35,
+        "bullwhip_amp": 297.27
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain MULTI_TIER_RECOVERY to ensure maximum factory production (20 units/period) and aggressive replenishment through the pipeline, clearing the severe multi-tier backlogs while keeping the distributor acting as a smooth conduit.",
+        "window_cost": 180.3,
+        "bullwhip_amp": -70.11
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY maintains urgent pull pressure at the retailer and warehouse, keeps the distributor acting as a frictionless pipe via shock absorber settings, and forces the manufacturer to push maximum production to replenish exhausted pipelines and clear multi-tier backlogs.",
+        "window_cost": 191.3,
+        "bullwhip_amp": -73.5
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY ensures maximum factory production and urgent pipeline pulls at the retail and warehouse echelons to eliminate outstanding backlogs under high demand, while the distributor acts as a frictionless conduit.",
+        "window_cost": 153.65,
+        "bullwhip_amp": 171.48
+      }
+    ]
+  },
+  {
+    "trace_idx": 5,
+    "cost_per_period": 133.165,
+    "f1": 0.3243039882692157,
+    "f2": 0.3522633016947929,
+    "f3": 0.3915295003479945,
+    "f4": 0.4629006170564334,
+    "avg_f": 0.3827493518421091,
+    "amp": 42.69264059487532,
+    "service_level": 0.0,
+    "cfr": 20.60593324513061,
+    "post_shock_holding_cost": 165.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Retailer needs to pull inventory to clear lingering backlogs, while upstream tiers act as 90% cooperative shock absorbers to flush their excess holding buffers downstream without generating bullwhip amplification.",
+        "window_cost": 60.15,
+        "bullwhip_amp": 135.75
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing multi-tier recovery ensures Retailer and Warehouse aggressively pull inventory while the Factory operates at max capacity (alpha = 0.65) to flood the 16-period pipeline and eliminate systemic backlogs.",
+        "window_cost": 65.8,
+        "bullwhip_amp": 95.6
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High multi-tier backlogs require continued aggressive pull at the retailer and warehouse levels while forcing the manufacturer to push maximum production, with the distributor acting as a cooperative frictionless pipe.",
+        "window_cost": 100.65,
+        "bullwhip_amp": 267.54
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforce MULTI_TIER_RECOVERY to maintain aggressive pull urgency at Retailer, Warehouse, and Manufacturer (max capacity production), while keeping Distributor at 0.10 to act as a frictionless conduit and rapidly rebuild exhausted inventory buffers across the pipeline.",
+        "window_cost": 110.2,
+        "bullwhip_amp": 37.92
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High ongoing demand requires a push-pull saturation defense where retailer, warehouse, and manufacturer apply backlog-clearing priorities (0.65) while the distributor acts as a cooperative frictionless pipe (0.10) to replenish exhausted inventory pipelines.",
+        "window_cost": 105.25,
+        "bullwhip_amp": -59.24
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High ongoing demand (>= 14) and severe multi-tier backlogs require MULTI_TIER_RECOVERY. Retailer, Warehouse, and Manufacturer are set to 0.65 to pull inventory and force maximum factory production output, while the Distributor acts as a cooperative frictionless pipe at 0.10 to ensure smooth flow.",
+        "window_cost": 89.65,
+        "bullwhip_amp": 222.09
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing MULTI_TIER_RECOVERY ensures both Retailer and Warehouse aggressively pull stock while the Factory operates at maximum output (alpha = 0.65) to flood the 16-period pipeline, and the Distributor acts as a cooperative frictionless pipe (alpha = 0.10) to relieve severe system-wide starvation.",
+        "window_cost": 212.0,
+        "bullwhip_amp": -60.4
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation with multi-tier backlogs requires aggressive replenishment pushes from the manufacturer, warehouse, and retailer while maintaining a frictionless distributor conduit to flood the pipeline and clear accumulated backlogs.",
+        "window_cost": 192.4,
+        "bullwhip_amp": -71.07
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Deploying Multi-Tier Recovery ensures that Retailer and Warehouse pull aggressively to clear backlogs while Distributor acts as a smooth frictionless pipe and the Manufacturer floods the 16-period pipeline at maximum capacity to satisfy high demand.",
+        "window_cost": 127.15,
+        "bullwhip_amp": 296.67
+      }
+    ]
+  },
+  {
+    "trace_idx": 6,
+    "cost_per_period": 136.23,
+    "f1": 0.3298855969493558,
+    "f2": 0.36610047484564406,
+    "f3": 0.3796117983942403,
+    "f4": 0.45571475461259314,
+    "avg_f": 0.3828281562004584,
+    "amp": 38.101407705541,
+    "service_level": 0.0,
+    "cfr": 19.351682628804575,
+    "post_shock_holding_cost": 109.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Deploying MULTI_TIER_RECOVERY pulls inventory urgently from retailer and warehouse to clear customer backlogs, uses the distributor as a frictionless transit pipe (0.10), and forces the factory to produce at max capacity (0.65) to flood the 16-period pipeline and stabilize stock levels.",
+        "window_cost": 49.7,
+        "bullwhip_amp": 130.03
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "With customer backlogs fully cleared and demand returning to stable levels, we transition to the CRUISER state to minimize holding costs, smooth order fluctuations, and restore long-run supply chain cost efficiency.",
+        "window_cost": 72.25,
+        "bullwhip_amp": 145.8
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Retailer inventory is depleted and requires local backlog clearance (alpha 0.65), while upstream tiers hold heavy excess inventory and act as frictionless pipes (alpha 0.10) to flush stock downward efficiently without exacerbating holding costs.",
+        "window_cost": 63.25,
+        "bullwhip_amp": 83.69
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Deploying MULTI_TIER_RECOVERY ensures Retailer, Warehouse, and Factory actively pull and produce at maximum capacity (0.65) to clear extreme multi-tier backlogs, while keeping the Distributor at 0.10 to act as a frictionless pipeline conduit.",
+        "window_cost": 84.6,
+        "bullwhip_amp": 188.65
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with high priority pulling at retailer, warehouse, and manufacturer to flood the exhausted pipeline and clear severe backlogs, while keeping the distributor as a cooperative transit pipe.",
+        "window_cost": 236.9,
+        "bullwhip_amp": -81.1
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforces MULTI_TIER_RECOVERY to aggressively pull inventory through retailer and warehouse, maintain a frictionless distributor pipe, and force the manufacturer to produce at max capacity to replenish exhausted pipelines and clear massive accumulated backlogs.",
+        "window_cost": 241.3,
+        "bullwhip_amp": -71.73
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintaining MULTI_TIER_RECOVERY forces maximum factory output (20 units/period) and aggressive pulling across downstream tiers to systematically resolve persistent stock starvation under elevated demand.",
+        "window_cost": 168.15,
+        "bullwhip_amp": 111.48
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High sustained demand and multi-tier backlogs require aggressive push-pull saturation defense, keeping the factory producing at max capacity and downstream echelons pulling aggressively while the distributor acts as a frictionless pipe.",
+        "window_cost": 126.2,
+        "bullwhip_amp": 111.97
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand and multi-tier backlogs dictate the MULTI_TIER_RECOVERY mode to ensure the factory operates at maximum capacity, flooding the pipeline while Retailer and Warehouse aggressively pull to clear accumulated customer backlogs.",
+        "window_cost": 179.15,
+        "bullwhip_amp": -70.31
+      }
+    ]
+  },
+  {
+    "trace_idx": 7,
+    "cost_per_period": 126.82,
+    "f1": 0.33172380773714427,
+    "f2": 0.36298765880298045,
+    "f3": 0.39673458922069554,
+    "f4": 0.46893080599195414,
+    "avg_f": 0.3900942154381936,
+    "amp": 41.31921672221295,
+    "service_level": 0.0,
+    "cfr": 20.574907812412153,
+    "post_shock_holding_cost": 148.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "We implement multi-tier recovery to allow the retailer and warehouse to pull stock urgently while the manufacturer forces production at maximum capacity (20 units/period) to flood the pipeline and resolve distributor starvation.",
+        "window_cost": 39.95,
+        "bullwhip_amp": 113.5
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforcing multi-tier recovery allows Retailer, Warehouse, and Factory to pull and produce at high capacity (0.65) to replenish depleted safety stocks, while the Distributor acts as a cooperative frictionless pipe (0.10) to ensure smooth flow.",
+        "window_cost": 51.1,
+        "bullwhip_amp": 32.53
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Deploying MULTI_TIER_RECOVERY allows Retailer and Warehouse to pull urgently for backlog clearance, the Distributor acts as a frictionless pipe at 0.10, and the Manufacturer pushes production at max capacity to replenish the starved downstream pipeline.",
+        "window_cost": 91.15,
+        "bullwhip_amp": 403.97
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY enables the retailer, warehouse, and manufacturer to aggressively pull and produce at maximum capacity to replenish exhausted inventory buffers, while keeping the distributor at 0.10 to act as a frictionless conduit.",
+        "window_cost": 120.75,
+        "bullwhip_amp": 68.78
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enabling MULTI_TIER_RECOVERY commands the retailer, warehouse, and factory to aggressively pull and produce at maximum capacity (0.65) to eliminate widespread backlogs while keeping the distributor at 0.10 to act as a smooth, cooperative conduit.",
+        "window_cost": 131.85,
+        "bullwhip_amp": -76.38
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand and severe multi-tier backlogs require MULTI_TIER_RECOVERY to aggressively pull inventory at downstream stages and force maximum production at the manufacturer, while utilizing the distributor as a cooperative transit pipe.",
+        "window_cost": 123.25,
+        "bullwhip_amp": 242.96
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High ongoing demand requires MULTI_TIER_RECOVERY to enforce maximum factory production and aggressive pull orders at retailer and warehouse levels while keeping the distributor operating as a frictionless conduit.",
+        "window_cost": 176.15,
+        "bullwhip_amp": -72.07
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Multi-tier recovery is mandated due to high demand (>= 14) and combined Retailer and Warehouse backlogs exceeding 40. Retailer, Warehouse, and Manufacturer are set to 0.65 to pull inventory and push maximum production, while Distributor acts as a frictionless pipe at 0.10.",
+        "window_cost": 122.05,
+        "bullwhip_amp": 256.88
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand and massive multi-tier backlogs require maximum factory production push combined with aggressive downstream pulling to clear accumulated deficits during the final window.",
+        "window_cost": 219.6,
+        "bullwhip_amp": -70.9
+      }
+    ]
+  },
+  {
+    "trace_idx": 8,
+    "cost_per_period": 216.285,
+    "f1": 0.32396504029733914,
+    "f2": 0.3642560299936926,
+    "f3": 0.4318480303772398,
+    "f4": 0.5077086926750051,
+    "avg_f": 0.4069444483358191,
+    "amp": 56.6687638411004,
+    "service_level": 0.0,
+    "cfr": 12.825943027461092,
+    "post_shock_holding_cost": 485.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation and multi-tier backlogs require aggressive pull-replenishment at the Retailer, Warehouse, and Manufacturer levels while keeping the Distributor at 0.10 to act as a frictionless pipeline, forcing the factory to push maximum output to flood the pipeline.",
+        "window_cost": 59.65,
+        "bullwhip_amp": 148.91
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Transitioning to CRUISER is necessary because backlogs are fully cleared and demand has returned to stable nominal levels. This restores the 70% cooperative steady-state anchor, optimizing holding and backlog trade-offs to guide total chain costs back toward the 34.0 benchmark.",
+        "window_cost": 91.9,
+        "bullwhip_amp": 74.29
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Multi-tier crisis management is required to resolve severe backlogs across Retailer and Warehouse, forcing the Factory to operate at maximum capacity (0.65) while the Distributor acts as a cooperative frictionless pipe (0.10) to flood the exhausted pipelines.",
+        "window_cost": 114.35,
+        "bullwhip_amp": 292.29
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "With backlogs cleared and demand returning to stable nominal levels, we transition to CRUISER to optimize long-run cost efficiency, eliminate excess holding costs, and restore the benchmark operational equilibrium.",
+        "window_cost": 103.9,
+        "bullwhip_amp": 143.73
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enabling multi-tier recovery forces the retailer, warehouse, and manufacturer to pull and push at maximum capacity (0.65) to resolve systemic starvation while keeping the distributor at 0.10 to ensure frictionless flow through the middle echelons.",
+        "window_cost": 225.0,
+        "bullwhip_amp": 259.84
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforces a Push-Pull Saturation Defense where Retailer, Warehouse, and Manufacturer operate at max backlog-clearance and production priority (0.65) to flood the exhausted pipeline, while Distributor acts as a frictionless 90% cooperative pipe (0.10) to rapidly feed downstream starving echelons.",
+        "window_cost": 335.55,
+        "bullwhip_amp": 181.29
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Sustained high demand and massive multi-tier backlogs require MULTI_TIER_RECOVERY. Retailer, Warehouse, and Factory maintain 0.65 to pull and produce at maximum capacity, while Distributor operates at 0.10 to act as a frictionless conduit.",
+        "window_cost": 351.95,
+        "bullwhip_amp": -57.33
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with maximum factory production and urgent upstream/downstream pulling to clear massive accumulated backlogs while keeping the distributor flowing smoothly.",
+        "window_cost": 320.55,
+        "bullwhip_amp": 104.98
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with high-capacity factory and warehouse push (0.65) alongside a frictionless distributor pipe (0.10) to aggressively feed inventory down the starving pipeline and clear severe backlogs before episode termination.",
+        "window_cost": 301.55,
+        "bullwhip_amp": -72.78
+      }
+    ]
+  },
+  {
+    "trace_idx": 9,
+    "cost_per_period": 165.155,
+    "f1": 0.30167094749210843,
+    "f2": 0.34774902553321585,
+    "f3": 0.3931384929176417,
+    "f4": 0.4827194584963439,
+    "avg_f": 0.3813194811098275,
+    "amp": 59.96220395237597,
+    "service_level": 0.0,
+    "cfr": 17.401010354828983,
+    "post_shock_holding_cost": 210.0,
+    "t_rec": 0,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enforces multi-tier recovery with Retailer, Warehouse, and Manufacturer pulling and producing at 0.65 to flood the depleted pipeline while Distributor acts as a 90% cooperative frictionless pipe (0.10) to eliminate bottlenecks.",
+        "window_cost": 57.9,
+        "bullwhip_amp": 147.64
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery to aggressively pull inventory through Retailer and Warehouse while ensuring the Factory forces maximum production and the Distributor acts as a frictionless pipe to rapidly clear accumulated backlogs.",
+        "window_cost": 109.4,
+        "bullwhip_amp": 62.26
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Deploy TARGETED_HYBRID to allow the retailer to aggressively pull inventory and clear lingering customer backlogs, while setting upstream echelons to 90% cooperative smoothing (0.10) to suppress the 192% bullwhip amplification and prevent holding cost accumulation.",
+        "window_cost": 118.25,
+        "bullwhip_amp": 192.34
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Enabling MULTI_TIER_RECOVERY pulls inventory urgently at the Retailer and Warehouse levels while keeping Distributor cooperative and forcing the Manufacturer to produce at maximum capacity to replenish exhausted buffers and resolve systemic backlogs.",
+        "window_cost": 97.4,
+        "bullwhip_amp": 475.78
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with high alpha at retailer, warehouse, and factory to maximize production and pull stock through the system, while keeping distributor at 0.10 to act as a smooth conduit and prevent mid-chain bottlenecks during high demand saturation.",
+        "window_cost": 213.4,
+        "bullwhip_amp": 138.19
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY forces the factory to produce at maximum capacity (20 units/period) while retailer and warehouse aggressively pull stock and the distributor acts as a frictionless pipe to resolve systemic multi-tier starvation.",
+        "window_cost": 236.25,
+        "bullwhip_amp": -70.89
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Applying MULTI_TIER_RECOVERY maintains urgent pull priorities at Retailer and Warehouse while forcing the Manufacturer to push at maximum capacity to flood the 16-period pipeline and eliminate ongoing backlogs without stalling upstream production.",
+        "window_cost": 167.8,
+        "bullwhip_amp": 148.08
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High sustained demand of ~18.8 units requires MULTI_TIER_RECOVERY to aggressively pull inventory at the Retailer and Warehouse, keep the Distributor frictionless (0.10), and force the Manufacturer to push at maximum capacity to saturate the 16-period pipeline.",
+        "window_cost": 193.95,
+        "bullwhip_amp": 163.3
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "Maintain multi-tier recovery with maximum factory production and urgent pull signals across retailer and warehouse to aggressively clear severe backlogs and replenish exhausted pipelines before the episode concludes.",
+        "window_cost": 264.15,
+        "bullwhip_amp": -73.14
+      }
+    ]
+  }
+]

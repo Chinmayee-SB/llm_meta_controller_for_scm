@@ -1,0 +1,1872 @@
+[
+  {
+    "trace_idx": 0,
+    "cost_per_period": 177.505,
+    "f1": 0.43775334025073886,
+    "f2": 0.492774726735631,
+    "f3": 0.6251000549406771,
+    "f4": 0.753212902576984,
+    "avg_f": 0.5772102561260077,
+    "amp": 72.02401656811685,
+    "service_level": 0.0,
+    "cfr": 12.939935533807395,
+    "post_shock_holding_cost": 6110.0,
+    "t_rec": 53,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 52.6,
+        "bullwhip_amp": 99.37
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 87.15,
+        "bullwhip_amp": 91.22
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 120.8,
+        "bullwhip_amp": 59.7
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 432.0,
+        "bullwhip_amp": 223.18
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 457.7,
+        "bullwhip_amp": -100.0
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 191.4,
+        "bullwhip_amp": 408407.28
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 94.95,
+        "bullwhip_amp": 35.34
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 102.25,
+        "bullwhip_amp": 245.84
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 139.2,
+        "bullwhip_amp": 173.21
+      }
+    ]
+  },
+  {
+    "trace_idx": 1,
+    "cost_per_period": 183.61,
+    "f1": 0.43081408017932116,
+    "f2": 0.47743886987409506,
+    "f3": 0.5673879957677642,
+    "f4": 0.7302675632563712,
+    "avg_f": 0.5514771272693879,
+    "amp": 69.46941324184085,
+    "service_level": 0.0,
+    "cfr": 11.82216900008887,
+    "post_shock_holding_cost": 5202.0,
+    "t_rec": 56,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 45.5,
+        "bullwhip_amp": 129.65
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 37.35,
+        "bullwhip_amp": 0.65
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 98.05,
+        "bullwhip_amp": 289.31
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 506.65,
+        "bullwhip_amp": 139.75
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 528.55,
+        "bullwhip_amp": 22394.05
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 236.5,
+        "bullwhip_amp": 354479.49
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 74.75,
+        "bullwhip_amp": 9.34
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 89.45,
+        "bullwhip_amp": 317.83
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 123.3,
+        "bullwhip_amp": 20.77
+      }
+    ]
+  },
+  {
+    "trace_idx": 2,
+    "cost_per_period": 148.48,
+    "f1": 0.3863006215997039,
+    "f2": 0.4411059441002846,
+    "f3": 0.5394972710780359,
+    "f4": 0.6827421113094377,
+    "avg_f": 0.5124114870218656,
+    "amp": 76.69280874416712,
+    "service_level": 0.0,
+    "cfr": 15.050331358640246,
+    "post_shock_holding_cost": 5077.0,
+    "t_rec": 50,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 56.9,
+        "bullwhip_amp": 162.18
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 47.1,
+        "bullwhip_amp": 85.98
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 97.95,
+        "bullwhip_amp": 25.04
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 376.25,
+        "bullwhip_amp": 335.18
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 371.65,
+        "bullwhip_amp": 427.0
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 107.4,
+        "bullwhip_amp": 94.21
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 90.3,
+        "bullwhip_amp": 119.37
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 112.35,
+        "bullwhip_amp": 71.58
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 131.55,
+        "bullwhip_amp": 49.63
+      }
+    ]
+  },
+  {
+    "trace_idx": 3,
+    "cost_per_period": 198.92,
+    "f1": 0.4015951034078445,
+    "f2": 0.4811863425969784,
+    "f3": 0.5958858018039661,
+    "f4": 0.7381304067989599,
+    "avg_f": 0.5541994136519373,
+    "amp": 83.75389705697502,
+    "service_level": 0.0,
+    "cfr": 12.03961769838932,
+    "post_shock_holding_cost": 6131.0,
+    "t_rec": 58,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 55.7,
+        "bullwhip_amp": 127.94
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 82.4,
+        "bullwhip_amp": 62.65
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 121.95,
+        "bullwhip_amp": 205.7
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 483.2,
+        "bullwhip_amp": 167.28
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 538.45,
+        "bullwhip_amp": 20733.22
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 250.75,
+        "bullwhip_amp": 2386.86
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 96.2,
+        "bullwhip_amp": 36.41
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 97.9,
+        "bullwhip_amp": 292.08
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 102.25,
+        "bullwhip_amp": 1.97
+      }
+    ]
+  },
+  {
+    "trace_idx": 4,
+    "cost_per_period": 131.25,
+    "f1": 0.3785720216580862,
+    "f2": 0.46427972558507424,
+    "f3": 0.5454328685666648,
+    "f4": 0.7007686331974479,
+    "avg_f": 0.5222633122518183,
+    "amp": 85.05952199188141,
+    "service_level": 0.0,
+    "cfr": 16.28730720703636,
+    "post_shock_holding_cost": 5325.0,
+    "t_rec": 59,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 50.3,
+        "bullwhip_amp": 129.51
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 118.45,
+        "bullwhip_amp": 87.66
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 102.0,
+        "bullwhip_amp": 126.45
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 315.15,
+        "bullwhip_amp": -100.0
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 263.55,
+        "bullwhip_amp": 1179.46
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 136.85,
+        "bullwhip_amp": 267971.51
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 90.05,
+        "bullwhip_amp": 111.28
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 95.55,
+        "bullwhip_amp": 175.68
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 81.65,
+        "bullwhip_amp": 138.08
+      }
+    ]
+  },
+  {
+    "trace_idx": 5,
+    "cost_per_period": 117.065,
+    "f1": 0.40422008961621875,
+    "f2": 0.4844813579147902,
+    "f3": 0.5438323878878161,
+    "f4": 0.7069254726017852,
+    "avg_f": 0.5348648270051526,
+    "amp": 74.8430243159077,
+    "service_level": 0.0,
+    "cfr": 17.12255760481309,
+    "post_shock_holding_cost": 5898.0,
+    "t_rec": 52,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 50.7,
+        "bullwhip_amp": 103.79
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 49.35,
+        "bullwhip_amp": 131.63
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 84.1,
+        "bullwhip_amp": 93.68
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 326.3,
+        "bullwhip_amp": -100.0
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 240.8,
+        "bullwhip_amp": 1152.44
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 101.6,
+        "bullwhip_amp": 194.4
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 103.05,
+        "bullwhip_amp": 119.34
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 79.65,
+        "bullwhip_amp": 165.85
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 92.75,
+        "bullwhip_amp": 188.22
+      }
+    ]
+  },
+  {
+    "trace_idx": 6,
+    "cost_per_period": 145.665,
+    "f1": 0.3975740636478935,
+    "f2": 0.4547546233838609,
+    "f3": 0.552526521615701,
+    "f4": 0.6966640930201432,
+    "avg_f": 0.5253798254168996,
+    "amp": 75.18469437749904,
+    "service_level": 0.0,
+    "cfr": 15.167793622146283,
+    "post_shock_holding_cost": 5840.0,
+    "t_rec": 50,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 45.25,
+        "bullwhip_amp": 163.33
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 38.9,
+        "bullwhip_amp": 50.22
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 71.2,
+        "bullwhip_amp": 171.12
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 433.05,
+        "bullwhip_amp": -100.0
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 335.05,
+        "bullwhip_amp": 581.24
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 115.3,
+        "bullwhip_amp": 275833.18
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 98.2,
+        "bullwhip_amp": 162.34
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 79.6,
+        "bullwhip_amp": -2.49
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 156.25,
+        "bullwhip_amp": 384.25
+      }
+    ]
+  },
+  {
+    "trace_idx": 7,
+    "cost_per_period": 187.385,
+    "f1": 0.41038341739500606,
+    "f2": 0.47135049859785555,
+    "f3": 0.5832586978791908,
+    "f4": 0.7290202947253027,
+    "avg_f": 0.5485032271493387,
+    "amp": 77.60042521371095,
+    "service_level": 0.0,
+    "cfr": 12.065795298584726,
+    "post_shock_holding_cost": 5562.0,
+    "t_rec": 58,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 56.8,
+        "bullwhip_amp": 184.35
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 101.55,
+        "bullwhip_amp": 3.88
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 117.05,
+        "bullwhip_amp": 286.88
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 456.35,
+        "bullwhip_amp": 56.29
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 492.3,
+        "bullwhip_amp": 35.97
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 221.4,
+        "bullwhip_amp": 279554.62
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 91.8,
+        "bullwhip_amp": 42.96
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 97.85,
+        "bullwhip_amp": 237.41
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 110.6,
+        "bullwhip_amp": 12.96
+      }
+    ]
+  },
+  {
+    "trace_idx": 8,
+    "cost_per_period": 169.88,
+    "f1": 0.4112757129546174,
+    "f2": 0.48323368813578993,
+    "f3": 0.5771036897516505,
+    "f4": 0.7170630803990915,
+    "avg_f": 0.5471690428102873,
+    "amp": 74.30855974674355,
+    "service_level": 0.0,
+    "cfr": 13.273518144244054,
+    "post_shock_holding_cost": 5616.0,
+    "t_rec": 57,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 40.15,
+        "bullwhip_amp": 163.42
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 47.45,
+        "bullwhip_amp": 12.24
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 118.3,
+        "bullwhip_amp": 444.36
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 455.45,
+        "bullwhip_amp": -100.0
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 417.75,
+        "bullwhip_amp": 227.78
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 196.2,
+        "bullwhip_amp": 340227.16
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 87.45,
+        "bullwhip_amp": -2.73
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 87.05,
+        "bullwhip_amp": 393.39
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 110.15,
+        "bullwhip_amp": 31.01
+      }
+    ]
+  },
+  {
+    "trace_idx": 9,
+    "cost_per_period": 185.155,
+    "f1": 0.40283176516174074,
+    "f2": 0.46591455356113587,
+    "f3": 0.5905484207712814,
+    "f4": 0.7415642798115284,
+    "avg_f": 0.5502147548264216,
+    "amp": 84.04214905068537,
+    "service_level": 0.0,
+    "cfr": 12.984103206102086,
+    "post_shock_holding_cost": 5631.0,
+    "t_rec": 52,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 54.95,
+        "bullwhip_amp": 115.54
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 85.45,
+        "bullwhip_amp": 5.48
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 134.65,
+        "bullwhip_amp": 321.47
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 513.2,
+        "bullwhip_amp": 92.71
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 487.05,
+        "bullwhip_amp": 15.77
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 183.4,
+        "bullwhip_amp": 426090.51
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 84.7,
+        "bullwhip_amp": 79.66
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 101.5,
+        "bullwhip_amp": 264.82
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "FIXED",
+        "rationale": "Static benchmark execution",
+        "window_cost": 90.5,
+        "bullwhip_amp": 44.23
+      }
+    ]
+  }
+]

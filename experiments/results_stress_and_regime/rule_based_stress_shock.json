@@ -1,0 +1,1872 @@
+[
+  {
+    "trace_idx": 0,
+    "cost_per_period": 200.23,
+    "f1": 0.4429083649306633,
+    "f2": 0.48642715672439435,
+    "f3": 0.544328516653124,
+    "f4": 0.6898938027185326,
+    "avg_f": 0.5408894602566785,
+    "amp": 55.72929482415307,
+    "service_level": 0.0,
+    "cfr": 11.48262202921923,
+    "post_shock_holding_cost": 3931.0,
+    "t_rec": 61,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 52.6,
+        "bullwhip_amp": 99.37
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 87.15,
+        "bullwhip_amp": 91.22
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 110.5,
+        "bullwhip_amp": 125.73
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 495.25,
+        "bullwhip_amp": 177.58
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 555.6,
+        "bullwhip_amp": 1827.31
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 333.95,
+        "bullwhip_amp": 1813.85
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 161.6,
+        "bullwhip_amp": -37.5
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 109.2,
+        "bullwhip_amp": 145.79
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 64.2,
+        "bullwhip_amp": 159.4
+      }
+    ]
+  },
+  {
+    "trace_idx": 1,
+    "cost_per_period": 151.035,
+    "f1": 0.4136532864707391,
+    "f2": 0.5087294069245417,
+    "f3": 0.5348683671623414,
+    "f4": 0.6784276535407647,
+    "avg_f": 0.5339196785245968,
+    "amp": 63.96912743042189,
+    "service_level": 0.0,
+    "cfr": 13.90504995400832,
+    "post_shock_holding_cost": 4935.0,
+    "t_rec": 50,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 45.5,
+        "bullwhip_amp": 129.65
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 71.2,
+        "bullwhip_amp": 11.61
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 105.45,
+        "bullwhip_amp": 179.56
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 432.4,
+        "bullwhip_amp": -21.21
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 384.3,
+        "bullwhip_amp": 1139.72
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 163.0,
+        "bullwhip_amp": 285508.95
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 77.4,
+        "bullwhip_amp": 47.62
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 81.1,
+        "bullwhip_amp": 178.54
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 89.05,
+        "bullwhip_amp": 137.7
+      }
+    ]
+  },
+  {
+    "trace_idx": 2,
+    "cost_per_period": 176.22,
+    "f1": 0.3989238657923115,
+    "f2": 0.43831298502753535,
+    "f3": 0.5058706760899565,
+    "f4": 0.6446887366659524,
+    "avg_f": 0.49694906589393895,
+    "amp": 61.56646053885593,
+    "service_level": 0.0,
+    "cfr": 12.966486875111075,
+    "post_shock_holding_cost": 3952.0,
+    "t_rec": 55,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 56.9,
+        "bullwhip_amp": 162.18
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 52.05,
+        "bullwhip_amp": 27.72
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 97.45,
+        "bullwhip_amp": 34.94
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 445.15,
+        "bullwhip_amp": 254.06
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 537.15,
+        "bullwhip_amp": 1297.51
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 278.4,
+        "bullwhip_amp": 77037.52
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 91.6,
+        "bullwhip_amp": 30.57
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 92.75,
+        "bullwhip_amp": 167.72
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 55.5,
+        "bullwhip_amp": 97.83
+      }
+    ]
+  },
+  {
+    "trace_idx": 3,
+    "cost_per_period": 248.68,
+    "f1": 0.43007641505009825,
+    "f2": 0.490203526500464,
+    "f3": 0.5058841341374234,
+    "f4": 0.6464472726684319,
+    "avg_f": 0.5181528370891044,
+    "amp": 50.27492211379065,
+    "service_level": 0.0,
+    "cfr": 9.864524986353025,
+    "post_shock_holding_cost": 3437.0,
+    "t_rec": 72,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 55.7,
+        "bullwhip_amp": 127.94
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 83.85,
+        "bullwhip_amp": 52.84
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 120.75,
+        "bullwhip_amp": 167.33
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 546.4,
+        "bullwhip_amp": 150.4
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 659.8,
+        "bullwhip_amp": 232693.06
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 415.2,
+        "bullwhip_amp": 947.69
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 288.7,
+        "bullwhip_amp": 305366.87
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 147.2,
+        "bullwhip_amp": -18.0
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 104.6,
+        "bullwhip_amp": 270.35
+      }
+    ]
+  },
+  {
+    "trace_idx": 4,
+    "cost_per_period": 185.375,
+    "f1": 0.37557122244799646,
+    "f2": 0.43342465942647357,
+    "f3": 0.5112449764846547,
+    "f4": 0.6357980627018823,
+    "avg_f": 0.48900973026525174,
+    "amp": 69.24321712981218,
+    "service_level": 0.0,
+    "cfr": 11.683316862795754,
+    "post_shock_holding_cost": 3794.0,
+    "t_rec": 65,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 50.3,
+        "bullwhip_amp": 129.51
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 107.85,
+        "bullwhip_amp": 48.75
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 87.8,
+        "bullwhip_amp": 178.7
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 444.1,
+        "bullwhip_amp": 80.67
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 515.15,
+        "bullwhip_amp": 234540.39
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 278.3,
+        "bullwhip_amp": 821.12
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 106.85,
+        "bullwhip_amp": 15.55
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 96.5,
+        "bullwhip_amp": 135.29
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 57.0,
+        "bullwhip_amp": 157.58
+      }
+    ]
+  },
+  {
+    "trace_idx": 5,
+    "cost_per_period": 129.685,
+    "f1": 0.4067075239384221,
+    "f2": 0.4492567467981131,
+    "f3": 0.5216992034217816,
+    "f4": 0.6797645397919292,
+    "avg_f": 0.5143570034875615,
+    "amp": 67.0973371413908,
+    "service_level": 0.0,
+    "cfr": 15.610639986986993,
+    "post_shock_holding_cost": 4827.0,
+    "t_rec": 53,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 50.7,
+        "bullwhip_amp": 103.79
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 43.45,
+        "bullwhip_amp": 115.65
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 46.95,
+        "bullwhip_amp": 123.59
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 377.95,
+        "bullwhip_amp": 369.63
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 353.75,
+        "bullwhip_amp": 715.46
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 129.0,
+        "bullwhip_amp": 388.89
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 90.05,
+        "bullwhip_amp": 87.52
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 75.05,
+        "bullwhip_amp": 149.02
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 73.85,
+        "bullwhip_amp": 127.86
+      }
+    ]
+  },
+  {
+    "trace_idx": 6,
+    "cost_per_period": 157.7,
+    "f1": 0.4065805585926296,
+    "f2": 0.4667661179851633,
+    "f3": 0.5374729246500094,
+    "f4": 0.666454474796664,
+    "avg_f": 0.5193185190061166,
+    "amp": 63.87664979683698,
+    "service_level": 0.0,
+    "cfr": 12.801958003607758,
+    "post_shock_holding_cost": 4633.0,
+    "t_rec": 59,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 45.25,
+        "bullwhip_amp": 163.33
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 42.1,
+        "bullwhip_amp": 47.9
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 47.95,
+        "bullwhip_amp": 64.66
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 410.0,
+        "bullwhip_amp": 43.15
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 428.25,
+        "bullwhip_amp": 900.26
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 213.5,
+        "bullwhip_amp": 327354.63
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 94.6,
+        "bullwhip_amp": 75.26
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 64.8,
+        "bullwhip_amp": 182.59
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 88.25,
+        "bullwhip_amp": -54.63
+      }
+    ]
+  },
+  {
+    "trace_idx": 7,
+    "cost_per_period": 142.36,
+    "f1": 0.394835375099208,
+    "f2": 0.47529904446882537,
+    "f3": 0.5242650808234453,
+    "f4": 0.6662006225873078,
+    "avg_f": 0.5151500307446966,
+    "amp": 68.68598373087187,
+    "service_level": 0.0,
+    "cfr": 15.017907774373796,
+    "post_shock_holding_cost": 4659.0,
+    "t_rec": 55,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 56.8,
+        "bullwhip_amp": 184.35
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 91.45,
+        "bullwhip_amp": -28.96
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 106.8,
+        "bullwhip_amp": 201.0
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 376.0,
+        "bullwhip_amp": -60.75
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 304.25,
+        "bullwhip_amp": 919.65
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 125.15,
+        "bullwhip_amp": 148.98
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 69.0,
+        "bullwhip_amp": 26.25
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 113.3,
+        "bullwhip_amp": 179.34
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 92.4,
+        "bullwhip_amp": 21.05
+      }
+    ]
+  },
+  {
+    "trace_idx": 8,
+    "cost_per_period": 134.08,
+    "f1": 0.3942150744862033,
+    "f2": 0.4543391684376985,
+    "f3": 0.5575738446151401,
+    "f4": 0.6541479456601317,
+    "avg_f": 0.5150690082997934,
+    "amp": 65.89473443603275,
+    "service_level": 0.0,
+    "cfr": 14.492147760839863,
+    "post_shock_holding_cost": 5017.0,
+    "t_rec": 58,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 40.15,
+        "bullwhip_amp": 163.42
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 38.95,
+        "bullwhip_amp": 27.41
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 66.85,
+        "bullwhip_amp": 156.54
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 341.0,
+        "bullwhip_amp": -86.32
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 302.9,
+        "bullwhip_amp": 1398.73
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 172.35,
+        "bullwhip_amp": 350650.68
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 77.95,
+        "bullwhip_amp": 38.29
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 92.2,
+        "bullwhip_amp": 267.72
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 92.6,
+        "bullwhip_amp": 30.37
+      }
+    ]
+  },
+  {
+    "trace_idx": 9,
+    "cost_per_period": 228.285,
+    "f1": 0.43740917042030675,
+    "f2": 0.4826462269142306,
+    "f3": 0.5206656210009921,
+    "f4": 0.671392181354614,
+    "avg_f": 0.5280282999225359,
+    "amp": 53.457853399877386,
+    "service_level": 0.0,
+    "cfr": 10.748400618927349,
+    "post_shock_holding_cost": 4121.0,
+    "t_rec": 67,
+    "interventions": [
+      {
+        "timestep": 20,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "TARGETED_HYBRID",
+        "rationale": "Post-shock stock starvation detected; assigning Retailer=0.65 while upstream stays at 0.10 to flush stock without hoarding.",
+        "window_cost": 54.95,
+        "bullwhip_amp": 115.54
+      },
+      {
+        "timestep": 40,
+        "old_alphas": [
+          0.65,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 87.45,
+        "bullwhip_amp": 65.99
+      },
+      {
+        "timestep": 60,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 102.2,
+        "bullwhip_amp": 248.12
+      },
+      {
+        "timestep": 80,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 578.85,
+        "bullwhip_amp": 72.51
+      },
+      {
+        "timestep": 100,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 576.05,
+        "bullwhip_amp": 1839.37
+      },
+      {
+        "timestep": 120,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "target_mode": "SHOCK_ABSORBER",
+        "rationale": "Elevated demand volatility or bullwhip surge detected; switching to Shock Absorber to dampen upstream amplification.",
+        "window_cost": 331.85,
+        "bullwhip_amp": 309773.1
+      },
+      {
+        "timestep": 140,
+        "old_alphas": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 217.5,
+        "bullwhip_amp": 38.07
+      },
+      {
+        "timestep": 160,
+        "old_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "new_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "target_mode": "CRUISER",
+        "rationale": "Nominal conditions; operating in optimal steady-state Cruiser mode.",
+        "window_cost": 156.8,
+        "bullwhip_amp": 22.73
+      },
+      {
+        "timestep": 180,
+        "old_alphas": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "new_alphas": [
+          0.65,
+          0.65,
+          0.1,
+          0.65
+        ],
+        "target_mode": "MULTI_TIER_RECOVERY",
+        "rationale": "High demand saturation or multi-tier backlog crisis detected; Retailer & Warehouse pull while Factory pushes at max capacity.",
+        "window_cost": 102.35,
+        "bullwhip_amp": 183.53
+      }
+    ]
+  }
+]

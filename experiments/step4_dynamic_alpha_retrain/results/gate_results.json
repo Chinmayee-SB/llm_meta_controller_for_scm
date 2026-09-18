@@ -1,0 +1,582 @@
+{
+  "random_dynamic_traces": [
+    {
+      "trace_idx": 0,
+      "trace_type": "MERTON",
+      "total_cost": 21512.0,
+      "service_level": 0.3700133868808568,
+      "bullwhip_ratio": 2.135550782792472,
+      "max_backlog": 128.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 1,
+      "trace_type": "MERTON",
+      "total_cost": 16224.0,
+      "service_level": 0.7820895522388059,
+      "bullwhip_ratio": 2.6668629614730137,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 2,
+      "trace_type": "MERTON",
+      "total_cost": 22637.0,
+      "service_level": 0.2985104873847401,
+      "bullwhip_ratio": 1.9735059136645792,
+      "max_backlog": 119.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 3,
+      "trace_type": "MERTON",
+      "total_cost": 28067.0,
+      "service_level": 0.32809678584326474,
+      "bullwhip_ratio": 4.237990747467751,
+      "max_backlog": 50.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 4,
+      "trace_type": "MERTON",
+      "total_cost": 21622.0,
+      "service_level": 0.35043785527730836,
+      "bullwhip_ratio": 2.4781043140423233,
+      "max_backlog": 142.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 5,
+      "trace_type": "MERTON",
+      "total_cost": 18182.0,
+      "service_level": 0.6165162153126045,
+      "bullwhip_ratio": 2.0377636028428188,
+      "max_backlog": 32.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 6,
+      "trace_type": "MERTON",
+      "total_cost": 20453.0,
+      "service_level": 0.5438853130485665,
+      "bullwhip_ratio": 4.907453736872489,
+      "max_backlog": 47.0,
+      "passed": false,
+      "failures": [
+        "bullwhip_high"
+      ]
+    },
+    {
+      "trace_idx": 7,
+      "trace_type": "MERTON",
+      "total_cost": 14781.0,
+      "service_level": 0.3951913308499831,
+      "bullwhip_ratio": 3.401188456928412,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 8,
+      "trace_type": "MERTON",
+      "total_cost": 17081.0,
+      "service_level": 0.6304179566563467,
+      "bullwhip_ratio": 2.6498419255425665,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 9,
+      "trace_type": "MERTON",
+      "total_cost": 16448.0,
+      "service_level": 0.621517027863777,
+      "bullwhip_ratio": 6.593246163028948,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "bullwhip_high"
+      ]
+    },
+    {
+      "trace_idx": 10,
+      "trace_type": "MERTON",
+      "total_cost": 18093.0,
+      "service_level": 0.45823834196891194,
+      "bullwhip_ratio": 2.239034844708285,
+      "max_backlog": 48.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 11,
+      "trace_type": "MERTON",
+      "total_cost": 13437.0,
+      "service_level": 0.5070754716981132,
+      "bullwhip_ratio": 3.3244024578198337,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 12,
+      "trace_type": "MERTON",
+      "total_cost": 13902.0,
+      "service_level": 0.6952076677316293,
+      "bullwhip_ratio": 4.489367725146503,
+      "max_backlog": 4.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 13,
+      "trace_type": "MERTON",
+      "total_cost": 27605.0,
+      "service_level": 0.2907847606642787,
+      "bullwhip_ratio": 1.8221358753489836,
+      "max_backlog": 143.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 14,
+      "trace_type": "MERTON",
+      "total_cost": 40777.0,
+      "service_level": 0.17420500582718243,
+      "bullwhip_ratio": 1.9242961312541935,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "service_level_low",
+        "catastrophic_cost"
+      ]
+    },
+    {
+      "trace_idx": 15,
+      "trace_type": "MERTON",
+      "total_cost": 24298.0,
+      "service_level": 0.32493937698190634,
+      "bullwhip_ratio": 3.5966786849907315,
+      "max_backlog": 30.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 16,
+      "trace_type": "MERTON",
+      "total_cost": 19081.0,
+      "service_level": 0.4979253112033195,
+      "bullwhip_ratio": 4.094544701403777,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 17,
+      "trace_type": "MERTON",
+      "total_cost": 24779.0,
+      "service_level": 0.34846242394343035,
+      "bullwhip_ratio": 2.0750166418894085,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 18,
+      "trace_type": "MERTON",
+      "total_cost": 11999.0,
+      "service_level": 0.6452615225271879,
+      "bullwhip_ratio": 6.9066490311462285,
+      "max_backlog": 23.0,
+      "passed": false,
+      "failures": [
+        "bullwhip_high"
+      ]
+    },
+    {
+      "trace_idx": 19,
+      "trace_type": "MERTON",
+      "total_cost": 21323.0,
+      "service_level": 0.30283965312021766,
+      "bullwhip_ratio": 2.4318274433361236,
+      "max_backlog": 92.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 20,
+      "trace_type": "POISSON",
+      "total_cost": 19161.0,
+      "service_level": 0.36260932944606417,
+      "bullwhip_ratio": 3.4248875104654117,
+      "max_backlog": 36.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 21,
+      "trace_type": "POISSON",
+      "total_cost": 16685.0,
+      "service_level": 0.29602830036983435,
+      "bullwhip_ratio": 3.3082507378614885,
+      "max_backlog": 66.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 22,
+      "trace_type": "POISSON",
+      "total_cost": 19136.0,
+      "service_level": 0.29697525206232817,
+      "bullwhip_ratio": 2.9276156445588035,
+      "max_backlog": 37.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 23,
+      "trace_type": "POISSON",
+      "total_cost": 14471.0,
+      "service_level": 0.45574912891986064,
+      "bullwhip_ratio": 3.0324214486702616,
+      "max_backlog": 35.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 24,
+      "trace_type": "POISSON",
+      "total_cost": 16329.0,
+      "service_level": 0.3716746411483254,
+      "bullwhip_ratio": 3.286883321124968,
+      "max_backlog": 23.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 25,
+      "trace_type": "POISSON",
+      "total_cost": 19506.0,
+      "service_level": 0.3896001575733701,
+      "bullwhip_ratio": 3.007451432946766,
+      "max_backlog": 60.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 26,
+      "trace_type": "POISSON",
+      "total_cost": 21444.0,
+      "service_level": 0.35202492211838005,
+      "bullwhip_ratio": 2.8924141909613197,
+      "max_backlog": 21.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 27,
+      "trace_type": "POISSON",
+      "total_cost": 16620.0,
+      "service_level": 0.404982499485279,
+      "bullwhip_ratio": 2.942640616415583,
+      "max_backlog": 28.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 28,
+      "trace_type": "POISSON",
+      "total_cost": 15227.0,
+      "service_level": 0.3707627118644068,
+      "bullwhip_ratio": 3.085333714368173,
+      "max_backlog": 25.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 29,
+      "trace_type": "POISSON",
+      "total_cost": 17004.0,
+      "service_level": 0.39918450560652396,
+      "bullwhip_ratio": 3.300134166661481,
+      "max_backlog": 25.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 30,
+      "trace_type": "POISSON",
+      "total_cost": 17105.0,
+      "service_level": 0.38436544342507645,
+      "bullwhip_ratio": 3.1433130332482224,
+      "max_backlog": 17.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 31,
+      "trace_type": "POISSON",
+      "total_cost": 23374.0,
+      "service_level": 0.314854068155878,
+      "bullwhip_ratio": 2.938437529287821,
+      "max_backlog": 43.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 32,
+      "trace_type": "POISSON",
+      "total_cost": 17987.0,
+      "service_level": 0.4285412708465273,
+      "bullwhip_ratio": 2.998720253287518,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 33,
+      "trace_type": "POISSON",
+      "total_cost": 19436.0,
+      "service_level": 0.2835969787658544,
+      "bullwhip_ratio": 2.8985025151920922,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 34,
+      "trace_type": "POISSON",
+      "total_cost": 14212.0,
+      "service_level": 0.3868493150684931,
+      "bullwhip_ratio": 2.8814281571678957,
+      "max_backlog": 9.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 35,
+      "trace_type": "POISSON",
+      "total_cost": 18772.0,
+      "service_level": 0.2784880489160645,
+      "bullwhip_ratio": 3.152161495733547,
+      "max_backlog": 19.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 36,
+      "trace_type": "POISSON",
+      "total_cost": 17593.0,
+      "service_level": 0.48956310679611653,
+      "bullwhip_ratio": 2.777786538677293,
+      "max_backlog": 51.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 37,
+      "trace_type": "POISSON",
+      "total_cost": 15272.0,
+      "service_level": 0.3847926267281106,
+      "bullwhip_ratio": 3.2155276701323627,
+      "max_backlog": 11.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 38,
+      "trace_type": "POISSON",
+      "total_cost": 20417.0,
+      "service_level": 0.273732847941753,
+      "bullwhip_ratio": 3.0927977744592012,
+      "max_backlog": 43.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 39,
+      "trace_type": "POISSON",
+      "total_cost": 14632.0,
+      "service_level": 0.47661739762539373,
+      "bullwhip_ratio": 3.1322749720049736,
+      "max_backlog": 0.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 40,
+      "trace_type": "DISRUPTION",
+      "total_cost": 23648.0,
+      "service_level": 0.32825667580465023,
+      "bullwhip_ratio": 1.847890381405865,
+      "max_backlog": 31.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 41,
+      "trace_type": "DISRUPTION",
+      "total_cost": 13024.0,
+      "service_level": 0.5919864559819413,
+      "bullwhip_ratio": 4.487406443609882,
+      "max_backlog": 16.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 42,
+      "trace_type": "DISRUPTION",
+      "total_cost": 28510.0,
+      "service_level": 0.20328375791488734,
+      "bullwhip_ratio": 1.578198870136794,
+      "max_backlog": 116.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 43,
+      "trace_type": "DISRUPTION",
+      "total_cost": 33369.0,
+      "service_level": 0.18566277577461346,
+      "bullwhip_ratio": 2.147550614868561,
+      "max_backlog": 135.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 44,
+      "trace_type": "DISRUPTION",
+      "total_cost": 27239.0,
+      "service_level": 0.344699087013229,
+      "bullwhip_ratio": 4.6603134351199245,
+      "max_backlog": 185.0,
+      "passed": false,
+      "failures": [
+        "service_level_low",
+        "bullwhip_high"
+      ]
+    },
+    {
+      "trace_idx": 45,
+      "trace_type": "DISRUPTION",
+      "total_cost": 14008.0,
+      "service_level": 0.32216216216216215,
+      "bullwhip_ratio": 2.1436512642685037,
+      "max_backlog": 30.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 46,
+      "trace_type": "DISRUPTION",
+      "total_cost": 17206.0,
+      "service_level": 0.4647779479326187,
+      "bullwhip_ratio": 2.194348861562043,
+      "max_backlog": 31.0,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "trace_idx": 47,
+      "trace_type": "DISRUPTION",
+      "total_cost": 20397.0,
+      "service_level": 0.22049367351171956,
+      "bullwhip_ratio": 2.1366506879492695,
+      "max_backlog": 43.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 48,
+      "trace_type": "DISRUPTION",
+      "total_cost": 22394.0,
+      "service_level": 0.30003248862897985,
+      "bullwhip_ratio": 2.5792672602948077,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    },
+    {
+      "trace_idx": 49,
+      "trace_type": "DISRUPTION",
+      "total_cost": 16431.0,
+      "service_level": 0.3349006197905535,
+      "bullwhip_ratio": 2.31445381836213,
+      "max_backlog": 0.0,
+      "passed": false,
+      "failures": [
+        "service_level_low"
+      ]
+    }
+  ],
+  "gate_passed": false,
+  "criteria_detail": {
+    "passing_traces": {
+      "value": 26,
+      "target": ">= 35/50",
+      "pass": false
+    },
+    "catastrophic_episodes": {
+      "value": 1,
+      "target": "== 0",
+      "pass": false
+    },
+    "mean_service_level": {
+      "value": 0.398,
+      "target": ">= 0.45",
+      "pass": false
+    },
+    "mean_bullwhip": {
+      "value": 3.07,
+      "target": "<= 3.5",
+      "pass": true
+    },
+    "mean_cost": {
+      "value": 19658.2,
+      "target": "<= 25000",
+      "pass": true
+    }
+  }
+}

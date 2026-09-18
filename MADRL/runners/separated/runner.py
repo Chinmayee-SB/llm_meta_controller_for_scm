@@ -66,7 +66,10 @@ class CRunner(Runner):
                 share_obs = []
                 for o in obs:
                     actor_obs_list = o
-                    critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                    if self.all_args.obs_dim > 7:
+                        critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                    else:
+                        critic_obs_list = [agent_o for agent_o in actor_obs_list]
                     share_obs.append(list(chain(*critic_obs_list)))
                 
                 available_actions = np.array([[None for agent_id in range(self.num_agents)] for info in infos])
@@ -154,7 +157,10 @@ class CRunner(Runner):
         share_obs = []
         for o in obs:
             actor_obs_list = o
-            critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+            if self.all_args.obs_dim > 7:
+                critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+            else:
+                critic_obs_list = [agent_o for agent_o in actor_obs_list]
             share_obs.append(list(chain(*critic_obs_list)))
         
         share_obs = np.array(share_obs)
@@ -267,7 +273,10 @@ class CRunner(Runner):
             eval_share_obs = []
             for o in eval_obs:
                 actor_obs_list = o
-                critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                if self.all_args.obs_dim > 7:
+                    critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                else:
+                    critic_obs_list = [agent_o for agent_o in actor_obs_list]
                 eval_share_obs.append(list(chain(*critic_obs_list)))
             eval_share_obs = np.array(eval_share_obs)
 
@@ -316,7 +325,10 @@ class CRunner(Runner):
                 eval_share_obs = []
                 for o in eval_obs:
                     actor_obs_list = o
-                    critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                    if self.all_args.obs_dim > 7:
+                        critic_obs_list = [agent_o[:-1] for agent_o in actor_obs_list]
+                    else:
+                        critic_obs_list = [agent_o for agent_o in actor_obs_list]
                     eval_share_obs.append(list(chain(*critic_obs_list)))
                 eval_share_obs = np.array(eval_share_obs)
 

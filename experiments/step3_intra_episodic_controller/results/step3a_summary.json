@@ -1,0 +1,206 @@
+{
+  "fixed_alpha_0.3": {
+    "name": "Fixed \u03b1=0.3 (Best Static)",
+    "interval": 50,
+    "summary": {
+      "n_traces": 20,
+      "per_period_cost": {
+        "mean": 87.31275000000001,
+        "std": 35.863352794844765
+      },
+      "total_cost": {
+        "mean": 17462.55,
+        "std": 7172.670558968954
+      },
+      "avg_fluctuation": {
+        "mean": 1.0600403594970724,
+        "std": 0.6318818712181712
+      },
+      "bullwhip_amplification_pct": {
+        "mean": 54.32563811464568,
+        "std": 22.710758026592302
+      },
+      "bullwhip_amplification_ratio": {
+        "mean": 0.5432563811464567,
+        "std": 0.22710758026592304
+      },
+      "service_level": {
+        "mean": 0.9890482517280083,
+        "std": 0.015378201611634622
+      },
+      "bullwhip_ratio": {
+        "mean": 2.8516325515722523,
+        "std": 1.1247389843223576
+      },
+      "cv_demand": {
+        "mean": 0.46236710485737775,
+        "std": 0.23920652174950793
+      },
+      "echelon_fluctuations_mean": {
+        "F1_retailer": 0.8145798967410329,
+        "F2_warehouse": 0.9974416671691697,
+        "F3_distributor": 1.1187463823872232,
+        "F4_manufacturer": 1.3093934916908632
+      },
+      "echelon_per_period_costs_mean": {
+        "retailer": 22.030249999999995,
+        "warehouse": 27.22925,
+        "distributor": 20.11125,
+        "manufacturer": 17.942
+      }
+    }
+  },
+  "rule_based": {
+    "name": "Rule-Based Heuristic",
+    "interval": 50,
+    "summary": {
+      "n_traces": 20,
+      "per_period_cost": {
+        "mean": 86.3355,
+        "std": 35.60659664654852
+      },
+      "total_cost": {
+        "mean": 17267.1,
+        "std": 7121.319329309703
+      },
+      "avg_fluctuation": {
+        "mean": 1.055405584677362,
+        "std": 0.6333353713395763
+      },
+      "bullwhip_amplification_pct": {
+        "mean": 54.02119185540496,
+        "std": 23.069051071591076
+      },
+      "bullwhip_amplification_ratio": {
+        "mean": 0.5402119185540494,
+        "std": 0.2306905107159108
+      },
+      "service_level": {
+        "mean": 0.9890014167503418,
+        "std": 0.014599212831018985
+      },
+      "bullwhip_ratio": {
+        "mean": 2.821419045338177,
+        "std": 1.087348546751396
+      },
+      "cv_demand": {
+        "mean": 0.46236710485737775,
+        "std": 0.23920652174950793
+      },
+      "echelon_fluctuations_mean": {
+        "F1_retailer": 0.8112978233246715,
+        "F2_warehouse": 0.999989782651798,
+        "F3_distributor": 1.1132867458789932,
+        "F4_manufacturer": 1.2970479868539855
+      },
+      "echelon_per_period_costs_mean": {
+        "retailer": 21.753750000000004,
+        "warehouse": 27.2365,
+        "distributor": 19.397750000000002,
+        "manufacturer": 17.947499999999998
+      }
+    }
+  },
+  "random_alpha": {
+    "name": "Random \u03b1",
+    "interval": 50,
+    "summary": {
+      "n_traces": 20,
+      "per_period_cost": {
+        "mean": 86.89874999999999,
+        "std": 34.552643852352304
+      },
+      "total_cost": {
+        "mean": 17379.75,
+        "std": 6910.528770470462
+      },
+      "avg_fluctuation": {
+        "mean": 1.046558874643935,
+        "std": 0.6231696669746971
+      },
+      "bullwhip_amplification_pct": {
+        "mean": 60.56560675790131,
+        "std": 29.099518587104424
+      },
+      "bullwhip_amplification_ratio": {
+        "mean": 0.6056560675790129,
+        "std": 0.2909951858710442
+      },
+      "service_level": {
+        "mean": 0.9905452287927774,
+        "std": 0.013967701606443006
+      },
+      "bullwhip_ratio": {
+        "mean": 2.835836250122924,
+        "std": 1.121660037192131
+      },
+      "cv_demand": {
+        "mean": 0.46236710485737775,
+        "std": 0.23920652174950793
+      },
+      "echelon_fluctuations_mean": {
+        "F1_retailer": 0.7746952438196458,
+        "F2_warehouse": 0.9936960535638661,
+        "F3_distributor": 1.1140958762786002,
+        "F4_manufacturer": 1.303748324913628
+      },
+      "echelon_per_period_costs_mean": {
+        "retailer": 20.741,
+        "warehouse": 25.670500000000004,
+        "distributor": 21.59225,
+        "manufacturer": 18.895
+      }
+    }
+  },
+  "llm_controller": {
+    "name": "Gemini Meta-Controller",
+    "interval": 50,
+    "summary": {
+      "n_traces": 20,
+      "per_period_cost": {
+        "mean": 93.35725000000002,
+        "std": 39.33800295118576
+      },
+      "total_cost": {
+        "mean": 18671.45,
+        "std": 7867.600590237154
+      },
+      "avg_fluctuation": {
+        "mean": 1.0587308212922657,
+        "std": 0.6287209969145362
+      },
+      "bullwhip_amplification_pct": {
+        "mean": 56.78390475677894,
+        "std": 27.326302499240402
+      },
+      "bullwhip_amplification_ratio": {
+        "mean": 0.5678390475677896,
+        "std": 0.273263024992404
+      },
+      "service_level": {
+        "mean": 0.9891380676160907,
+        "std": 0.016292213255963636
+      },
+      "bullwhip_ratio": {
+        "mean": 2.8671839368452288,
+        "std": 1.1647141085531538
+      },
+      "cv_demand": {
+        "mean": 0.46236710485737775,
+        "std": 0.23920652174950793
+      },
+      "echelon_fluctuations_mean": {
+        "F1_retailer": 0.8066145978402458,
+        "F2_warehouse": 0.9939947851793833,
+        "F3_distributor": 1.12281946685525,
+        "F4_manufacturer": 1.311494435294183
+      },
+      "echelon_per_period_costs_mean": {
+        "retailer": 23.709749999999996,
+        "warehouse": 29.6115,
+        "distributor": 21.07375,
+        "manufacturer": 18.962250000000004
+      }
+    }
+  }
+}

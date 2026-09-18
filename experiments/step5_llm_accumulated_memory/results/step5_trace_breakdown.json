@@ -1,0 +1,1786 @@
+{
+  "fixed_alpha_0.3": {
+    "name": "Fixed \u03b1=0.3 (Best Static)",
+    "interval": 50,
+    "traces": [
+      {
+        "total_cost": 17814.0,
+        "per_period_cost": 89.07,
+        "echelon_per_period_costs": {
+          "retailer": 19.675,
+          "warehouse": 26.125,
+          "distributor": 21.085,
+          "manufacturer": 22.185
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.581332042367592,
+          "F2_warehouse": 0.6644255169735988,
+          "F3_distributor": 0.7427829789604247,
+          "F4_manufacturer": 0.8623221531937968
+        },
+        "avg_fluctuation": 0.7127156728738531,
+        "bullwhip_amplification_pct": 48.33556218264108,
+        "bullwhip_amplification_ratio": 0.4833556218264108,
+        "cv_demand": 0.34084052256409136,
+        "bullwhip_ratio": 2.529987182001361,
+        "service_level": 0.9978503869303526
+      },
+      {
+        "total_cost": 12758.0,
+        "per_period_cost": 63.79,
+        "echelon_per_period_costs": {
+          "retailer": 5.9,
+          "warehouse": 14.72,
+          "distributor": 23.485,
+          "manufacturer": 19.685
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.9875997367968368,
+          "F2_warehouse": 1.2948466020000358,
+          "F3_distributor": 1.4646708922815423,
+          "F4_manufacturer": 1.6828647969754682
+        },
+        "avg_fluctuation": 1.3574955070134709,
+        "bullwhip_amplification_pct": 70.39947807536295,
+        "bullwhip_amplification_ratio": 0.7039947807536295,
+        "cv_demand": 0.5526669691589601,
+        "bullwhip_ratio": 3.0449889189803137,
+        "service_level": 0.9953488372093023
+      },
+      {
+        "total_cost": 36629.0,
+        "per_period_cost": 183.145,
+        "echelon_per_period_costs": {
+          "retailer": 69.31,
+          "warehouse": 89.935,
+          "distributor": 12.66,
+          "manufacturer": 11.24
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.2591511941179675,
+          "F2_warehouse": 0.26911570691279835,
+          "F3_distributor": 0.2837942687180569,
+          "F4_manufacturer": 0.33753391034970476
+        },
+        "avg_fluctuation": 0.2873987700246319,
+        "bullwhip_amplification_pct": 30.245940597926356,
+        "bullwhip_amplification_ratio": 0.3024594059792636,
+        "cv_demand": 0.1673130069471027,
+        "bullwhip_ratio": 2.017379978452116,
+        "service_level": 0.9662240184757506
+      },
+      {
+        "total_cost": 15066.0,
+        "per_period_cost": 75.33,
+        "echelon_per_period_costs": {
+          "retailer": 15.77,
+          "warehouse": 21.48,
+          "distributor": 20.045,
+          "manufacturer": 18.035
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5533319678156889,
+          "F2_warehouse": 0.6988886895960859,
+          "F3_distributor": 0.7854316864614421,
+          "F4_manufacturer": 0.9306561175702884
+        },
+        "avg_fluctuation": 0.7420771153608763,
+        "bullwhip_amplification_pct": 68.1912796840763,
+        "bullwhip_amplification_ratio": 0.681912796840763,
+        "cv_demand": 0.35435112806487,
+        "bullwhip_ratio": 2.6263670237277075,
+        "service_level": 0.998119417019276
+      },
+      {
+        "total_cost": 15846.0,
+        "per_period_cost": 79.23,
+        "echelon_per_period_costs": {
+          "retailer": 14.85,
+          "warehouse": 19.58,
+          "distributor": 20.57,
+          "manufacturer": 24.23
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5832984197438857,
+          "F2_warehouse": 0.6622003851338527,
+          "F3_distributor": 0.7722050707257336,
+          "F4_manufacturer": 0.9395330317075585
+        },
+        "avg_fluctuation": 0.7393092268277577,
+        "bullwhip_amplification_pct": 61.07244592229275,
+        "bullwhip_amplification_ratio": 0.6107244592229275,
+        "cv_demand": 0.242552435107859,
+        "bullwhip_ratio": 3.8735254555979366,
+        "service_level": 0.9946315275744265
+      },
+      {
+        "total_cost": 20092.0,
+        "per_period_cost": 100.46,
+        "echelon_per_period_costs": {
+          "retailer": 23.38,
+          "warehouse": 34.285,
+          "distributor": 22.4,
+          "manufacturer": 20.395
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5391836389842736,
+          "F2_warehouse": 0.6088805915437494,
+          "F3_distributor": 0.6400509627131142,
+          "F4_manufacturer": 0.757002485291608
+        },
+        "avg_fluctuation": 0.6362794196331862,
+        "bullwhip_amplification_pct": 40.39789610783935,
+        "bullwhip_amplification_ratio": 0.4039789610783935,
+        "cv_demand": 0.33724710837988237,
+        "bullwhip_ratio": 2.24465226381987,
+        "service_level": 0.9959448499594485
+      },
+      {
+        "total_cost": 13216.0,
+        "per_period_cost": 66.08,
+        "echelon_per_period_costs": {
+          "retailer": 8.525,
+          "warehouse": 16.745,
+          "distributor": 20.54,
+          "manufacturer": 20.27
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5782970441554054,
+          "F2_warehouse": 0.7484414578269348,
+          "F3_distributor": 0.9134902970175859,
+          "F4_manufacturer": 1.1111358955437851
+        },
+        "avg_fluctuation": 0.8378411736359279,
+        "bullwhip_amplification_pct": 92.13930051580728,
+        "bullwhip_amplification_ratio": 0.9213930051580728,
+        "cv_demand": 0.22796059572245506,
+        "bullwhip_ratio": 4.874245445895427,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 35578.0,
+        "per_period_cost": 177.89,
+        "echelon_per_period_costs": {
+          "retailer": 75.39,
+          "warehouse": 78.35,
+          "distributor": 12.885,
+          "manufacturer": 11.265
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.40209621758699804,
+          "F2_warehouse": 0.3703681739645724,
+          "F3_distributor": 0.38677627661643926,
+          "F4_manufacturer": 0.43127829219964287
+        },
+        "avg_fluctuation": 0.3976297400919131,
+        "bullwhip_amplification_pct": 7.257485481402459,
+        "bullwhip_amplification_ratio": 0.07257485481402459,
+        "cv_demand": 0.2627226723981463,
+        "bullwhip_ratio": 1.6415724165063947,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 21784.0,
+        "per_period_cost": 108.92,
+        "echelon_per_period_costs": {
+          "retailer": 39.98,
+          "warehouse": 37.315,
+          "distributor": 17.45,
+          "manufacturer": 14.175
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.35648317765469706,
+          "F2_warehouse": 0.3705938149272053,
+          "F3_distributor": 0.39382642065442364,
+          "F4_manufacturer": 0.48168804601334614
+        },
+        "avg_fluctuation": 0.400647864812418,
+        "bullwhip_amplification_pct": 35.12223751549006,
+        "bullwhip_amplification_ratio": 0.3512223751549006,
+        "cv_demand": 0.2664545463073916,
+        "bullwhip_ratio": 1.8077681641718109,
+        "service_level": 0.9887459807073955
+      },
+      {
+        "total_cost": 12678.0,
+        "per_period_cost": 63.39,
+        "echelon_per_period_costs": {
+          "retailer": 9.33,
+          "warehouse": 16.21,
+          "distributor": 20.455,
+          "manufacturer": 17.395
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.1449085844667082,
+          "F2_warehouse": 1.2775513295982528,
+          "F3_distributor": 1.380617031909676,
+          "F4_manufacturer": 1.5807506841313412
+        },
+        "avg_fluctuation": 1.3459569075264946,
+        "bullwhip_amplification_pct": 38.06785149293346,
+        "bullwhip_amplification_ratio": 0.3806785149293346,
+        "cv_demand": 0.8407672722098352,
+        "bullwhip_ratio": 1.8801287066949772,
+        "service_level": 0.99687255668491
+      },
+      {
+        "total_cost": 11450.0,
+        "per_period_cost": 57.25,
+        "echelon_per_period_costs": {
+          "retailer": 4.17,
+          "warehouse": 13.315,
+          "distributor": 21.945,
+          "manufacturer": 17.82
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.783970046896599,
+          "F2_warehouse": 2.411141997971528,
+          "F3_distributor": 2.7272486058122256,
+          "F4_manufacturer": 3.184586985649204
+        },
+        "avg_fluctuation": 2.526736909082389,
+        "bullwhip_amplification_pct": 78.51123628387838,
+        "bullwhip_amplification_ratio": 0.7851123628387837,
+        "cv_demand": 0.5573926661832321,
+        "bullwhip_ratio": 5.713363628294191,
+        "service_level": 0.989406779661017
+      },
+      {
+        "total_cost": 21033.0,
+        "per_period_cost": 105.165,
+        "echelon_per_period_costs": {
+          "retailer": 43.45,
+          "warehouse": 24.605,
+          "distributor": 20.225,
+          "manufacturer": 16.885
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5256083778417013,
+          "F2_warehouse": 0.5535855843446491,
+          "F3_distributor": 0.6083203398205432,
+          "F4_manufacturer": 0.7236624877024779
+        },
+        "avg_fluctuation": 0.6027941974273429,
+        "bullwhip_amplification_pct": 37.680927133247664,
+        "bullwhip_amplification_ratio": 0.37680927133247666,
+        "cv_demand": 0.3715155945391454,
+        "bullwhip_ratio": 1.9478657109943414,
+        "service_level": 0.9443137254901961
+      },
+      {
+        "total_cost": 10877.0,
+        "per_period_cost": 54.385,
+        "echelon_per_period_costs": {
+          "retailer": 6.055,
+          "warehouse": 13.005,
+          "distributor": 20.585,
+          "manufacturer": 14.74
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4137044378573183,
+          "F2_warehouse": 1.9302674830682558,
+          "F3_distributor": 2.1747919865635987,
+          "F4_manufacturer": 2.537499061383183
+        },
+        "avg_fluctuation": 2.0140657422180888,
+        "bullwhip_amplification_pct": 79.49289776787745,
+        "bullwhip_amplification_ratio": 0.7949289776787745,
+        "cv_demand": 0.7555282625215679,
+        "bullwhip_ratio": 3.3585759623528912,
+        "service_level": 0.9937402190923318
+      },
+      {
+        "total_cost": 12396.0,
+        "per_period_cost": 61.98,
+        "echelon_per_period_costs": {
+          "retailer": 4.46,
+          "warehouse": 13.755,
+          "distributor": 25.245,
+          "manufacturer": 18.52
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.432781241847394,
+          "F2_warehouse": 1.8305751536635138,
+          "F3_distributor": 2.0692559324232884,
+          "F4_manufacturer": 2.3836542330097346
+        },
+        "avg_fluctuation": 1.9290666402359826,
+        "bullwhip_amplification_pct": 66.36553881291101,
+        "bullwhip_amplification_ratio": 0.6636553881291101,
+        "cv_demand": 1.0112422204745004,
+        "bullwhip_ratio": 2.357154581511899,
+        "service_level": 0.9886845827439887
+      },
+      {
+        "total_cost": 11008.0,
+        "per_period_cost": 55.04,
+        "echelon_per_period_costs": {
+          "retailer": 3.21,
+          "warehouse": 14.94,
+          "distributor": 20.505,
+          "manufacturer": 16.385
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.443732314835212,
+          "F2_warehouse": 1.8976792999550376,
+          "F3_distributor": 2.1873472348109493,
+          "F4_manufacturer": 2.550999876731249
+        },
+        "avg_fluctuation": 2.019939681583112,
+        "bullwhip_amplification_pct": 76.69479657123426,
+        "bullwhip_amplification_ratio": 0.7669479657123426,
+        "cv_demand": 0.7812015087755845,
+        "bullwhip_ratio": 3.265482526690913,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12362.0,
+        "per_period_cost": 61.81,
+        "echelon_per_period_costs": {
+          "retailer": 7.725,
+          "warehouse": 13.97,
+          "distributor": 22.83,
+          "manufacturer": 17.285
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.1185903419819716,
+          "F2_warehouse": 1.2944539784478055,
+          "F3_distributor": 1.467107270689483,
+          "F4_manufacturer": 1.7488400099622075
+        },
+        "avg_fluctuation": 1.4072479002703668,
+        "bullwhip_amplification_pct": 56.34320665271697,
+        "bullwhip_amplification_ratio": 0.5634320665271697,
+        "cv_demand": 0.6550221634539455,
+        "bullwhip_ratio": 2.669894405924431,
+        "service_level": 0.9963735267452403
+      },
+      {
+        "total_cost": 13953.0,
+        "per_period_cost": 69.765,
+        "echelon_per_period_costs": {
+          "retailer": 8.255,
+          "warehouse": 16.485,
+          "distributor": 21.97,
+          "manufacturer": 23.055
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.0710590436178786,
+          "F2_warehouse": 1.3095006154717865,
+          "F3_distributor": 1.4061917034614666,
+          "F4_manufacturer": 1.6145115719611753
+        },
+        "avg_fluctuation": 1.3503157336280769,
+        "bullwhip_amplification_pct": 50.73973573927304,
+        "bullwhip_amplification_ratio": 0.5073973573927304,
+        "cv_demand": 0.6561489572892674,
+        "bullwhip_ratio": 2.460586965848683,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 19628.0,
+        "per_period_cost": 98.14,
+        "echelon_per_period_costs": {
+          "retailer": 29.875,
+          "warehouse": 31.365,
+          "distributor": 19.455,
+          "manufacturer": 17.445
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.47618954958112875,
+          "F2_warehouse": 0.48211428669014966,
+          "F3_distributor": 0.5226161376450799,
+          "F4_manufacturer": 0.6065147777427329
+        },
+        "avg_fluctuation": 0.5218586879147729,
+        "bullwhip_amplification_pct": 27.36835116945391,
+        "bullwhip_amplification_ratio": 0.2736835116945391,
+        "cv_demand": 0.250856450208773,
+        "bullwhip_ratio": 2.4177762909343827,
+        "service_level": 0.9992695398100804
+      },
+      {
+        "total_cost": 13439.0,
+        "per_period_cost": 67.195,
+        "echelon_per_period_costs": {
+          "retailer": 7.7,
+          "warehouse": 14.865,
+          "distributor": 22.345,
+          "manufacturer": 22.285
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.6003314004036862,
+          "F2_warehouse": 0.8003319916929857,
+          "F3_distributor": 0.9426716956486961,
+          "F4_manufacturer": 1.1447167737893396
+        },
+        "avg_fluctuation": 0.8720129653836769,
+        "bullwhip_amplification_pct": 90.68080946950094,
+        "bullwhip_amplification_ratio": 0.9068080946950094,
+        "cv_demand": 0.24048807207279552,
+        "bullwhip_ratio": 4.759973182548674,
+        "service_level": 0.9799291617473436
+      },
+      {
+        "total_cost": 21644.0,
+        "per_period_cost": 108.22,
+        "echelon_per_period_costs": {
+          "retailer": 43.595,
+          "warehouse": 33.535,
+          "distributor": 15.545,
+          "manufacturer": 15.545
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.4399491562677158,
+          "F2_warehouse": 0.4738706836005976,
+          "F3_distributor": 0.5057308548106961,
+          "F4_manufacturer": 0.5781186429094198
+        },
+        "avg_fluctuation": 0.49941733439710734,
+        "bullwhip_amplification_pct": 31.40578511704788,
+        "bullwhip_amplification_ratio": 0.3140578511704788,
+        "cv_demand": 0.3750699447681522,
+        "bullwhip_ratio": 1.5413622204967163,
+        "service_level": 0.9555099247091033
+      }
+    ]
+  },
+  "rule_based": {
+    "name": "Rule-Based Heuristic",
+    "interval": 50,
+    "traces": [
+      {
+        "total_cost": 18213.0,
+        "per_period_cost": 91.065,
+        "echelon_per_period_costs": {
+          "retailer": 19.675,
+          "warehouse": 28.22,
+          "distributor": 20.645,
+          "manufacturer": 22.525
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5795002207793387,
+          "F2_warehouse": 0.6536967140924564,
+          "F3_distributor": 0.7311731761803577,
+          "F4_manufacturer": 0.8489053122775724
+        },
+        "avg_fluctuation": 0.7033188558324313,
+        "bullwhip_amplification_pct": 46.48921291797357,
+        "bullwhip_amplification_ratio": 0.46489212917973566,
+        "cv_demand": 0.34084052256409136,
+        "bullwhip_ratio": 2.4906231978855886,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12653.0,
+        "per_period_cost": 63.265,
+        "echelon_per_period_costs": {
+          "retailer": 6.175,
+          "warehouse": 14.99,
+          "distributor": 22.33,
+          "manufacturer": 19.77
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.977710040290929,
+          "F2_warehouse": 1.2802789250464548,
+          "F3_distributor": 1.413282973598494,
+          "F4_manufacturer": 1.615055791807094
+        },
+        "avg_fluctuation": 1.321581932685743,
+        "bullwhip_amplification_pct": 65.18760422328438,
+        "bullwhip_amplification_ratio": 0.6518760422328438,
+        "cv_demand": 0.5526669691589601,
+        "bullwhip_ratio": 2.922294766891643,
+        "service_level": 0.9953488372093023
+      },
+      {
+        "total_cost": 35525.0,
+        "per_period_cost": 177.625,
+        "echelon_per_period_costs": {
+          "retailer": 69.335,
+          "warehouse": 86.145,
+          "distributor": 10.905,
+          "manufacturer": 11.24
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.26059917192102405,
+          "F2_warehouse": 0.2692591919657068,
+          "F3_distributor": 0.2837942687180569,
+          "F4_manufacturer": 0.33753391034970476
+        },
+        "avg_fluctuation": 0.28779663573862313,
+        "bullwhip_amplification_pct": 29.522249768313213,
+        "bullwhip_amplification_ratio": 0.29522249768313213,
+        "cv_demand": 0.1673130069471027,
+        "bullwhip_ratio": 2.017379978452116,
+        "service_level": 0.9662240184757506
+      },
+      {
+        "total_cost": 14202.0,
+        "per_period_cost": 71.01,
+        "echelon_per_period_costs": {
+          "retailer": 14.71,
+          "warehouse": 20.845,
+          "distributor": 17.62,
+          "manufacturer": 17.835
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5362762548044837,
+          "F2_warehouse": 0.6732314853230311,
+          "F3_distributor": 0.7744871627961524,
+          "F4_manufacturer": 0.9133471987812625
+        },
+        "avg_fluctuation": 0.7243355254262324,
+        "bullwhip_amplification_pct": 70.31281743292024,
+        "bullwhip_amplification_ratio": 0.7031281743292024,
+        "cv_demand": 0.35435112806487,
+        "bullwhip_ratio": 2.577520223426687,
+        "service_level": 0.999529854254819
+      },
+      {
+        "total_cost": 14395.0,
+        "per_period_cost": 71.975,
+        "echelon_per_period_costs": {
+          "retailer": 12.835,
+          "warehouse": 17.265,
+          "distributor": 18.125,
+          "manufacturer": 23.75
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.531760638454105,
+          "F2_warehouse": 0.6389780322536806,
+          "F3_distributor": 0.7649026517220833,
+          "F4_manufacturer": 0.9250457963817005
+        },
+        "avg_fluctuation": 0.7151717797028924,
+        "bullwhip_amplification_pct": 73.95905779542555,
+        "bullwhip_amplification_ratio": 0.7395905779542555,
+        "cv_demand": 0.242552435107859,
+        "bullwhip_ratio": 3.8137971938741746,
+        "service_level": 0.9902391410444119
+      },
+      {
+        "total_cost": 21746.0,
+        "per_period_cost": 108.73,
+        "echelon_per_period_costs": {
+          "retailer": 24.02,
+          "warehouse": 35.33,
+          "distributor": 26.325,
+          "manufacturer": 23.055
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5429373448106021,
+          "F2_warehouse": 0.6116846302374829,
+          "F3_distributor": 0.642891006342536,
+          "F4_manufacturer": 0.7654480323884114
+        },
+        "avg_fluctuation": 0.6407402534447582,
+        "bullwhip_amplification_pct": 40.982756059159975,
+        "bullwhip_amplification_ratio": 0.40982756059159975,
+        "cv_demand": 0.33724710837988237,
+        "bullwhip_ratio": 2.2696948717087126,
+        "service_level": 0.9955393349553934
+      },
+      {
+        "total_cost": 13012.0,
+        "per_period_cost": 65.06,
+        "echelon_per_period_costs": {
+          "retailer": 9.365,
+          "warehouse": 15.845,
+          "distributor": 19.18,
+          "manufacturer": 20.67
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5987199934588262,
+          "F2_warehouse": 0.7413696280464896,
+          "F3_distributor": 0.8903610327249509,
+          "F4_manufacturer": 1.0933753506624533
+        },
+        "avg_fluctuation": 0.83095650122318,
+        "bullwhip_amplification_pct": 82.61881390430707,
+        "bullwhip_amplification_ratio": 0.8261881390430708,
+        "cv_demand": 0.22796059572245506,
+        "bullwhip_ratio": 4.796334854264251,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 35578.0,
+        "per_period_cost": 177.89,
+        "echelon_per_period_costs": {
+          "retailer": 75.39,
+          "warehouse": 78.35,
+          "distributor": 12.885,
+          "manufacturer": 11.265
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.40209621758699804,
+          "F2_warehouse": 0.3703681739645724,
+          "F3_distributor": 0.38677627661643926,
+          "F4_manufacturer": 0.43127829219964287
+        },
+        "avg_fluctuation": 0.3976297400919131,
+        "bullwhip_amplification_pct": 7.257485481402459,
+        "bullwhip_amplification_ratio": 0.07257485481402459,
+        "cv_demand": 0.2627226723981463,
+        "bullwhip_ratio": 1.6415724165063947,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 21379.0,
+        "per_period_cost": 106.895,
+        "echelon_per_period_costs": {
+          "retailer": 39.565,
+          "warehouse": 37.245,
+          "distributor": 17.285,
+          "manufacturer": 12.8
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.35570272690131466,
+          "F2_warehouse": 0.3705938149272053,
+          "F3_distributor": 0.3941296606271294,
+          "F4_manufacturer": 0.4734082428747319
+        },
+        "avg_fluctuation": 0.3984586113325953,
+        "bullwhip_amplification_pct": 33.090979368868645,
+        "bullwhip_amplification_ratio": 0.33090979368868645,
+        "cv_demand": 0.2664545463073916,
+        "bullwhip_ratio": 1.7766941845630622,
+        "service_level": 0.9813504823151126
+      },
+      {
+        "total_cost": 12765.0,
+        "per_period_cost": 63.825,
+        "echelon_per_period_costs": {
+          "retailer": 9.33,
+          "warehouse": 18.255,
+          "distributor": 19.57,
+          "manufacturer": 16.67
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.1449085844667082,
+          "F2_warehouse": 1.2843688809907658,
+          "F3_distributor": 1.368148393138297,
+          "F4_manufacturer": 1.5754245876378161
+        },
+        "avg_fluctuation": 1.3432126115583967,
+        "bullwhip_amplification_pct": 37.60265308619726,
+        "bullwhip_amplification_ratio": 0.3760265308619726,
+        "cv_demand": 0.8407672722098352,
+        "bullwhip_ratio": 1.8737939019641434,
+        "service_level": 0.99687255668491
+      },
+      {
+        "total_cost": 11283.0,
+        "per_period_cost": 56.415,
+        "echelon_per_period_costs": {
+          "retailer": 4.65,
+          "warehouse": 13.285,
+          "distributor": 21.265,
+          "manufacturer": 17.215
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.7714030533845722,
+          "F2_warehouse": 2.4580072782357383,
+          "F3_distributor": 2.7187380325972272,
+          "F4_manufacturer": 3.078657431100137
+        },
+        "avg_fluctuation": 2.5067014488294186,
+        "bullwhip_amplification_pct": 73.7976811780825,
+        "bullwhip_amplification_ratio": 0.737976811780825,
+        "cv_demand": 0.5573926661832321,
+        "bullwhip_ratio": 5.523318869947398,
+        "service_level": 0.9766949152542372
+      },
+      {
+        "total_cost": 19690.0,
+        "per_period_cost": 98.45,
+        "echelon_per_period_costs": {
+          "retailer": 41.135,
+          "warehouse": 22.565,
+          "distributor": 15.935,
+          "manufacturer": 18.815
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5118062546606966,
+          "F2_warehouse": 0.5588407387366918,
+          "F3_distributor": 0.6105895780374307,
+          "F4_manufacturer": 0.7212896770071254
+        },
+        "avg_fluctuation": 0.6006315621104862,
+        "bullwhip_amplification_pct": 40.930219284894505,
+        "bullwhip_amplification_ratio": 0.4093021928489451,
+        "cv_demand": 0.3715155945391454,
+        "bullwhip_ratio": 1.9414788708987167,
+        "service_level": 0.9490196078431372
+      },
+      {
+        "total_cost": 11309.0,
+        "per_period_cost": 56.545,
+        "echelon_per_period_costs": {
+          "retailer": 5.55,
+          "warehouse": 14.255,
+          "distributor": 21.55,
+          "manufacturer": 15.19
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4144550726865048,
+          "F2_warehouse": 1.982755162865077,
+          "F3_distributor": 2.2062377164738383,
+          "F4_manufacturer": 2.5177149969903807
+        },
+        "avg_fluctuation": 2.0302907372539503,
+        "bullwhip_amplification_pct": 77.99893723088924,
+        "bullwhip_amplification_ratio": 0.7799893723088924,
+        "cv_demand": 0.7555282625215679,
+        "bullwhip_ratio": 3.332390225333904,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 11666.0,
+        "per_period_cost": 58.33,
+        "echelon_per_period_costs": {
+          "retailer": 4.765,
+          "warehouse": 12.71,
+          "distributor": 24.21,
+          "manufacturer": 16.645
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4386186773724903,
+          "F2_warehouse": 1.849339776468333,
+          "F3_distributor": 2.1033793786166646,
+          "F4_manufacturer": 2.4314349887885114
+        },
+        "avg_fluctuation": 1.9556932053115,
+        "bullwhip_amplification_pct": 69.01177685453885,
+        "bullwhip_amplification_ratio": 0.6901177685453885,
+        "cv_demand": 1.0112422204745004,
+        "bullwhip_ratio": 2.4044041472552644,
+        "service_level": 0.9858557284299858
+      },
+      {
+        "total_cost": 11050.0,
+        "per_period_cost": 55.25,
+        "echelon_per_period_costs": {
+          "retailer": 3.365,
+          "warehouse": 14.345,
+          "distributor": 20.645,
+          "manufacturer": 16.895
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4486849809274194,
+          "F2_warehouse": 1.931469617148527,
+          "F3_distributor": 2.162259386398368,
+          "F4_manufacturer": 2.550999876731249
+        },
+        "avg_fluctuation": 2.023353465301391,
+        "bullwhip_amplification_pct": 76.09072436839577,
+        "bullwhip_amplification_ratio": 0.7609072436839577,
+        "cv_demand": 0.7812015087755845,
+        "bullwhip_ratio": 3.265482526690913,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 13213.0,
+        "per_period_cost": 66.065,
+        "echelon_per_period_costs": {
+          "retailer": 8.185,
+          "warehouse": 15.56,
+          "distributor": 22.625,
+          "manufacturer": 19.695
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.1249292170284857,
+          "F2_warehouse": 1.312028179131792,
+          "F3_distributor": 1.4521793864387598,
+          "F4_manufacturer": 1.7317526107725751
+        },
+        "avg_fluctuation": 1.4052223483429032,
+        "bullwhip_amplification_pct": 53.94325123379949,
+        "bullwhip_amplification_ratio": 0.5394325123379948,
+        "cv_demand": 0.6550221634539455,
+        "bullwhip_ratio": 2.643807656279915,
+        "service_level": 0.9972801450589301
+      },
+      {
+        "total_cost": 13575.0,
+        "per_period_cost": 67.875,
+        "echelon_per_period_costs": {
+          "retailer": 8.045,
+          "warehouse": 17.175,
+          "distributor": 20.89,
+          "manufacturer": 21.765
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.0808909201728887,
+          "F2_warehouse": 1.2826850092967685,
+          "F3_distributor": 1.4046963746569618,
+          "F4_manufacturer": 1.6126173403620228
+        },
+        "avg_fluctuation": 1.3452224111221605,
+        "bullwhip_amplification_pct": 49.19334692015771,
+        "bullwhip_amplification_ratio": 0.4919334692015771,
+        "cv_demand": 0.6561489572892674,
+        "bullwhip_ratio": 2.4577000732031804,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 20084.0,
+        "per_period_cost": 100.42,
+        "echelon_per_period_costs": {
+          "retailer": 31.955,
+          "warehouse": 32.225,
+          "distributor": 18.55,
+          "manufacturer": 17.69
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.4925284087813514,
+          "F2_warehouse": 0.4968130205797474,
+          "F3_distributor": 0.532085545856717,
+          "F4_manufacturer": 0.615081415374242
+        },
+        "avg_fluctuation": 0.5341270976480145,
+        "bullwhip_amplification_pct": 24.882423918677077,
+        "bullwhip_amplification_ratio": 0.24882423918677077,
+        "cv_demand": 0.250856450208773,
+        "bullwhip_ratio": 2.4519258518660614,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12253.0,
+        "per_period_cost": 61.265,
+        "echelon_per_period_costs": {
+          "retailer": 7.925,
+          "warehouse": 14.6,
+          "distributor": 18.03,
+          "manufacturer": 20.71
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5703426725771583,
+          "F2_warehouse": 0.7590159909257368,
+          "F3_distributor": 0.9200350477791829,
+          "F4_manufacturer": 1.1318567898790872
+        },
+        "avg_fluctuation": 0.8453126252902914,
+        "bullwhip_amplification_pct": 98.4520612432283,
+        "bullwhip_amplification_ratio": 0.984520612432283,
+        "cv_demand": 0.24048807207279552,
+        "bullwhip_ratio": 4.706498663835915,
+        "service_level": 0.9840613931523022
+      },
+      {
+        "total_cost": 21751.0,
+        "per_period_cost": 108.755,
+        "echelon_per_period_costs": {
+          "retailer": 39.1,
+          "warehouse": 35.52,
+          "distributor": 19.385,
+          "manufacturer": 14.75
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.44208601542753223,
+          "F2_warehouse": 0.47501140279970294,
+          "F3_distributor": 0.5055878682602136,
+          "F4_manufacturer": 0.5707320947139889
+        },
+        "avg_fluctuation": 0.49835434530035944,
+        "bullwhip_amplification_pct": 29.099784837583176,
+        "bullwhip_amplification_ratio": 0.29099784837583176,
+        "cv_demand": 0.3750699447681522,
+        "bullwhip_ratio": 1.521668431915504,
+        "service_level": 0.9620123203285421
+      }
+    ]
+  },
+  "random_alpha": {
+    "name": "Random \u03b1 Baseline",
+    "interval": 50,
+    "traces": [
+      {
+        "total_cost": 18348.0,
+        "per_period_cost": 91.74,
+        "echelon_per_period_costs": {
+          "retailer": 20.38,
+          "warehouse": 26.83,
+          "distributor": 21.49,
+          "manufacturer": 23.04
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5760578540673265,
+          "F2_warehouse": 0.6635790550412712,
+          "F3_distributor": 0.7315045470518998,
+          "F4_manufacturer": 0.8528939531357531
+        },
+        "avg_fluctuation": 0.7060088523240626,
+        "bullwhip_amplification_pct": 48.05699585793193,
+        "bullwhip_amplification_ratio": 0.4805699585793193,
+        "cv_demand": 0.34084052256409136,
+        "bullwhip_ratio": 2.5023255648112546,
+        "service_level": 0.9995700773860705
+      },
+      {
+        "total_cost": 13141.0,
+        "per_period_cost": 65.705,
+        "echelon_per_period_costs": {
+          "retailer": 8.1,
+          "warehouse": 16.205,
+          "distributor": 23.19,
+          "manufacturer": 18.21
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.9858665614547307,
+          "F2_warehouse": 1.3033625571562009,
+          "F3_distributor": 1.447834827058109,
+          "F4_manufacturer": 1.678809101714665
+        },
+        "avg_fluctuation": 1.3539682618459263,
+        "bullwhip_amplification_pct": 70.28766035409883,
+        "bullwhip_amplification_ratio": 0.7028766035409884,
+        "cv_demand": 0.5526669691589601,
+        "bullwhip_ratio": 3.0376505117891344,
+        "service_level": 0.9916279069767442
+      },
+      {
+        "total_cost": 28223.0,
+        "per_period_cost": 141.115,
+        "echelon_per_period_costs": {
+          "retailer": 46.4,
+          "warehouse": 58.305,
+          "distributor": 24.825,
+          "manufacturer": 11.585
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.25846384438616704,
+          "F2_warehouse": 0.2478235537130151,
+          "F3_distributor": 0.27778263727962377,
+          "F4_manufacturer": 0.3288626139477191
+        },
+        "avg_fluctuation": 0.27823316233163126,
+        "bullwhip_amplification_pct": 27.237376171024643,
+        "bullwhip_amplification_ratio": 0.2723737617102464,
+        "cv_demand": 0.1673130069471027,
+        "bullwhip_ratio": 1.9655531864996698,
+        "service_level": 0.9774826789838337
+      },
+      {
+        "total_cost": 16342.0,
+        "per_period_cost": 81.71,
+        "echelon_per_period_costs": {
+          "retailer": 15.95,
+          "warehouse": 18.41,
+          "distributor": 23.295,
+          "manufacturer": 24.055
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.542943242578112,
+          "F2_warehouse": 0.7088227641008243,
+          "F3_distributor": 0.7887460408617921,
+          "F4_manufacturer": 0.9073039921036502
+        },
+        "avg_fluctuation": 0.7369540099110946,
+        "bullwhip_amplification_pct": 67.10844172134962,
+        "bullwhip_amplification_ratio": 0.6710844172134962,
+        "cv_demand": 0.35435112806487,
+        "bullwhip_ratio": 2.5604659340538425,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 14945.0,
+        "per_period_cost": 74.725,
+        "echelon_per_period_costs": {
+          "retailer": 13.755,
+          "warehouse": 18.16,
+          "distributor": 19.01,
+          "manufacturer": 23.8
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5332342657211714,
+          "F2_warehouse": 0.6549854830543697,
+          "F3_distributor": 0.7847921236376794,
+          "F4_manufacturer": 0.9436436042282013
+        },
+        "avg_fluctuation": 0.7291638691603555,
+        "bullwhip_amplification_pct": 76.96604754984617,
+        "bullwhip_amplification_ratio": 0.7696604754984617,
+        "cv_demand": 0.242552435107859,
+        "bullwhip_ratio": 3.890472605680412,
+        "service_level": 0.9902391410444119
+      },
+      {
+        "total_cost": 18278.0,
+        "per_period_cost": 91.39,
+        "echelon_per_period_costs": {
+          "retailer": 20.785,
+          "warehouse": 24.075,
+          "distributor": 23.08,
+          "manufacturer": 23.45
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5182764497013809,
+          "F2_warehouse": 0.6000996514505992,
+          "F3_distributor": 0.6300544665278903,
+          "F4_manufacturer": 0.7506152102139477
+        },
+        "avg_fluctuation": 0.6247614444734546,
+        "bullwhip_amplification_pct": 44.829117866813206,
+        "bullwhip_amplification_ratio": 0.44829117866813206,
+        "cv_demand": 0.33724710837988237,
+        "bullwhip_ratio": 2.225712812838824,
+        "service_level": 0.9914841849148418
+      },
+      {
+        "total_cost": 13254.0,
+        "per_period_cost": 66.27,
+        "echelon_per_period_costs": {
+          "retailer": 8.27,
+          "warehouse": 14.59,
+          "distributor": 19.45,
+          "manufacturer": 23.96
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5284342724360455,
+          "F2_warehouse": 0.73789928117601,
+          "F3_distributor": 0.9033200793967735,
+          "F4_manufacturer": 1.0926168409093386
+        },
+        "avg_fluctuation": 0.8155676184795418,
+        "bullwhip_amplification_pct": 106.76494654149712,
+        "bullwhip_amplification_ratio": 1.0676494654149713,
+        "cv_demand": 0.22796059572245506,
+        "bullwhip_ratio": 4.793007482045772,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 35890.0,
+        "per_period_cost": 179.45,
+        "echelon_per_period_costs": {
+          "retailer": 76.02,
+          "warehouse": 78.86,
+          "distributor": 12.515,
+          "manufacturer": 12.055
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.40209621758699804,
+          "F2_warehouse": 0.3617855853652744,
+          "F3_distributor": 0.38677627661643926,
+          "F4_manufacturer": 0.44162399669562
+        },
+        "avg_fluctuation": 0.39807051906608293,
+        "bullwhip_amplification_pct": 9.830427987069967,
+        "bullwhip_amplification_ratio": 0.09830427987069967,
+        "cv_demand": 0.2627226723981463,
+        "bullwhip_ratio": 1.6809512200239634,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 21815.0,
+        "per_period_cost": 109.075,
+        "echelon_per_period_costs": {
+          "retailer": 43.54,
+          "warehouse": 36.36,
+          "distributor": 16.345,
+          "manufacturer": 12.83
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.35805743701971643,
+          "F2_warehouse": 0.3623746720638671,
+          "F3_distributor": 0.38626354521751616,
+          "F4_manufacturer": 0.47388155296440665
+        },
+        "avg_fluctuation": 0.3951443018163766,
+        "bullwhip_amplification_pct": 32.34791515817961,
+        "bullwhip_amplification_ratio": 0.3234791515817961,
+        "cv_demand": 0.2664545463073916,
+        "bullwhip_ratio": 1.778470510380107,
+        "service_level": 0.9919614147909968
+      },
+      {
+        "total_cost": 12131.0,
+        "per_period_cost": 60.655,
+        "echelon_per_period_costs": {
+          "retailer": 8.97,
+          "warehouse": 15.51,
+          "distributor": 18.4,
+          "manufacturer": 17.775
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.0964102952389951,
+          "F2_warehouse": 1.2663503278021344,
+          "F3_distributor": 1.3549144174245424,
+          "F4_manufacturer": 1.5608198309048982
+        },
+        "avg_fluctuation": 1.3196237178426427,
+        "bullwhip_amplification_pct": 42.357276074708075,
+        "bullwhip_amplification_ratio": 0.4235727607470807,
+        "cv_demand": 0.8407672722098352,
+        "bullwhip_ratio": 1.85642315358269,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 10486.0,
+        "per_period_cost": 52.43,
+        "echelon_per_period_costs": {
+          "retailer": 4.105,
+          "warehouse": 11.8,
+          "distributor": 18.925,
+          "manufacturer": 17.6
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4646909200519385,
+          "F2_warehouse": 2.459577795472613,
+          "F3_distributor": 2.7250552152068273,
+          "F4_manufacturer": 3.1845869856492035
+        },
+        "avg_fluctuation": 2.4584777290951454,
+        "bullwhip_amplification_pct": 117.42382246325916,
+        "bullwhip_amplification_ratio": 1.1742382246325915,
+        "cv_demand": 0.5573926661832321,
+        "bullwhip_ratio": 5.71336362829419,
+        "service_level": 0.9915254237288136
+      },
+      {
+        "total_cost": 26513.0,
+        "per_period_cost": 132.565,
+        "echelon_per_period_costs": {
+          "retailer": 50.745,
+          "warehouse": 34.455,
+          "distributor": 25.33,
+          "manufacturer": 22.035
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5071084926013455,
+          "F2_warehouse": 0.5639328357524016,
+          "F3_distributor": 0.6330813612382761,
+          "F4_manufacturer": 0.743284536703395
+        },
+        "avg_fluctuation": 0.6118518065738545,
+        "bullwhip_amplification_pct": 46.57308003076872,
+        "bullwhip_amplification_ratio": 0.4657308003076872,
+        "cv_demand": 0.3715155945391454,
+        "bullwhip_ratio": 2.00068192998848,
+        "service_level": 0.9407843137254902
+      },
+      {
+        "total_cost": 11147.0,
+        "per_period_cost": 55.735,
+        "echelon_per_period_costs": {
+          "retailer": 4.36,
+          "warehouse": 13.095,
+          "distributor": 21.245,
+          "manufacturer": 17.035
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.3800237428132012,
+          "F2_warehouse": 1.9506196894816736,
+          "F3_distributor": 2.178188809087544,
+          "F4_manufacturer": 2.580632560453107
+        },
+        "avg_fluctuation": 2.0223662004588814,
+        "bullwhip_amplification_pct": 86.99914214464492,
+        "bullwhip_amplification_ratio": 0.8699914214464493,
+        "cv_demand": 0.7555282625215679,
+        "bullwhip_ratio": 3.4156664792926104,
+        "service_level": 0.9953051643192489
+      },
+      {
+        "total_cost": 11125.0,
+        "per_period_cost": 55.625,
+        "echelon_per_period_costs": {
+          "retailer": 3.88,
+          "warehouse": 11.735,
+          "distributor": 22.645,
+          "manufacturer": 17.365
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.3904416109422446,
+          "F2_warehouse": 1.7849447835009942,
+          "F3_distributor": 2.0733095891468434,
+          "F4_manufacturer": 2.4090051442709637
+        },
+        "avg_fluctuation": 1.9144252819652614,
+        "bullwhip_amplification_pct": 73.25467860807768,
+        "bullwhip_amplification_ratio": 0.7325467860807768,
+        "cv_demand": 1.0112422204745004,
+        "bullwhip_ratio": 2.382223660658272,
+        "service_level": 0.9957567185289957
+      },
+      {
+        "total_cost": 11101.0,
+        "per_period_cost": 55.505,
+        "echelon_per_period_costs": {
+          "retailer": 3.56,
+          "warehouse": 13.25,
+          "distributor": 19.915,
+          "manufacturer": 18.78
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4084899551370875,
+          "F2_warehouse": 1.9043826023732124,
+          "F3_distributor": 2.1877419599587187,
+          "F4_manufacturer": 2.510082588487718
+        },
+        "avg_fluctuation": 2.0026742764891843,
+        "bullwhip_amplification_pct": 78.21089737508373,
+        "bullwhip_amplification_ratio": 0.7821089737508373,
+        "cv_demand": 0.7812015087755845,
+        "bullwhip_ratio": 3.2131051467397875,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12343.0,
+        "per_period_cost": 61.715,
+        "echelon_per_period_costs": {
+          "retailer": 7.22,
+          "warehouse": 14.07,
+          "distributor": 22.75,
+          "manufacturer": 17.675
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.067263745114111,
+          "F2_warehouse": 1.3002554785954397,
+          "F3_distributor": 1.4430058401599497,
+          "F4_manufacturer": 1.6832782092225689
+        },
+        "avg_fluctuation": 1.3734508182730172,
+        "bullwhip_amplification_pct": 57.71904713605671,
+        "bullwhip_amplification_ratio": 0.5771904713605671,
+        "cv_demand": 0.6550221634539455,
+        "bullwhip_ratio": 2.5698034404616292,
+        "service_level": 0.9963735267452403
+      },
+      {
+        "total_cost": 13796.0,
+        "per_period_cost": 68.98,
+        "echelon_per_period_costs": {
+          "retailer": 7.605,
+          "warehouse": 15.8,
+          "distributor": 20.64,
+          "manufacturer": 24.935
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.022976887114465,
+          "F2_warehouse": 1.2834344196091647,
+          "F3_distributor": 1.3936855623068893,
+          "F4_manufacturer": 1.627515643026721
+        },
+        "avg_fluctuation": 1.3319031280143099,
+        "bullwhip_amplification_pct": 59.09603271853898,
+        "bullwhip_amplification_ratio": 0.5909603271853898,
+        "cv_demand": 0.6561489572892674,
+        "bullwhip_ratio": 2.4804057446809606,
+        "service_level": 0.9991673605328892
+      },
+      {
+        "total_cost": 18338.0,
+        "per_period_cost": 91.69,
+        "echelon_per_period_costs": {
+          "retailer": 26.925,
+          "warehouse": 30.45,
+          "distributor": 17.78,
+          "manufacturer": 16.535
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.47600646795521073,
+          "F2_warehouse": 0.48163885240206766,
+          "F3_distributor": 0.5129340277758038,
+          "F4_manufacturer": 0.6095455451176939
+        },
+        "avg_fluctuation": 0.520031223312694,
+        "bullwhip_amplification_pct": 28.054046772962838,
+        "bullwhip_amplification_ratio": 0.2805404677296284,
+        "cv_demand": 0.250856450208773,
+        "bullwhip_ratio": 2.429857971004553,
+        "service_level": 0.9985390796201608
+      },
+      {
+        "total_cost": 13094.0,
+        "per_period_cost": 65.47,
+        "echelon_per_period_costs": {
+          "retailer": 8.49,
+          "warehouse": 14.41,
+          "distributor": 20.54,
+          "manufacturer": 22.03
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.541886838662901,
+          "F2_warehouse": 0.782995662614414,
+          "F3_distributor": 0.9425312497818515,
+          "F4_manufacturer": 1.1386115768344143
+        },
+        "avg_fluctuation": 0.8515063319733951,
+        "bullwhip_amplification_pct": 110.1198064975935,
+        "bullwhip_amplification_ratio": 1.101198064975935,
+        "cv_demand": 0.24048807207279552,
+        "bullwhip_ratio": 4.734586489136799,
+        "service_level": 0.9805194805194806
+      },
+      {
+        "total_cost": 27285.0,
+        "per_period_cost": 136.425,
+        "echelon_per_period_costs": {
+          "retailer": 35.76,
+          "warehouse": 47.04,
+          "distributor": 40.475,
+          "manufacturer": 13.15
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.43517577580976796,
+          "F2_warehouse": 0.4550560205517745,
+          "F3_distributor": 0.5003949498370376,
+          "F4_manufacturer": 0.5573530116885685
+        },
+        "avg_fluctuation": 0.4869949394717871,
+        "bullwhip_amplification_pct": 28.07537612852076,
+        "bullwhip_amplification_ratio": 0.28075376128520757,
+        "cv_demand": 0.3750699447681522,
+        "bullwhip_ratio": 1.4859975304955289,
+        "service_level": 0.9705681040383299
+      }
+    ]
+  },
+  "llm_accumulated_memory": {
+    "name": "Gemini LLM (Accumulated Memory)",
+    "interval": 50,
+    "traces": [
+      {
+        "total_cost": 18208.0,
+        "per_period_cost": 91.04,
+        "echelon_per_period_costs": {
+          "retailer": 19.9,
+          "warehouse": 28.045,
+          "distributor": 20.97,
+          "manufacturer": 22.125
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5752252888072324,
+          "F2_warehouse": 0.6656605073625923,
+          "F3_distributor": 0.7263100449354783,
+          "F4_manufacturer": 0.8491364619113722
+        },
+        "avg_fluctuation": 0.7040830757541687,
+        "bullwhip_amplification_pct": 47.61806868263956,
+        "bullwhip_amplification_ratio": 0.4761806868263956,
+        "cv_demand": 0.34084052256409136,
+        "bullwhip_ratio": 2.4913013732153906,
+        "service_level": 0.9978503869303526
+      },
+      {
+        "total_cost": 12574.0,
+        "per_period_cost": 62.87,
+        "echelon_per_period_costs": {
+          "retailer": 7.24,
+          "warehouse": 12.75,
+          "distributor": 23.605,
+          "manufacturer": 19.275
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.9722606919246233,
+          "F2_warehouse": 1.3036127051633128,
+          "F3_distributor": 1.4513777001597616,
+          "F4_manufacturer": 1.6657696718857817
+        },
+        "avg_fluctuation": 1.3482551922833699,
+        "bullwhip_amplification_pct": 71.32952979805589,
+        "bullwhip_amplification_ratio": 0.7132952979805589,
+        "cv_demand": 0.5526669691589601,
+        "bullwhip_ratio": 3.014056863974925,
+        "service_level": 0.9925581395348837
+      },
+      {
+        "total_cost": 39275.0,
+        "per_period_cost": 196.375,
+        "echelon_per_period_costs": {
+          "retailer": 77.44,
+          "warehouse": 94.795,
+          "distributor": 13.275,
+          "manufacturer": 10.865
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.26059917192102405,
+          "F2_warehouse": 0.2703865454118783,
+          "F3_distributor": 0.29200575373905413,
+          "F4_manufacturer": 0.35162759131672
+        },
+        "avg_fluctuation": 0.29365476559716913,
+        "bullwhip_amplification_pct": 34.9304330956518,
+        "bullwhip_amplification_ratio": 0.349304330956518,
+        "cv_demand": 0.1673130069471027,
+        "bullwhip_ratio": 2.101615395794601,
+        "service_level": 0.9621824480369515
+      },
+      {
+        "total_cost": 14783.0,
+        "per_period_cost": 73.915,
+        "echelon_per_period_costs": {
+          "retailer": 15.83,
+          "warehouse": 20.1,
+          "distributor": 19.925,
+          "manufacturer": 18.06
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5427478380152309,
+          "F2_warehouse": 0.6966445056274178,
+          "F3_distributor": 0.7791418478127895,
+          "F4_manufacturer": 0.9258830222782258
+        },
+        "avg_fluctuation": 0.7361043034334159,
+        "bullwhip_amplification_pct": 70.59174766390193,
+        "bullwhip_amplification_ratio": 0.7059174766390193,
+        "cv_demand": 0.35435112806487,
+        "bullwhip_ratio": 2.6128970643737506,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 14858.0,
+        "per_period_cost": 74.29,
+        "echelon_per_period_costs": {
+          "retailer": 13.845,
+          "warehouse": 16.285,
+          "distributor": 19.235,
+          "manufacturer": 24.925
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5576812768217875,
+          "F2_warehouse": 0.6611821118625002,
+          "F3_distributor": 0.7903701310720467,
+          "F4_manufacturer": 0.9678758923419153
+        },
+        "avg_fluctuation": 0.7442773530245624,
+        "bullwhip_amplification_pct": 73.55359280803138,
+        "bullwhip_amplification_ratio": 0.7355359280803138,
+        "cv_demand": 0.242552435107859,
+        "bullwhip_ratio": 3.9903779647131437,
+        "service_level": 0.9926793557833089
+      },
+      {
+        "total_cost": 25995.0,
+        "per_period_cost": 129.975,
+        "echelon_per_period_costs": {
+          "retailer": 26.15,
+          "warehouse": 48.65,
+          "distributor": 31.645,
+          "manufacturer": 23.53
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5475529966137251,
+          "F2_warehouse": 0.6293002880256923,
+          "F3_distributor": 0.6575320722658169,
+          "F4_manufacturer": 0.7684403759574229
+        },
+        "avg_fluctuation": 0.6507064332156642,
+        "bullwhip_amplification_pct": 40.34082193134707,
+        "bullwhip_amplification_ratio": 0.4034082193134707,
+        "cv_demand": 0.33724710837988237,
+        "bullwhip_ratio": 2.278567723379366,
+        "service_level": 0.991889699918897
+      },
+      {
+        "total_cost": 13569.0,
+        "per_period_cost": 67.845,
+        "echelon_per_period_costs": {
+          "retailer": 8.575,
+          "warehouse": 13.97,
+          "distributor": 21.435,
+          "manufacturer": 23.865
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5568135484580664,
+          "F2_warehouse": 0.7457054254468838,
+          "F3_distributor": 0.8917270919131354,
+          "F4_manufacturer": 1.0870552191985359
+        },
+        "avg_fluctuation": 0.8203253212541552,
+        "bullwhip_amplification_pct": 95.22786796564486,
+        "bullwhip_amplification_ratio": 0.9522786796564486,
+        "cv_demand": 0.22796059572245506,
+        "bullwhip_ratio": 4.768610187885452,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 35429.0,
+        "per_period_cost": 177.145,
+        "echelon_per_period_costs": {
+          "retailer": 75.495,
+          "warehouse": 78.29,
+          "distributor": 12.095,
+          "manufacturer": 11.265
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.40209621758699804,
+          "F2_warehouse": 0.36169892586274,
+          "F3_distributor": 0.38677627661643926,
+          "F4_manufacturer": 0.43127829219964287
+        },
+        "avg_fluctuation": 0.39546242806645504,
+        "bullwhip_amplification_pct": 7.257485481402459,
+        "bullwhip_amplification_ratio": 0.07257485481402459,
+        "cv_demand": 0.2627226723981463,
+        "bullwhip_ratio": 1.6415724165063947,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 22644.0,
+        "per_period_cost": 113.22,
+        "echelon_per_period_costs": {
+          "retailer": 41.54,
+          "warehouse": 39.68,
+          "distributor": 18.755,
+          "manufacturer": 13.245
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.3575737605915284,
+          "F2_warehouse": 0.36207818112266094,
+          "F3_distributor": 0.3860544455455936,
+          "F4_manufacturer": 0.4739354755358798
+        },
+        "avg_fluctuation": 0.3949104656989157,
+        "bullwhip_amplification_pct": 32.54201727550034,
+        "bullwhip_amplification_ratio": 0.32542017275500346,
+        "cv_demand": 0.2664545463073916,
+        "bullwhip_ratio": 1.7786728809991128,
+        "service_level": 0.9932475884244373
+      },
+      {
+        "total_cost": 14769.0,
+        "per_period_cost": 73.845,
+        "echelon_per_period_costs": {
+          "retailer": 9.915,
+          "warehouse": 19.845,
+          "distributor": 24.44,
+          "manufacturer": 19.645
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.1207909533745362,
+          "F2_warehouse": 1.2508427205407122,
+          "F3_distributor": 1.3307842828823149,
+          "F4_manufacturer": 1.488788651452656
+        },
+        "avg_fluctuation": 1.2978016520625548,
+        "bullwhip_amplification_pct": 32.83374985943035,
+        "bullwhip_amplification_ratio": 0.3283374985943035,
+        "cv_demand": 0.8407672722098352,
+        "bullwhip_ratio": 1.7707500049800826,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 11471.0,
+        "per_period_cost": 57.355,
+        "echelon_per_period_costs": {
+          "retailer": 5.09,
+          "warehouse": 12.45,
+          "distributor": 21.165,
+          "manufacturer": 18.65
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.7130807374872485,
+          "F2_warehouse": 2.4263188296315805,
+          "F3_distributor": 2.623607174388684,
+          "F4_manufacturer": 3.0975453600780645
+        },
+        "avg_fluctuation": 2.465138025396395,
+        "bullwhip_amplification_pct": 80.8172430110651,
+        "bullwhip_amplification_ratio": 0.808172430110651,
+        "cv_demand": 0.5573926661832321,
+        "bullwhip_ratio": 5.557205087193964,
+        "service_level": 0.9872881355932204
+      },
+      {
+        "total_cost": 25467.0,
+        "per_period_cost": 127.335,
+        "echelon_per_period_costs": {
+          "retailer": 47.67,
+          "warehouse": 33.48,
+          "distributor": 24.75,
+          "manufacturer": 21.435
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.5214554487443437,
+          "F2_warehouse": 0.570268248181725,
+          "F3_distributor": 0.6334111440599658,
+          "F4_manufacturer": 0.738354324154487
+        },
+        "avg_fluctuation": 0.6158722912851303,
+        "bullwhip_amplification_pct": 41.594900567715285,
+        "bullwhip_amplification_ratio": 0.41594900567715287,
+        "cv_demand": 0.3715155945391454,
+        "bullwhip_ratio": 1.987411390012833,
+        "service_level": 0.9419607843137255
+      },
+      {
+        "total_cost": 13395.0,
+        "per_period_cost": 66.975,
+        "echelon_per_period_costs": {
+          "retailer": 9.48,
+          "warehouse": 16.19,
+          "distributor": 23.695,
+          "manufacturer": 17.61
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.3655380087836886,
+          "F2_warehouse": 1.9437633677291148,
+          "F3_distributor": 2.265876791367142,
+          "F4_manufacturer": 2.642160522364387
+        },
+        "avg_fluctuation": 2.054334672561083,
+        "bullwhip_amplification_pct": 93.48861074308807,
+        "bullwhip_amplification_ratio": 0.9348861074308807,
+        "cv_demand": 0.7555282625215679,
+        "bullwhip_ratio": 3.4971034882880527,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12817.0,
+        "per_period_cost": 64.085,
+        "echelon_per_period_costs": {
+          "retailer": 4.385,
+          "warehouse": 12.73,
+          "distributor": 24.765,
+          "manufacturer": 22.205
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4088928198741835,
+          "F2_warehouse": 1.7802716927800948,
+          "F3_distributor": 2.067551385340113,
+          "F4_manufacturer": 2.4053511772118195
+        },
+        "avg_fluctuation": 1.9155167688015529,
+        "bullwhip_amplification_pct": 70.7263422228684,
+        "bullwhip_amplification_ratio": 0.707263422228684,
+        "cv_demand": 1.0112422204745004,
+        "bullwhip_ratio": 2.3786103156206906,
+        "service_level": 0.9900990099009901
+      },
+      {
+        "total_cost": 10124.0,
+        "per_period_cost": 50.62,
+        "echelon_per_period_costs": {
+          "retailer": 3.525,
+          "warehouse": 12.84,
+          "distributor": 18.145,
+          "manufacturer": 16.11
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.4199910580699313,
+          "F2_warehouse": 1.9256776413938157,
+          "F3_distributor": 2.1952606936645793,
+          "F4_manufacturer": 2.580696786125652
+        },
+        "avg_fluctuation": 2.0304065448134945,
+        "bullwhip_amplification_pct": 81.74035473387877,
+        "bullwhip_amplification_ratio": 0.8174035473387877,
+        "cv_demand": 0.7812015087755845,
+        "bullwhip_ratio": 3.3034969302229134,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12127.0,
+        "per_period_cost": 60.635,
+        "echelon_per_period_costs": {
+          "retailer": 7.485,
+          "warehouse": 13.53,
+          "distributor": 21.595,
+          "manufacturer": 18.025
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.048508313771703,
+          "F2_warehouse": 1.2989896525009244,
+          "F3_distributor": 1.4534002006815516,
+          "F4_manufacturer": 1.7095050119321171
+        },
+        "avg_fluctuation": 1.377600794721574,
+        "bullwhip_amplification_pct": 63.04162680243051,
+        "bullwhip_amplification_ratio": 0.6304162680243051,
+        "cv_demand": 0.6550221634539455,
+        "bullwhip_ratio": 2.6098430057967223,
+        "service_level": 0.9981867633726201
+      },
+      {
+        "total_cost": 13814.0,
+        "per_period_cost": 69.07,
+        "echelon_per_period_costs": {
+          "retailer": 7.885,
+          "warehouse": 14.77,
+          "distributor": 22.235,
+          "manufacturer": 24.18
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 1.0757517795759766,
+          "F2_warehouse": 1.2962032461414428,
+          "F3_distributor": 1.4085183392943836,
+          "F4_manufacturer": 1.6207755835852262
+        },
+        "avg_fluctuation": 1.3503122371492573,
+        "bullwhip_amplification_pct": 50.664457578130055,
+        "bullwhip_amplification_ratio": 0.5066445757813005,
+        "cv_demand": 0.6561489572892674,
+        "bullwhip_ratio": 2.470133596311877,
+        "service_level": 0.9991673605328892
+      },
+      {
+        "total_cost": 21462.0,
+        "per_period_cost": 107.31,
+        "echelon_per_period_costs": {
+          "retailer": 31.025,
+          "warehouse": 33.465,
+          "distributor": 21.815,
+          "manufacturer": 21.005
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.4802846914612278,
+          "F2_warehouse": 0.5022077442597764,
+          "F3_distributor": 0.5391632093127283,
+          "F4_manufacturer": 0.6191266122241179
+        },
+        "avg_fluctuation": 0.5351955643144626,
+        "bullwhip_amplification_pct": 28.90825446475811,
+        "bullwhip_amplification_ratio": 0.2890825446475811,
+        "cv_demand": 0.250856450208773,
+        "bullwhip_ratio": 2.4680513963617656,
+        "service_level": 1.0
+      },
+      {
+        "total_cost": 12490.0,
+        "per_period_cost": 62.45,
+        "echelon_per_period_costs": {
+          "retailer": 8.35,
+          "warehouse": 13.625,
+          "distributor": 20.33,
+          "manufacturer": 20.145
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.579416742989642,
+          "F2_warehouse": 0.7821881356863244,
+          "F3_distributor": 0.9260324582065906,
+          "F4_manufacturer": 1.116650091245364
+        },
+        "avg_fluctuation": 0.8510718570319803,
+        "bullwhip_amplification_pct": 92.71967970475545,
+        "bullwhip_amplification_ratio": 0.9271967970475545,
+        "cv_demand": 0.24048807207279552,
+        "bullwhip_ratio": 4.643266011577302,
+        "service_level": 0.9811097992916175
+      },
+      {
+        "total_cost": 17050.0,
+        "per_period_cost": 85.25,
+        "echelon_per_period_costs": {
+          "retailer": 32.455,
+          "warehouse": 24.64,
+          "distributor": 17.13,
+          "manufacturer": 11.025
+        },
+        "echelon_fluctuations": {
+          "F1_retailer": 0.43249303514295084,
+          "F2_warehouse": 0.4677379806666237,
+          "F3_distributor": 0.4906304233296842,
+          "F4_manufacturer": 0.5519568045245248
+        },
+        "avg_fluctuation": 0.48570456091594594,
+        "bullwhip_amplification_pct": 27.622125600725077,
+        "bullwhip_amplification_ratio": 0.2762212560072508,
+        "cv_demand": 0.3750699447681522,
+        "bullwhip_ratio": 1.4716103282168194,
+        "service_level": 0.9702258726899384
+      }
+    ]
+  }
+}

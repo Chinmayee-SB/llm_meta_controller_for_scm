@@ -1,14 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & Packages
 .venv/
 venv/
+ENV/
+env/
+.python-version-test
 
-__pycache__/
-*.pyc
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 
-wandb/
-
-MADRL/results/
-
+# Model Checkpoints & Large Binaries
 *.pt
 *.pth
+*.ckpt
+*.bin
+*.onnx
+checkpoints/
+checkpoints_base_repro/
+weights/
 
+# Experiment Trackers & Logs
+wandb/
 events.out.tfevents.*
+*.log
+MADRL/results/
+
+# Temporary / Scratch scripts
+tmp_read.py
+try.py
+scratch/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
