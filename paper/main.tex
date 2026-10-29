@@ -65,7 +65,7 @@ capacity-bound, the buffer the curriculum teaches cannot clear the
 downstream bottleneck, and cost rises $6.8\%$. Ablating the supervisor on
 identical frozen weights, a language model reading window telemetry matches
 a hand-tuned rule base to within $3$ cost units at $n=100$: expert heuristic
-quality without manual threshold tuning and an auditable rationale
+quality with no environment-specific thresholds and an auditable rationale
 per decision. Switching itself pays most under contraction.
 We report a fixed-$\alpha$ execution arm throughout, which makes the two
 contributions separable, and recommend it in comparable studies.
@@ -135,8 +135,8 @@ $6.8\%$ more, and we identify the mechanism.
 At $n=100$ the paired difference between the language model and a rule base
 tuned against this environment is $-0.37$ with interval $[-3.07, +2.33]$:
 an equivalence result bounding any true gap to roughly $\pm 3$ cost units.
-The model is given the topology and the regimes in a structured telemetry prompt
-without manual policy threshold rules, and logs a rationale for every decision.
+The model is given the topology and the regimes in a prompt and no
+thresholds, and logs a rationale for every decision.
 
 \item \textbf{A fixed-$\alpha$ arm separates the two.} Executing the trained
 policy at a constant $\alpha$ isolates what training contributes from what
@@ -297,8 +297,8 @@ Fig.~\ref{fig:arch} shows the system. The inner loop is standard
 decentralized execution: every period, each actor reads its local
 observation and emits an order, with no communication. The outer loop
 activates at $t = 20, 40, \dots$: the environment aggregates the preceding
-window into demand mean and spread, per-echelon backlog, on-hand inventory,
-window cost and bullwhip amplification, and a supervisor
+window into demand mean and spread, per-echelon backlog, inventory and
+pipeline stock, window cost and bullwhip amplification, and a supervisor
 returns a mode with a per-echelon vector
 $[\alpha_R, \alpha_W, \alpha_D, \alpha_M]$, written into the actors'
 observations for the next window. The cadence is set by physics: a
@@ -323,40 +323,43 @@ the supervisor is an ablation dimension rather than a fixed component. We
 evaluate three, all reading the same telemetry at the same cadence.
 \textbf{Static} holds $\alpha = 0.375$ at every tier for the whole
 episode, isolating what the curriculum alone contributes.
-\textbf{Rule-based} applies the hand-tuned priority ladder and thresholds in
+\textbf{Rule-based} applies the hand-tuned thresholds in
 Table~\ref{tab:rules}, developed against this environment.
-\textbf{LLM} receives window telemetry formatted as structured text along with
-status indicators for each tier, and queries a frontier language model, the preview
-endpoint \texttt{gpt-5.6-luna}. The model returns a structured JSON reply giving a
-target mode, the per-echelon $\alpha$ vector, a diagnosis and an operational rationale. Each assigned
-$\alpha$ is snapped to the nearest discrete anchor in $\{0.100, 0.375, 0.650\}$. Failed
-calls or schema errors are retried up to $5$ times before defaulting to the rule-based
-fallback (zero fallbacks occurred across all $280$ benchmark traces). The prompt states that
-raising $\alpha$ during a spike produces no immediate inventory, only upstream order variance;
-without it the model reaches for aggressive settings whenever demand rises.
+\textbf{LLM} sends the telemetry as JSON to a frontier language model, the
+preview endpoint \texttt{gpt-5.6-luna}, under a prompt describing the
+topology, the lead-time structure and the three regimes, and parses a structured reply giving a target mode, the $\alpha$
+vector, a diagnosis and a rationale. The prompt states that raising $\alpha$
+during a spike produces no immediate inventory, only upstream order
+variance; without it the model reaches for aggressive settings whenever
+demand rises.
 
 \begin{table}[t]
-\caption{Rule-based supervisor priority ladder. Evaluated in top-to-bottom order every $N=20$ periods. The assigned column lists $\alpha$ for retailer / warehouse / distributor / manufacturer; ``all'' means one value across every echelon.}
+\caption{Rule-based supervisor. The assigned column lists $\alpha$ for
+retailer / warehouse / distributor / manufacturer; ``all'' means one value
+across every echelon.}
 \label{tab:rules}
 \centering
 \footnotesize
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}p{3.5cm}@{}}
 \toprule
-Trigger Condition & Assigned $\alpha$ & Operational Intent \\
+Trigger & Assigned $\alpha$ & Intent \\
 \midrule
-1. Mean demand $\ge 14$ \textbf{or} $B_R{+}B_W > 40$ (max 2 consecutive windows) & $.65/.65/.10/.65$ & Multi-tier recovery: pull downstream, saturate factory, distributor frictionless \\
+Backlogs $\approx 0$, demand moderate & all $.375$ & Default; do not intervene during calm windows \\
 \addlinespace[3pt]
-2. $\ge 2$ demand spikes, std $> 3.5$, \textbf{or} Bullwhip Amp $> 120\%$ & all $.10$ & Shock absorber: damp ripple and upstream variance surge \\
+Demand high \textbf{or} $B_R{+}B_W$ large & $.65/.65/.10/.65$ & Multi-tier recovery: pull downstream, saturate factory, keep distributor frictionless \\
 \addlinespace[3pt]
-3. Total backlog $> 4$ \textbf{or} mean backlog $> 2$ (non-consecutive) & $.65/.10/.10/.10$ & Targeted hybrid: retailer pulls, upstream flushes stock without hoarding \\
+Demand normal, retailer backlog persists & $.65/.10/.10/.10$ & Targeted hybrid: retailer pulls, upstream flushes stock down \\
 \addlinespace[3pt]
-4. Default steady state (backlogs $\approx 0$, calm demand) & all $.375$ & Cruiser: balanced nominal operating point \\
+$B \approx 0$, high amplification, upstream bloated & all $.10$ & Shock absorber: damp ripple, drain carrying cost \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-To enforce flow conservation under severe starvation, an order floor guardrail $a_t^i = \min(20, \max(a_t^i, \text{incoming}))$ is evaluated across all controllers whenever a tier's inventory is zero and backlog is positive, ensuring fully starved echelons order at least the incoming demand.
+A stockout pass-through rule caps orders by incoming demand when a tier is
+fully starved, enforcing conservation of flow; the rule-based controller
+also serves as the fallback if an LLM call fails or returns malformed
+output.
 
 %=======================================================================
 \section{Experimental Setup}
@@ -404,26 +407,21 @@ narrower: every policy compared here shares one codebase, environment,
 configuration and trace set, so the comparison between them is internally
 valid. The repository ships its serial environment with an echelon count of
 three and $\alpha = 0.5$; we set these to four and $0.375$, the
-value~\cite{liu2022} reports for that topology, with the common stockout floor
-applied during evaluation.
+value~\cite{liu2022} reports for that topology, and changed nothing else.
 
 \textbf{Suites.} Two hundred and eighty frozen traces of $T=200$, $56{,}000$
 periods in total, generated once from fixed seeds and reused by every
 controller. \textbf{S1} ($100$ traces) is Merton jump-diffusion
 demand~\cite{merton1976} simulated as in~\cite{glasserman2004}, matching the
 training distribution, with empirical mean $8.97$ and standard deviation
-$5.06$ (while training clamps demand to at least $1$, S1 evaluation traces
-contain $23$ zero-demand periods; both generators cap demand at $20$).
-Disruption suites S2--S4 are generated from clipped Poisson draws:
-\textbf{S2} ($30$) holds a calm baseline of mean
+$5.06$. \textbf{S2} ($30$) holds a calm baseline of mean
 $10.02$ until $t=60$, applies a $15$-period pulse drawn uniformly on
 $[35,45]$ with mean $39.99$, four times baseline and twice the $20$-unit
 order cap, then returns to $9.98$ from $t=75$. \textbf{S3} ($120$) steps
-demand permanently upward at $t=80$, from Poisson mean $10$ ($9.95$ empirical)
-to $19$ ($18.94$ empirical, $+90.5\%$), settling just under the order cap.
-\textbf{S4} ($30$) collapses it permanently at $t=80$, from a high-load Poisson
-mean of $18$ ($17.42$ empirical) to $5$ ($4.93$ empirical, $-71.7\%$).
-All figures are empirical means over the frozen traces,
+demand permanently upward at $t=80$, from mean $9.95$ to $18.94$
+($+90.5\%$), settling just under the order cap. \textbf{S4} ($30$)
+collapses it permanently at $t=80$, from a high-load mean of $17.42$ to
+$4.93$ ($-71.7\%$). All figures are empirical means over the frozen traces,
 not generator targets. S2 and S3 open inside the training distribution and
 leave it when the shock fires; S4 is outside it throughout, its pre-shock
 mean exceeding every S1 trace mean before collapsing below the S1 mean. S3
@@ -436,12 +434,13 @@ $\bar C = \tfrac{1}{T}\sum_t \sum_i (I_t^i + B_t^i)$. Order fluctuation is
 the coefficient of variation $F_i = \sigma(a^i)/\mu(a^i)$
 following~\cite{fransoo2000}, with $\bar F$ its mean and bullwhip
 amplification $A = (F_3/F_0 - 1)$. Fill rate is the share of effective
-demand, $D_t + B_{t-1}^0$, met from stock on hand. Service level is evaluated
-as $1 - (\sum_t B_t^0 / \sum_t D_t)$, measuring demand fulfilled without
-carried backlog. Recovery time $T_{\text{rec}}$ measures the number of terminal
-backlog-free periods ($\sum_i B_t^i < 0.5$) sustained at the end of the episode;
-under sustained step-up (S3) capacity saturation drives $T_{\text{rec}}$ to zero for
-all controllers. Comparisons are paired $t$-tests on the shared traces.
+demand, $D_t + B_{t-1}^0$, met from stock on hand; service level is the
+share of periods with no carried backlog. Under sustained disruption
+cumulative backlog drives service level to zero for every controller, so we
+report it and recovery time $T_{\text{rec}}$, the mean number of periods to
+return retailer backlog to zero, for S1 alone, and use fill rate as the
+availability metric throughout. Comparisons are paired $t$-tests on the
+shared traces.
 
 %=======================================================================
 \section{Results}
@@ -591,17 +590,14 @@ interval $[-7.96, -1.57]$, and the language model captures most of that
 gain; in distribution the rule base is \emph{more} expensive by $2.45$.
 Neither survives correction over the full family, but together they suggest
 that adaptivity earns its keep when there is a regime change to respond to
-and costs a little when there is not. Terminal stability further corroborates the supervisory mechanism:
-on S1, the adaptive rule base sustains an average of $6.66$ backlog-free
-periods at the close of the episode compared to $4.52$ for the static arm,
-demonstrating that dynamic intervention clears transient disturbances and
-restores steady state earlier. Under the step-up (S3), continuous capacity
-saturation prevents any controller from reaching a clean terminal state ($T_{\text{rec}} = 0$).
+and costs a little when there is not. Recovery time supports the supervisor
+no better: on S1 the static arm is fastest at $4.52$ periods and the rule
+base slowest at $6.66$, and under the step-up no controller ever clears
+retailer backlog.
 
 The language model's contribution is therefore neither speed nor cost, but
-that it reaches rule-based quality without manual policy threshold engineering,
-guided by structured telemetry indicators, and that each decision arrives with
-an auditable diagnosis. In one logged
+that it reaches rule-based quality with no environment-specific threshold
+written, and that each decision arrives with a diagnosis. In one logged
 window after the pulse subsided, demand had normalized but upstream
 amplification remained high; the model diagnosed ``an upstream overflow
 problem'' and held \textsc{Shock Absorber} to let pipeline stock drain
