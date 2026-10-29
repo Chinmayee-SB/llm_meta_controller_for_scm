@@ -1,0 +1,171 @@
+"""
+statistical_tests.py
+
+Statistical Analysis and Hypothesis Testing for the 280-Trace Benchmark.
+Directly reproduces Table I (Headline Metrics) and Table III (Paired Differences & p-values)
+from the paper: "Regime-Aware Cooperation in Multi-Echelon Inventory Control".
+"""
+
+import os
+import sys
+import json
+import numpy as np
+from scipy import stats
+
+if sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RESULTS_DIR = os.path.join(BASE_DIR, "benchmark_results")
+
+
+def load_results():
+    base_file = os.path.join(RESULTS_DIR, "results_base_specialist_280.json")
+    cruiser_file = os.path.join(RESULTS_DIR, "results_fixed_cruiser_280.json")
+    rule_file = os.path.join(RESULTS_DIR, "results_rule_based_280.json")
+    llm_file = os.path.join(RESULTS_DIR, "results_llm_280.json")
+
+    with open(base_file, "r", encoding="utf-8") as f:
+        base = json.load(f)
+    with open(cruiser_file, "r", encoding="utf-8") as f:
+        cruiser = json.load(f)
+    with open(rule_file, "r", encoding="utf-8") as f:
+        rule = json.load(f)
+    with open(llm_file, "r", encoding="utf-8") as f:
+        llm = json.load(f)
+
+    return base, cruiser, rule, llm
+
+
+def holm_bonferroni(p_values: list, alpha: float = 0.05) -> list:
+    """Applies Holm-Bonferroni correction over a family of hypothesis tests."""
+    m = len(p_values)
+    indexed = sorted(enumerate(p_values), key=lambda x: x[1])
+    is_significant = [False] * m
+
+    for rank, (orig_idx, p_val) in enumerate(indexed):
+        threshold = alpha / float(m - rank)
+        if p_val <= threshold:
+            is_significant[orig_idx] = True
+        else:
+            break
+    return is_significant
+
+
+def print_table_1(base, cruiser, rule, llm):
+    suites = [
+        ("s1", "S1: Merton (In-Distribution)", 100),
+        ("s2", "S2: Pulse Shock (Transient)", 30),
+        ("s3", "S3: Sustained Step-Up (+90.5%)", 120),
+        ("s4", "S4: Sustained Step-Down (-71.7%)", 30),
+    ]
+
+    print("=" * 115)
+    print(" TABLE I: HEADLINE METRICS OVER 280 FROZEN TRACES")
+    print("=" * 115)
+    print(f"{'Suite (N)':<34} | {'Metric':<14} | {'Base Specialist':<16} | {'Static Cruiser':<16} | {'Rule-Based':<16} | {'Zero-Shot LLM':<16}")
+    print("-" * 115)
+
+    for k, name, n in suites:
+        # Cost row
+        b_c = f"{base[k]['cost_mean']:.2f}"
+        c_c = f"{cruiser[k]['cost_mean']:.2f}"
+        r_c = f"{rule[k]['cost_mean']:.2f}"
+        l_c = f"{llm[k]['cost_mean']:.2f}"
+        print(f"{name + f' ({n})':<34} | {'Cost':<14} | {b_c:<16} | {c_c:<16} | {r_c:<16} | {l_c:<16}")
+
+        # CFR row
+        b_cfr = f"{base[k]['cfr_mean']:.1f}%"
+        c_cfr = f"{cruiser[k]['cfr_mean']:.1f}%"
+        r_cfr = f"{rule[k]['cfr_mean']:.1f}%"
+        l_cfr = f"{llm[k]['cfr_mean']:.1f}%"
+        print(f"{'':<34} | {'Fill Rate':<14} | {b_cfr:<16} | {c_cfr:<16} | {r_cfr:<16} | {l_cfr:<16}")
+
+        # Bullwhip Amplification row
+        b_amp = f"{base[k]['amp_mean']:+.1f}%"
+        c_amp = f"{cruiser[k]['amp_mean']:+.1f}%"
+        r_amp = f"{rule[k]['amp_mean']:+.1f}%"
+        l_amp = f"{llm[k]['amp_mean']:+.1f}%"
+        print(f"{'':<34} | {'Bullwhip A':<14} | {b_amp:<16} | {c_amp:<16} | {r_amp:<16} | {l_amp:<16}")
+        print("-" * 115)
+
+
+def print_table_3(base, cruiser, rule, llm):
+    suites = [
+        ("s1", "S1 (100)", 100),
+        ("s2", "S2 (30)", 30),
+        ("s3", "S3 (120)", 120),
+        ("s4", "S4 (30)", 30),
+    ]
+
+    contrasts = [
+        ("Static - Base", cruiser, base),
+        ("Rules - Static", rule, cruiser),
+        ("LLM - Static", llm, cruiser),
+        ("LLM - Rules", llm, rule),
+    ]
+
+    print("\n" + "=" * 115)
+    print(" TABLE III: PAIRED DIFFERENCES ON SHARED TRACES (Delta with p-value)")
+    print(" Negative favors first-named model. Asterisk (*) marks significance surviving Holm correction.")
+    print("=" * 115)
+
+    # Collect all 16 cost p-values for Holm correction
+    all_cost_pvals = []
+    contrast_order = []
+    for c_label, m1, m2 in contrasts:
+        for k, s_label, n in suites:
+            c1 = np.array(m1[k]["trace_costs"])
+            c2 = np.array(m2[k]["trace_costs"])
+            _, p_c = stats.ttest_rel(c1, c2)
+            all_cost_pvals.append(p_c)
+            contrast_order.append((c_label, k))
+
+    cost_sig = holm_bonferroni(all_cost_pvals, alpha=0.05)
+    sig_map = {contrast_order[i]: cost_sig[i] for i in range(len(contrast_order))}
+
+    print("\n[PER-PERIOD COST CONTRASTS]")
+    header = f"{'Contrast':<20} | {'S1 (100)':<22} | {'S2 (30)':<22} | {'S3 (120)':<22} | {'S4 (30)':<22}"
+    print(header)
+    print("-" * len(header))
+
+    for c_label, m1, m2 in contrasts:
+        row_str = f"{c_label:<20} | "
+        for k, s_label, n in suites:
+            c1 = np.array(m1[k]["trace_costs"])
+            c2 = np.array(m2[k]["trace_costs"])
+            diff_mean = float(np.mean(c1 - c2))
+            _, p_c = stats.ttest_rel(c1, c2)
+            star = "*" if sig_map.get((c_label, k), False) else ""
+            cell = f"{diff_mean:+5.2f}{star} (p={p_c:.2e})"
+            row_str += f"{cell:<22} | "
+        print(row_str[:-2])
+
+    print("\n[CUSTOMER FILL RATE CONTRASTS (Percentage Points)]")
+    print(header)
+    print("-" * len(header))
+    for c_label, m1, m2 in contrasts[:1]:  # Static - Base
+        row_str = f"{c_label:<20} | "
+        for k, s_label, n in suites:
+            cfr1 = np.array(m1[k]["trace_cfrs"])
+            cfr2 = np.array(m2[k]["trace_cfrs"])
+            diff_mean = float(np.mean(cfr1 - cfr2))
+            _, p_cfr = stats.ttest_rel(cfr1, cfr2)
+            cell = f"{diff_mean:+5.2f} (p={p_cfr:.2e})"
+            row_str += f"{cell:<22} | "
+        print(row_str[:-2])
+    print("=" * 115)
+
+
+def main():
+    base, cruiser, rule, llm = load_results()
+    print_table_1(base, cruiser, rule, llm)
+    print_table_3(base, cruiser, rule, llm)
+
+
+if __name__ == "__main__":
+    main()

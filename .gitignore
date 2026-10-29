@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.so
 
-# Environments & Packages
+# Python virtual environments
 .venv/
 venv/
 ENV/
@@ -22,25 +22,11 @@ coverage.xml
 *.py,cover
 .hypothesis/
 
-# Model Checkpoints & Large Binaries
-*.pt
-*.pth
-*.ckpt
-*.bin
-*.onnx
-checkpoints/
-checkpoints_base_repro/
-weights/
-
 # Experiment Trackers & Logs
 wandb/
 events.out.tfevents.*
 *.log
-MADRL/results/
-
-# Temporary / Scratch scripts
-tmp_read.py
-try.py
+logs/
 scratch/
 
 # OS & Editor files
@@ -51,3 +37,17 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Model Checkpoints & Large Binaries
+# (Ignore intermediate and training runs; allow release checkpoints for reproduction)
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+
+!checkpoints/best_regime_aware_policy.pt
+!checkpoints/best_base_paper_policy.pt
+# Local legacy archive (not tracked)
+.legacy_backup/
+
