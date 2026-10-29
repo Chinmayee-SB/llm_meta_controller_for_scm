@@ -55,3 +55,5 @@ Thumbs.db
 # Local legacy archive (not tracked)
 .legacy_backup/
 
+# Research paper source (local only, do not track in repository)
+paper/
