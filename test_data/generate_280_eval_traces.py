@@ -4,8 +4,8 @@ generate_280_eval_traces.py
 Generates and freezes exactly 280 deterministic evaluation demand traces:
 - S1 Merton In-Distribution: 100 traces in test_data/test_demand_merton/ (000..099)
 - S2 Black Swan Pulse Shock: 30 traces in test_data/test_demand_stress_shock/ (000..029)
-- S3 Sustained Step-Up (+200%): 120 traces in test_data/test_demand_sustained_up/ (000..119)
-- S4 Sustained Step-Down (-67%): 30 traces in test_data/test_demand_sustained_down/ (000..029)
+- S3 Sustained Step-Up (+90.5%): 120 traces in test_data/test_demand_sustained_up/ (000..119)
+- S4 Sustained Step-Down (-71.7%): 30 traces in test_data/test_demand_sustained_down/ (000..029)
 """
 
 import os

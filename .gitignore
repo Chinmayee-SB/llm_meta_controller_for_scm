@@ -29,6 +29,10 @@ events.out.tfevents.*
 logs/
 scratch/
 
+# Allow release benchmark logs for reproducibility
+!benchmark_results/logs/
+!benchmark_results/logs/**
+
 # OS & Editor files
 .DS_Store
 Thumbs.db

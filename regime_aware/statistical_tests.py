@@ -158,6 +158,37 @@ def print_table_3(base, cruiser, rule, llm):
             cell = f"{diff_mean:+5.2f} (p={p_cfr:.2e})"
             row_str += f"{cell:<22} | "
         print(row_str[:-2])
+
+    print("\n[PAIRED 95% CONFIDENCE INTERVALS (scipy.stats.t.interval)]")
+    header_ci = f"{'Contrast':<20} | {'S1 (100)':<24} | {'S2 (30)':<24} | {'S3 (120)':<24} | {'S4 (30)':<24}"
+    print(header_ci)
+    print("-" * len(header_ci))
+    for c_label, m1, m2 in contrasts:
+        row_str = f"{c_label:<20} | "
+        for k, s_label, n in suites:
+            c1 = np.array(m1[k]["trace_costs"])
+            c2 = np.array(m2[k]["trace_costs"])
+            diff = c1 - c2
+            m = float(np.mean(diff))
+            se = float(stats.sem(diff))
+            ci = stats.t.interval(0.95, len(diff) - 1, loc=m, scale=se)
+            cell = f"[{ci[0]:+6.2f}, {ci[1]:+6.2f}]"
+            row_str += f"{cell:<24} | "
+        print(row_str[:-2])
+
+    print("\n[CUSTOMER FILL RATE 95% CI (Static - Base)]")
+    cfr_row = f"{'Static - Base':<20} | "
+    for k, s_label, n in suites:
+        c1 = np.array(cruiser[k]["trace_cfrs"])
+        c2 = np.array(base[k]["trace_cfrs"])
+        diff = c1 - c2
+        m = float(np.mean(diff))
+        se = float(stats.sem(diff))
+        ci = stats.t.interval(0.95, len(diff) - 1, loc=m, scale=se)
+        cell = f"[{ci[0]:+6.2f}, {ci[1]:+6.2f}]"
+        cfr_row += f"{cell:<24} | "
+    print(cfr_row[:-2])
+
     print("=" * 115)
 
 
