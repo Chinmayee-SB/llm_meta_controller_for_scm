@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regime-Aware Cooperation</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M4 22 L10 22 L14 18 L18 18 L22 14 L28 14"/>
+      <path d="M4 10 L10 10 L14 14 L14 18" class="dim"/>
+      <path d="M22 14 L22 24 L28 24" class="dim"/>
+      <circle cx="4" cy="22" r="1.8"/><circle cx="28" cy="14" r="1.8"/>
+    </svg>
+    <div>
+      <strong>Regime-Aware Cooperation</strong>
+      <span>Multi-echelon inventory control</span>
+    </div>
+  </div>
+
+  <nav class="acts" aria-label="Demo sections">
+    <button class="act-tab" data-act="recovery"><i>01</i><span>Recovery</span></button>
+    <button class="act-tab" data-act="dial"><i>02</i><span>Cooperation Dial</span></button>
+    <button class="act-tab" data-act="supervisor"><i>03</i><span>Zero-Shot Supervisor</span></button>
+    <button class="act-tab secondary" data-act="evidence"><i>280</i><span>Evidence</span></button>
+  </nav>
+
+  <div class="sysline">
+    <div class="sys-item"><span class="led" id="sys-led"></span><label>Inference</label><b id="sys-inference">Connecting</b></div>
+    <div class="sys-item"><label>Supervisor</label><b id="sys-llm">Checking</b></div>
+  </div>
+</header>
+
+<main id="stage">
+
+  <!-- 01 RECOVERY -->
+  <section class="act" id="act-recovery">
+    <div class="act-head">
+      <div>
+        <h1>One demand shock, two policies</h1>
+        <p id="rec-summary"></p>
+      </div>
+      <div class="act-controls">
+        <div class="segmented" id="rec-suites"></div>
+        <div class="stepper">
+          <button class="icon-btn" id="rec-prev" aria-label="Previous trace"><svg viewBox="0 0 16 16"><path d="M10 3 L5 8 L10 13"/></svg></button>
+          <div class="stepper-value"><label>Trace</label><b id="rec-trace">000</b></div>
+          <button class="icon-btn" id="rec-next" aria-label="Next trace"><svg viewBox="0 0 16 16"><path d="M6 3 L11 8 L6 13"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec-grid">
+      <div class="rec-chains">
+        <div class="chain-row" id="rec-row-base">
+          <div class="chain-tag base">
+            <b>Base specialist</b><span>Retrained from released code, fixed &alpha; 0.375</span>
+          </div>
+          <div class="chain-host" id="rec-chain-base"></div>
+        </div>
+        <div class="chain-row" id="rec-row-ours">
+          <div class="chain-tag ours">
+            <b>Curriculum policy</b><span>Trained across three regimes, held at &alpha; 0.375, no switching</span>
+          </div>
+          <div class="chain-host" id="rec-chain-ours"></div>
+        </div>
+        <div class="legend">
+          <span><i class="swatch goods"></i>Goods in transit: lit lanes scale with quantity, 4 periods per link</span>
+          <span><i class="swatch orders"></i>Orders moving upstream</span>
+          <span><i class="swatch unmet"></i>Unmet demand</span>
+        </div>
+      </div>
+
+      <aside class="score">
+        <div class="plate score-card base">
+          <label>Base specialist</label>
+          <div class="metric-big"><b id="rec-base-backlog">0</b><span>units owed to customers</span></div>
+          <div class="metric-row"><span>Cost per period</span><b id="rec-base-cost">0.00</b></div>
+          <div class="status-line" id="rec-base-status">Running</div>
+        </div>
+        <div class="plate score-card ours">
+          <label>Curriculum policy</label>
+          <div class="metric-big"><b id="rec-ours-backlog">0</b><span>units owed to customers</span></div>
+          <div class="metric-row"><span>Cost per period</span><b id="rec-ours-cost">0.00</b></div>
+          <div class="status-line" id="rec-ours-status">Running</div>
+        </div>
+        <div class="plate score-card proof" id="rec-proof">
+          <label id="rec-proof-title">Across all pulse traces</label>
+          <div class="proof-pair">
+            <div><b id="rec-all-base">&middot;&middot;&middot;</b><span>Base, median clearance period</span></div>
+            <div class="ours"><b id="rec-all-ours">&middot;&middot;&middot;</b><span>Ours, median clearance period</span></div>
+          </div>
+          <p id="rec-all-note">Computing live</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 02 DIAL -->
+  <section class="act" id="act-dial">
+    <div class="act-head">
+      <div>
+        <h1>One set of weights, three behaviours</h1>
+        <p id="dial-summary"></p>
+      </div>
+      <div class="act-controls">
+        <div class="segmented" id="dial-suites"></div>
+        <div class="stepper">
+          <button class="icon-btn" id="dial-prev" aria-label="Previous trace"><svg viewBox="0 0 16 16"><path d="M10 3 L5 8 L10 13"/></svg></button>
+          <div class="stepper-value"><label>Trace</label><b id="dial-trace">000</b></div>
+          <button class="icon-btn" id="dial-next" aria-label="Next trace"><svg viewBox="0 0 16 16"><path d="M6 3 L11 8 L6 13"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dial-grid">
+      <div class="dial-main">
+        <div class="preset-row">
+          <label>Regime</label>
+          <div class="presets" id="dial-presets"></div>
+          <button class="toggle" id="dial-link" aria-pressed="true"><span class="toggle-dot"></span>Move tiers together</button>
+        </div>
+        <div class="chain-host tall" id="dial-chain"></div>
+        <div class="legend">
+          <span><i class="swatch goods"></i>Goods in transit</span>
+          <span><i class="swatch orders"></i>Orders moving upstream</span>
+          <span class="legend-note">Small &alpha; weighs the whole chain's cost. Large &alpha; weighs the tier's own cost.</span>
+        </div>
+      </div>
+
+      <aside class="score">
+        <div class="plate score-card weights">
+          <label>Frozen weights</label>
+          <div class="hash" id="dial-hash">&middot;&middot;&middot;</div>
+          <div class="metric-row"><span>Retraining steps</span><b>0</b></div>
+          <div class="metric-row"><span>Last full episode</span><b id="dial-ms">0 ms</b></div>
+        </div>
+        <div class="plate score-card ours">
+          <label>This trace</label>
+          <div class="metric-big"><b id="dial-cost">0.00</b><span>cost per period</span></div>
+          <div class="metric-row"><span>Against cruiser &alpha; 0.375</span><b id="dial-delta">0.00</b></div>
+          <div class="metric-row"><span>Orders changed</span><b id="dial-changed">0%</b></div>
+        </div>
+        <div class="plate score-card sweep">
+          <label id="dial-sweep-title">All traces in this suite</label>
+          <div class="bars" id="dial-bars"></div>
+          <p>Mean cost, same weights, uniform &alpha;</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 03 SUPERVISOR -->
+  <section class="act" id="act-supervisor">
+    <div class="act-head">
+      <div>
+        <h1>A supervisor with zero training on this chain</h1>
+        <div class="chips">
+          <span class="chip">No examples</span>
+          <span class="chip">No fine-tuning</span>
+          <span class="chip">No numeric thresholds</span>
+          <span class="chip dim" id="sup-model"></span>
+        </div>
+      </div>
+      <div class="act-controls">
+        <div class="segmented" id="sup-source">
+          <button data-source="live">Live LLM</button>
+          <button data-source="log">Logged run</button>
+        </div>
+        <div class="segmented" id="sup-suites"></div>
+        <div class="stepper">
+          <button class="icon-btn" id="sup-prev" aria-label="Previous trace"><svg viewBox="0 0 16 16"><path d="M10 3 L5 8 L10 13"/></svg></button>
+          <div class="stepper-value"><label>Trace</label><b id="sup-trace">000</b></div>
+          <button class="icon-btn" id="sup-next" aria-label="Next trace"><svg viewBox="0 0 16 16"><path d="M6 3 L11 8 L6 13"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sup-grid">
+      <div class="sup-main">
+        <div class="chain-host supervised" id="sup-chain"></div>
+        <div class="legend">
+          <span><i class="swatch telemetry"></i>Window telemetry, every 20 periods</span>
+          <span><i class="swatch alpha"></i>Assigned &alpha; vector</span>
+          <span><i class="swatch goods"></i>Goods in transit, ordered every period by the frozen policy</span>
+        </div>
+      </div>
+
+      <aside class="decision plate" id="sup-card">
+        <div class="decision-top">
+          <div>
+            <label id="sup-card-label">Decision</label>
+            <div class="mode" id="sup-mode">Awaiting first window</div>
+          </div>
+          <div class="source-tag" id="sup-source-tag"></div>
+        </div>
+        <div class="alpha-vector" id="sup-vector"></div>
+        <div class="telemetry-grid" id="sup-telemetry"></div>
+        <div class="reason">
+          <label>Diagnosis</label>
+          <p id="sup-diagnosis">The supervisor reads a telemetry window every 20 periods. Press play to start.</p>
+          <label>Rationale</label>
+          <p id="sup-rationale"></p>
+        </div>
+        <div class="final" id="sup-final" hidden>
+          <label>This trace, full episode</label>
+          <div class="bars" id="sup-final-bars"></div>
+          <div class="final-note" id="sup-final-note"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- EVIDENCE -->
+  <section class="act" id="act-evidence">
+    <div class="act-head">
+      <div>
+        <h1>All 280 frozen traces, including the losses</h1>
+        <p>Each mark is one paired trace against the base specialist. Select one to run it live.</p>
+      </div>
+      <div class="act-controls">
+        <div class="segmented" id="ev-arms">
+          <button data-arm="static">Static &alpha;</button>
+          <button data-arm="rules">Rules</button>
+          <button data-arm="llm">Zero-shot LLM</button>
+        </div>
+      </div>
+    </div>
+    <div class="ev-grid">
+      <div class="plate ev-canvas-host" id="ev-host">
+        <canvas id="ev-canvas"></canvas>
+        <div class="ev-tip" id="ev-tip" hidden></div>
+      </div>
+      <div class="plate ev-table-host">
+        <table class="ev-table" id="ev-table"></table>
+        <p class="ev-note">
+          Per-period cost, same protocol for every arm. <em>*</em> survives Holm correction over 16 cost tests.
+          Static &alpha; wins under transient shock and collapse. The step-up loss is structural: demand sits against the 20-unit order cap.
+          Across supervisors the zero-shot LLM matches the rule base; it does not beat static &alpha; on cost.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="transport" id="transport">
+  <div class="transport-buttons">
+    <button class="play-btn" id="tr-play" aria-label="Play">
+      <svg class="i-play" viewBox="0 0 20 20"><path d="M6 3.5 L16 10 L6 16.5 Z"/></svg>
+      <svg class="i-pause" viewBox="0 0 20 20"><path d="M6 4 V16 M14 4 V16"/></svg>
+    </button>
+    <button class="icon-btn" id="tr-restart" aria-label="Restart">
+      <svg viewBox="0 0 16 16"><path d="M3.5 8 A4.8 4.8 0 1 0 5 4.5 M5 1.6 V4.7 H8.1"/></svg>
+    </button>
+    <div class="segmented compact" id="tr-speed">
+      <button data-speed="1">1x</button><button data-speed="2">2x</button><button data-speed="4">4x</button>
+    </div>
+  </div>
+  <div class="period"><label>Period</label><b id="tr-t">000</b><span>/ 200</span></div>
+  <div class="timeline-host" id="tr-host"><canvas id="tr-canvas"></canvas></div>
+</footer>
+
+<div class="notice" id="notice" hidden></div>
+<script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

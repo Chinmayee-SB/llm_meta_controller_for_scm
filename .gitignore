@@ -57,3 +57,7 @@ Thumbs.db
 
 # Research paper source (local only, do not track in repository)
 paper/
+
+# Live demo
+.env
+demo/live_logs/

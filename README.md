@@ -250,3 +250,9 @@ If you find this work or benchmark useful in your research, please cite:
 
 ## 📄 License
 This repository is released under the [MIT License](LICENSE).
+
+---
+
+## Live Demo (Review 2)
+
+An interactive stage demo that runs the frozen checkpoints in real time. See [`demo/README.md`](demo/README.md).
