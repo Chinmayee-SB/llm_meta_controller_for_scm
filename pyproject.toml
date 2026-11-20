@@ -31,5 +31,12 @@ dependencies = [
     "pyyaml>=6.0",
     "tensorboardX>=2.5.1",
     "requests>=2.28.0",
-    "openai>=1.0.0"
+    "openai>=1.0.0",
+    "absl-py>=1.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0"
 ]

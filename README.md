@@ -105,6 +105,7 @@ Evaluated on **280 frozen evaluation traces** across four demand suites ($56,000
 ├── evaluate_llm_unguided.py           # Dedicated benchmark runner for threshold-free unguided LLM
 ├── analyze.py                         # Root CLI entrypoint to reproduce Table I & III statistics
 ├── train.py                           # Root CLI entrypoint for HAPPO curriculum & specialist training
+├── tests/                             # Software test suite (pytest)
 │
 ├── paper/                             # IEEE Conference manuscript source
 │   └── main.tex                       # Complete LaTeX source of the paper
@@ -198,7 +199,14 @@ python evaluate.py --controller llm --model gpt-5.6-luna
 python evaluate_llm_unguided.py --model gpt-5.6-luna
 ```
 
-### 4. Train Policies from Scratch
+### 4. Run the Software Tests
+The test suite checks the supervisors, telemetry, reward, curriculum sampling and statistics, audits the LLM decision logs, and reruns the base, static and rule-based arms on all 280 traces to confirm they reproduce the published per-trace costs (about 2 minutes on a CPU):
+
+```bash
+python -m pytest tests -v
+```
+
+### 5. Train Policies from Scratch
 To train policies under identical conditions ($3 \times 10^6$ environment steps across 5 parallel rollout threads):
 
 ```bash
